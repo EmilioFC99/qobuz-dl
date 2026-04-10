@@ -158,6 +158,8 @@ ultimate exclusive features:
   --native-lang         do not force English; download metadata in the account's native language
   --no-credits          disable the generation of the Digital Booklet.txt (Credits & Review) file
 ```
+## Credits
+This "Ultimate Edition" is a fork of the original `qobuz-dl` project created by **[vitiko98](https://github.com/vitiko98/qobuz-dl)**. A huge thanks to him and all the original contributors for laying the foundation of this amazing tool.
 
 ## A note about Qo-DL
 `qobuz-dl` is inspired in the discontinued Qo-DL-Reborn. This tool uses two modules from Qo-DL: `qopy` and `spoofer`, both written by Sorrow446 and DashLt.
