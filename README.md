@@ -5,7 +5,7 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
 ## Features & Ultimate Additions
 
 * **[NEW] Automatic Lyrics Engine:** Fetches and injects synchronized (`.lrc`) and unsynchronized lyrics using LRCLIB (with a Genius fallback API).
-* **[NEW] Audiophile & DAP Friendly (Roon Ready):** Metadata, cover art, and embedded lyrics are meticulously formatted to ensure perfect out-of-the-box compatibility with Roon servers and standalone Digital Audio Players (DAPs).
+* **[NEW] Audiophile & DAP Friendly (Optimized for Roon):** Metadata, cover art, and embedded lyrics are meticulously formatted to ensure perfect out-of-the-box library integration with Roon servers and standalone Digital Audio Players (like FiiO, Astell&Kern).
 * **[NEW] Digital Booklet Generation:** Automatically compiles a `.txt` file with a complete tracklist (including track durations), full credits, metadata, and album reviews for every download.
 * **[NEW] Segmented Download & Remuxing:** Bypasses Akamai CDN throttling with a high-speed, multithreaded segmented download engine and automatic FFmpeg remuxing.
 * **[NEW] Smart Quality Fallback:** Automatically downgrades to the next best available quality if the requested tier is restricted by the server, ensuring your download queue never crashes.
