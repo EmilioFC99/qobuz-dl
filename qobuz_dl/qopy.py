@@ -10,7 +10,6 @@ from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 
 from qobuz_dl.exceptions import (
     AuthenticationError,
-    IneligibleError,
     InvalidAppIdError,
     InvalidAppSecretError,
     InvalidQuality,
@@ -76,6 +75,7 @@ class Client:
         return r.json()
 
     def auth(self, email, pwd):
+        # Se la password è lunghissima, è un Token di Autenticazione!
         if len(pwd) > 60:
             self.uat = pwd
         else:

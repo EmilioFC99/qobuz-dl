@@ -2,10 +2,12 @@ import argparse
 
 
 def fun_args(subparsers, default_limit):
+    # Abbiamo rinominato il comando in 'interactive' aggiungendo 'fun' e 'i' come alias
     interactive = subparsers.add_parser(
-        "fun",
+        "interactive",
         description="Interactively search for tracks and albums.",
         help="interactive mode",
+        aliases=["i", "fun"]
     )
     interactive.add_argument(
         "-l",
@@ -173,7 +175,7 @@ def qobuz_dl_args(
 
     subparsers = parser.add_subparsers(
         title="commands",
-        description="run qobuz-dl <command> --help for more info\n(e.g. qobuz-dl fun --help)",
+        description="run qobuz-dl <command> --help for more info\n(e.g. qobuz-dl interactive --help)",
         dest="command",
     )
 

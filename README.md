@@ -4,21 +4,28 @@ This is an enhanced, feature-rich fork of the original qobuz-dl project, designe
 
 ## Features & Ultimate Additions
 
+## Features & Ultimate Additions
+
 * **[NEW] Automatic Lyrics Engine:** Fetches and injects synchronized (`.lrc`) and unsynchronized lyrics using LRCLIB (with a Genius fallback API).
 * **[NEW] Digital Booklet Generation:** Automatically compiles a `.txt` file with a complete tracklist (including track durations), full credits, metadata, and album reviews for every download.
 * **[NEW] Segmented Download & Remuxing:** Bypasses Akamai CDN throttling with a high-speed, multithreaded segmented download engine and automatic FFmpeg remuxing.
 * **[NEW] Smart Quality Fallback:** Automatically downgrades to the next best available quality if the requested tier is restricted by the server, ensuring your download queue never crashes.
 * **[NEW] Token Authentication:** Log in securely using your browser's `user_auth_token` if standard password authentication is blocked by Qobuz.
 * **[NEW] Regional Bypass:** Forces English language for metadata, reviews, and digital booklets regardless of your account's native region.
+* **[NEW] International & Clean Outputs:** Console logs and outputs have been fully translated to English and modernized for a cleaner terminal experience.
 * Download FLAC and MP3 files from Qobuz
 * Explore and download music directly from your terminal with **interactive** or **lucky** mode
 * Download albums, tracks, artists, playlists, and labels with **download** mode
 * Download music from last.fm playlists
-* Queue support on **interactive** mode
+* Queue support and **multiselect** on **interactive** mode
 * Effective duplicate handling with own portable database
 * Support for albums with multiple discs and M3U playlists
 * Downloads URLs from text files
 * Extended tags and more...
+
+### 🛠️ Upstream Pull Requests & Issues Resolved
+* **Interactive Mode Restored & Enhanced (PR #179):** Fixed the critical crash caused by the deprecated `options_map_func` in the `pick` library. The interactive menu is fully working again and now supports **multiselect** (press `Space` to queue multiple releases at once!). The command has also been renamed to `interactive` (or `-i`), while keeping `fun` as an alias for retro-compatibility.
+* **Free Account Handling (Issue #261):** Cleaned up the `IneligibleError` handling. The script now gracefully bypasses streamable checks for free accounts, defaulting purchased items to Studio quality without crashing.
 
 ## Getting started
 

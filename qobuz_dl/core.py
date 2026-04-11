@@ -306,12 +306,6 @@ class QobuzDL:
             {"q_string": "Hi-Res > 96 kHz", "q": 27},
         ]
 
-        def get_title_text(option):
-            return option.get("text")
-
-        def get_quality_text(option):
-            return option.get("q_string")
-
         try:
             item_types = ["Albums", "Tracks", "Artists", "Playlists"]
             selected_type = pick(item_types, "I'll search for:\n[press Intro]")[0][
@@ -336,21 +330,26 @@ class QobuzDL:
                     "(one or more)\nPress Ctrl + c to quit\n"
                     "Don't select anything to try another search"
                 )
+                
+                # --- MODERN PICK FIX FOR OPTIONS ---
+                options_texts = [opt.get("text") for opt in options]
                 selected_items = pick(
-                    options,
+                    options_texts,
                     title,
                     multiselect=True,
                     min_selection_count=0,
-                    options_map_func=get_title_text,
                 )
+                
                 if len(selected_items) > 0:
-                    [final_url_list.append(i[0]["url"]) for i in selected_items]
+                    # Ricolleghiamo i testi scelti alle URL originali tramite l'indice i[1]
+                    [final_url_list.append(options[i[1]]["url"]) for i in selected_items]
+                    
                     y_n = pick(
                         ["Yes", "No"],
                         "Items were added to queue to be downloaded. "
                         "Keep searching?",
                     )
-                    if y_n[0][0] == "N":
+                    if y_n[0] == "No":
                         break
                 else:
                     logger.info(f"{YELLOW}Ok, try again...{RESET}")
@@ -361,12 +360,15 @@ class QobuzDL:
                     "be automatically\ndowngraded if the selected "
                     "is not found)"
                 )
-                self.quality = pick(
-                    qualities,
+                
+                # --- MODERN PICK FIX FOR QUALITIES ---
+                qualities_texts = [q.get("q_string") for q in qualities]
+                selected_quality = pick(
+                    qualities_texts,
                     desc,
                     default_index=1,
-                    options_map_func=get_quality_text,
-                )[0]["q"]
+                )
+                self.quality = qualities[selected_quality[1]]["q"]
 
                 if download:
                     self.download_list_of_urls(final_url_list)

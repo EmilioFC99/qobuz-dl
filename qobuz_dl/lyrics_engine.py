@@ -4,7 +4,7 @@ import mutagen
 from mutagen.id3 import ID3, USLT, ID3NoHeaderError
 from mutagen.flac import FLAC
 
-# Importiamo lyricsgenius solo se l'utente ha configurato il token
+# Import lyricsgenius only if the user has configured the token
 try:
     import lyricsgenius
 except ImportError:
@@ -15,25 +15,28 @@ class LyricsEngine:
         self.genius_token = genius_token
         self.genius = None
         if self.genius_token and lyricsgenius:
-            # Inizializziamo Genius in modalità silenziosa (verbose=False)
+            # Initialize Genius in silent mode (verbose=False)
             self.genius = lyricsgenius.Genius(self.genius_token, verbose=False, remove_section_headers=True)
 
     def fetch_and_inject(self, file_path, artist, track, album):
-        """Motore a cascata: prima prova LRCLIB (per il formato LRC), poi Genius."""
+        """Waterfall engine: first try LRCLIB (for LRC format), then Genius."""
         try:
-            print(f"    🔍 Cerco testo per: {track}...")
+            print(f"    🔍 Searching lyrics for: {track}...")
             
-            # TENTATIVO 1: LRCLIB (Ricerca gratuita e priorità ai testi sincronizzati)
+            # ATTEMPT 1: LRCLIB (Free search, priority to synchronized lyrics)
             lrclib_url = "https://lrclib.net/api/get"
             
-            # Prova A: Ricerca precisissima (Artista + Traccia + Album)
-            params = {"artist_name": artist, "track_name": track, "album_name": album}
-            response = requests.get(lrclib_url, params=params, timeout=5) 
+            # Aggiungiamo un User-Agent ufficiale per evitare blocchi o rallentamenti da parte dell'API
+            headers = {"User-Agent": "qobuz-dl-ultimate/1.0 (https://github.com/Sei969/qobuz-dl)"}
             
-            # Prova B: Se fallisce, riproviamo ignorando l'album (spesso risolve i problemi di versioni/remastered)
+            # Try A: Exact match (Artist + Track + Album)
+            params = {"artist_name": artist, "track_name": track, "album_name": album}
+            response = requests.get(lrclib_url, params=params, headers=headers, timeout=6) 
+            
+            # Try B: If it fails, try again without album (often solves version/remaster issues)
             if response.status_code != 200:
                 params = {"artist_name": artist, "track_name": track}
-                response = requests.get(lrclib_url, params=params, timeout=5)
+                response = requests.get(lrclib_url, params=params, headers=headers, timeout=6)
 
             if response.status_code == 200:
                 data = response.json()
@@ -43,39 +46,36 @@ class LyricsEngine:
                 if synced_lyrics:
                     self._save_lrc_file(file_path, synced_lyrics)
                     self._inject_metadata(file_path, plain_lyrics)
-                    print(f"    ✅ Testo Sincronizzato (Karaoke) salvato!")
+                    print(f"    ✅ Synchronized lyrics saved!")
                     return
                 elif plain_lyrics:
                     self._inject_metadata(file_path, plain_lyrics)
-                    print(f"    ✅ Testo standard iniettato nei metadati!")
+                    print(f"    ✅ Standard lyrics injected into metadata!")
                     return
 
-            # TENTATIVO 2: FALLBACK SU GENIUS (Se l'utente ha messo il token)
+            # ATTEMPT 2: GENIUS FALLBACK (If the user provided a token)
             if self.genius:
                 song = self.genius.search_song(track, artist)
                 if song and song.lyrics:
                     self._inject_metadata(file_path, song.lyrics)
-                    print(f"    ✅ Testo iniettato via Genius (Fallback)!")
+                    print(f"    ✅ Lyrics injected via Genius (Fallback)!")
                     return
 
-            print(f"    ❌ Nessun testo trovato per questa traccia.")
+            print(f"    ❌ No lyrics found for this track.")
 
         except Exception as e:
-            print(f"    ⚠️ Errore durante la ricerca testi: {e}")
-
-        except Exception as e:
-            # Se la rete salta o l'API cambia, blocchiamo l'errore per salvare il file audio
-            print(f"    ⚠️ Errore durante la ricerca testi: {e}")
+            # Catch network or API errors to avoid interrupting the audio download
+            print(f"    ⚠️ Error during lyrics search: {e}")
 
     def _save_lrc_file(self, audio_file_path, synced_lyrics):
-        """Crea il file .lrc affianco al file audio."""
+        """Creates the .lrc file next to the audio file."""
         base_name = os.path.splitext(audio_file_path)[0]
         lrc_path = f"{base_name}.lrc"
         with open(lrc_path, 'w', encoding='utf-8') as f:
             f.write(synced_lyrics)
 
     def _inject_metadata(self, file_path, lyrics):
-        """Inietta il testo direttamente nei tag del file FLAC o MP3."""
+        """Injects lyrics directly into FLAC or MP3 tags."""
         if not lyrics: return
         
         ext = os.path.splitext(file_path)[1].lower()
@@ -92,4 +92,4 @@ class LyricsEngine:
                 audio.add(USLT(encoding=3, lang='eng', desc='', text=lyrics))
                 audio.save(file_path)
         except Exception:
-            pass # Ignoriamo errori di scrittura per non bloccare il programma
+            pass # Ignore writing errors to avoid crashing the program
