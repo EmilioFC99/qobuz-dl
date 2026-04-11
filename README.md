@@ -4,8 +4,6 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
 
 ## Features & Ultimate Additions
 
-## Features & Ultimate Additions
-
 * **[NEW] Automatic Lyrics Engine:** Fetches and injects synchronized (`.lrc`) and unsynchronized lyrics using LRCLIB (with a Genius fallback API).
 * **[NEW] Digital Booklet Generation:** Automatically compiles a `.txt` file with a complete tracklist (including track durations), full credits, metadata, and album reviews for every download.
 * **[NEW] Segmented Download & Remuxing:** Bypasses Akamai CDN throttling with a high-speed, multithreaded segmented download engine and automatic FFmpeg remuxing.
