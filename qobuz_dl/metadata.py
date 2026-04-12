@@ -5,6 +5,8 @@ import logging
 from mutagen.flac import FLAC, Picture
 import mutagen.id3 as id3
 from mutagen.id3 import ID3NoHeaderError
+from qobuz_dl.settings import QobuzDLSettings
+from qobuz_dl.utils import get_album_artist, flac_fix_md5s
 
 logger = logging.getLogger(__name__)
 
@@ -16,20 +18,42 @@ COPYRIGHT, PHON_COPYRIGHT = "\u2117", "\u00a9"
 FLAC_MAX_BLOCKSIZE = 16777215
 
 ID3_LEGEND = {
-    "album": id3.TALB,
     "albumartist": id3.TPE2,
+    "album": id3.TALB,
     "artist": id3.TPE1,
-    "comment": id3.COMM,
-    "composer": id3.TCOM,
-    "copyright": id3.TCOP,
-    "date": id3.TDAT,
-    "genre": id3.TCON,
-    "isrc": id3.TSRC,
-    "label": id3.TPUB,
-    "performer": id3.TOPE,
     "title": id3.TIT2,
+    "date": id3.TDAT,
+    "mediatype": id3.TMED,
+    "genre": id3.TCON,
+    "composer": id3.TCOM,
+    "itunesadvisory": id3.TXXX,
+    "copyright": id3.TCOP,
+    "label": id3.TPUB,
+    "barcode": id3.TXXX,
+    "isrc": id3.TSRC,
+    "comment": id3.COMM,
     "year": id3.TYER,
+    "performer": id3.TOPE,
 }
+
+EMB_COVER_NAME = "embed_cover.jpg"
+
+
+def _get_title_with_version(title: str = "", version: str = "") -> str:
+    """
+    Get the title and append the version to the title, if available
+    :param title:
+    :param version:
+    :return:
+    """
+    item_title = title
+    if version:
+        item_title = (
+            f"{title} ({version})"
+            if version.lower() not in title.lower()
+            else title
+        )
+    return item_title
 
 
 def _get_title(track_dict):
@@ -64,9 +88,9 @@ def _format_genres(genres: list) -> str:
 
 
 def _embed_flac_img(root_dir, audio: FLAC):
-    emb_image = os.path.join(root_dir, "cover.jpg")
+    emb_image = os.path.join(root_dir, EMB_COVER_NAME)
     multi_emb_image = os.path.join(
-        os.path.abspath(os.path.join(root_dir, os.pardir)), "cover.jpg"
+        os.path.abspath(os.path.join(root_dir, os.pardir)), EMB_COVER_NAME
     )
     if os.path.isfile(emb_image):
         cover_image = emb_image
@@ -94,9 +118,9 @@ def _embed_flac_img(root_dir, audio: FLAC):
 
 
 def _embed_id3_img(root_dir, audio: id3.ID3):
-    emb_image = os.path.join(root_dir, "cover.jpg")
+    emb_image = os.path.join(root_dir, EMB_COVER_NAME)
     multi_emb_image = os.path.join(
-        os.path.abspath(os.path.join(root_dir, os.pardir)), "cover.jpg"
+        os.path.abspath(os.path.join(root_dir, os.pardir)), EMB_COVER_NAME
     )
     if os.path.isfile(emb_image):
         cover_image = emb_image
@@ -109,7 +133,7 @@ def _embed_id3_img(root_dir, audio: id3.ID3):
 
 # Use KeyError catching instead of dict.get to avoid empty tags
 def tag_flac(
-    filename, root_dir, final_name, d: dict, album, istrack=True, em_image=False
+    filename, root_dir, final_name, d: dict, album, istrack=True, em_image=False, settings: QobuzDLSettings = None
 ):
     """
     Tag a FLAC file
@@ -119,54 +143,47 @@ def tag_flac(
     :param str final_name: Final name of the FLAC file (complete path)
     :param dict d: Track dictionary from Qobuz_client
     :param dict album: Album dictionary from Qobuz_client
-    :param bool istrack
+    :param bool istrack: Whether the download URL is a link to a track or not.
     :param bool em_image: Embed cover art into file
+    :param QobuzDLSettings settings: QobuzDL settings
     """
     audio = FLAC(filename)
 
-    audio["TITLE"] = _get_title(d)
-
-    audio["TRACKNUMBER"] = str(d["track_number"])  # TRACK NUMBER
-
-    if "Disc " in final_name:
-        audio["DISCNUMBER"] = str(d["media_number"])
-
-    try:
-        audio["COMPOSER"] = d["composer"]["name"]  # COMPOSER
-    except KeyError:
-        pass
-
-    artist_ = d.get("performer", {}).get("name")  # TRACK ARTIST
     if istrack:
-        audio["ARTIST"] = artist_ or d["album"]["artist"]["name"]  # TRACK ARTIST
+        qobuz_item = d
+        qobuz_album = d.get("album", {})
     else:
-        audio["ARTIST"] = artist_ or album["artist"]["name"]
+        qobuz_item = d
+        qobuz_album = album
 
-    audio["LABEL"] = album.get("label", {}).get("name", "n/a")
+    # temporarily holds metadata
+    tags = _get_tags_to_add(qobuz_album, qobuz_item, settings=settings)
 
-    if istrack:
-        audio["GENRE"] = _format_genres(d["album"]["genres_list"])
-        audio["ALBUMARTIST"] = d["album"]["artist"]["name"]
-        audio["TRACKTOTAL"] = str(d["album"]["tracks_count"])
-        audio["ALBUM"] = d["album"]["title"]
-        audio["DATE"] = d["album"]["release_date_original"]
-        audio["COPYRIGHT"] = _format_copyright(d.get("copyright") or "n/a")
-    else:
-        audio["GENRE"] = _format_genres(album["genres_list"])
-        audio["ALBUMARTIST"] = album["artist"]["name"]
-        audio["TRACKTOTAL"] = str(album["tracks_count"])
-        audio["ALBUM"] = album["title"]
-        audio["DATE"] = album["release_date_original"]
-        audio["COPYRIGHT"] = _format_copyright(album.get("copyright") or "n/a")
+    # Track Information
+    if not settings.no_track_number_tag:
+        tags["TRACKNUMBER"] = str(qobuz_item.get("track_number", "1"))
+    if not settings.no_track_total_tag:
+        tags["TRACKTOTAL"] = str(qobuz_album.get("tracks_count", "1"))
+    if not settings.no_disc_number_tag:
+        tags["DISCNUMBER"] = str(qobuz_item.get("media_number", "1"))
+    if not settings.no_disc_total_tag:
+        tags["DISCTOTAL"] = str(qobuz_album.get("media_count", "1"))
+
+    # write metadata in `tags` to file
+    for k, v in tags.items():
+        if v:
+            audio[k] = v
 
     if em_image:
         _embed_flac_img(root_dir, audio)
 
     audio.save()
     os.rename(filename, final_name)
+    if settings.fix_md5s:
+        flac_fix_md5s(final_name)
 
 
-def tag_mp3(filename, root_dir, final_name, d, album, istrack=True, em_image=False):
+def tag_mp3(filename, root_dir, final_name, d, album, istrack=True, em_image=False, settings: QobuzDLSettings = None):
     """
     Tag an mp3 file
 
@@ -174,8 +191,10 @@ def tag_mp3(filename, root_dir, final_name, d, album, istrack=True, em_image=Fal
     :param str root_dir: Root dir used to get the cover art
     :param str final_name: Final name of the mp3 file (complete path)
     :param dict d: Track dictionary from Qobuz_client
-    :param bool istrack
+    :param dict album: Album dictionary from Qobuz_client
+    :param bool istrack: Whether the download URL is a link to a track or not.
     :param bool em_image: Embed cover art into file
+    :param QobuzDLSettings settings: QobuzDL settings
     """
 
     try:
@@ -183,47 +202,85 @@ def tag_mp3(filename, root_dir, final_name, d, album, istrack=True, em_image=Fal
     except ID3NoHeaderError:
         audio = id3.ID3()
 
+    if istrack:
+        qobuz_item = d
+        qobuz_album = d.get("album", {})
+    else:
+        qobuz_item = d
+        qobuz_album = album
+
     # temporarily holds metadata
-    tags = dict()
-    tags["title"] = _get_title(d)
-    try:
-        tags["label"] = album["label"]["name"]
-    except KeyError:
-        pass
-
-    artist_ = d.get("performer", {}).get("name")  # TRACK ARTIST
-    if istrack:
-        tags["artist"] = artist_ or d["album"]["artist"]["name"]  # TRACK ARTIST
-    else:
-        tags["artist"] = artist_ or album["artist"]["name"]
-
-    if istrack:
-        tags["genre"] = _format_genres(d["album"]["genres_list"])
-        tags["albumartist"] = d["album"]["artist"]["name"]
-        tags["album"] = d["album"]["title"]
-        tags["date"] = d["album"]["release_date_original"]
-        tags["copyright"] = _format_copyright(d["copyright"])
-        tracktotal = str(d["album"]["tracks_count"])
-    else:
-        tags["genre"] = _format_genres(album["genres_list"])
-        tags["albumartist"] = album["artist"]["name"]
-        tags["album"] = album["title"]
-        tags["date"] = album["release_date_original"]
-        tags["copyright"] = _format_copyright(album["copyright"])
-        tracktotal = str(album["tracks_count"])
-
-    tags["year"] = tags["date"][:4]
-
-    audio["TRCK"] = id3.TRCK(encoding=3, text=f'{d["track_number"]}/{tracktotal}')
-    audio["TPOS"] = id3.TPOS(encoding=3, text=str(d["media_number"]))
+    tags = _get_tags_to_add(qobuz_album, qobuz_item, settings=settings)
 
     # write metadata in `tags` to file
     for k, v in tags.items():
-        id3tag = ID3_LEGEND[k]
-        audio[id3tag.__name__] = id3tag(encoding=3, text=v)
+        if v:
+            id3tag = ID3_LEGEND[k]
+            if id3tag == id3.TXXX:
+                audio.add(id3tag(encoding=3, desc=k, text=v))
+            else:
+                audio[id3tag.__name__] = id3tag(encoding=3, text=v)
+
+    # track information
+    audio["TRCK"] = id3.TRCK(encoding=3,
+                             text=f'{str(qobuz_item.get("track_number", "1"))}/{str(qobuz_album.get("tracks_count", "1"))}')
+    audio["TPOS"] = id3.TPOS(encoding=3,
+                             text=f'{str(qobuz_item.get("media_number", "1"))}/{str(qobuz_album.get("media_count", "1"))}')
 
     if em_image:
         _embed_id3_img(root_dir, audio)
 
-    audio.save(filename, "v2_version=3")
+    audio.save(filename, v2_version=3)
     os.rename(filename, final_name)
+
+def _get_tags_to_add(qobuz_album: dict, qobuz_item : dict, settings: QobuzDLSettings = None):
+    """
+    get tags data from album and track metadata
+    :param dict qobuz_album: Qobuz album
+    :param dict qobuz_item: Qobuz item
+    :param QobuzDLSettings settings: QobuzDL settings
+    """
+    tags = dict()
+    if not qobuz_album or not qobuz_item:
+        return tags
+
+    # Basic Information
+    if not settings.no_album_title_tag:
+        tags["ALBUM"] = _get_title_with_version(title=qobuz_album.get("title", ""),
+                                                version=qobuz_album.get("version", ""))
+    if not settings.no_track_title_tag:
+        tags["TITLE"] = _get_title_with_version(title=qobuz_item.get("title", ""),
+                                                version=qobuz_item.get("version", ""))
+
+    # Artist Information
+    if not settings.no_album_artist_tag:
+        tags["ALBUMARTIST"] = get_album_artist(qobuz_album)
+    if not settings.no_track_artist_tag:
+        tags["ARTIST"] = qobuz_item.get("performer", {}).get("name", "") or qobuz_album.get("artist", {}).get("name",
+                                                                                                              "")
+    if not settings.no_composer_tag:
+        tags["COMPOSER"] = qobuz_item.get("composer", {}).get("name", "")
+
+    # Release Information
+    release_date = qobuz_album.get("release_date_original", "")
+    if not settings.no_release_date_tag:
+        tags["DATE"] = release_date
+        tags["YEAR"] = release_date[:4] if release_date else ""
+    if not settings.no_genre_tag:
+        tags["GENRE"] = _format_genres(qobuz_album.get("genres_list", []))
+    if not settings.no_label_tag:
+        tags["COPYRIGHT"] = _format_copyright(qobuz_album.get("copyright", "n/a"))
+    if not settings.no_label_tag:
+        # Qobuz sometimes has multiple spaces in place of where a single space should be when it comes to Labels
+        tags["LABEL"] = re.sub(r'\s+',' ', qobuz_album.get("label", {}).get("name", ""))
+    if not settings.no_isrc_tag:
+        tags["ISRC"] = qobuz_item.get("isrc", "")
+    if not settings.no_upc_tag:
+        tags["BARCODE"] = qobuz_album.get("upc", "")
+
+    # Media Information
+    if not settings.no_media_type_tag:
+        tags["MEDIATYPE"] = qobuz_album.get("product_type", "").upper()
+    if not settings.no_explicit_tag:
+        tags["ITUNESADVISORY"] = "1" if qobuz_album.get("parental_warning", False) else "0"
+    return tags

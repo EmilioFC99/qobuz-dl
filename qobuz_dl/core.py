@@ -19,6 +19,7 @@ from qobuz_dl.utils import (
     create_and_return_dir,
     PartialFormatter,
 )
+from qobuz_dl.settings import QobuzDLSettings
 
 WEB_URL = "https://play.qobuz.com/"
 ARTISTS_SELECTOR = "td.chartlist-artist > a"
@@ -36,7 +37,7 @@ logger = logging.getLogger(__name__)
 class QobuzDL:
     def __init__(
         self,
-        directory="Qobuz Downloads",
+        directory="QobuzDownloads",
         quality=6,
         embed_art=False,
         lucky_limit=1,
@@ -52,11 +53,12 @@ class QobuzDL:
         "{sampling_rate}kHz]",
         track_format="{tracknumber}. {tracktitle}",
         smart_discography=False,
-        # --- LYRICS & METADATA PARAMETERS ---
+# --- LYRICS & METADATA PARAMETERS ---
         fetch_lyrics=False,
         genius_token=None,
         force_english=True,
         no_credits=False, # <-- NEW
+        settings: QobuzDLSettings = None,
     ):
         self.directory = create_and_return_dir(directory)
         self.quality = quality
@@ -73,16 +75,16 @@ class QobuzDL:
         self.folder_format = folder_format
         self.track_format = track_format
         self.smart_discography = smart_discography
-        
-        # --- NEW ASSIGNMENTS ---
+# --- NEW ASSIGNMENTS ---
         self.fetch_lyrics = fetch_lyrics
         self.genius_token = genius_token
         self.force_english = force_english
         self.no_credits = no_credits # <-- NEW
+        self.settings = settings or QobuzDLSettings()
 
     def initialize_client(self, email, pwd, app_id, secrets):
-        # Pass the force_english flag to the API Client
-        self.client = qopy.Client(email, pwd, app_id, secrets, force_english=self.force_english)
+        # Pass the force_english flag to the API Client and user_auth_token from settings
+        self.client = qopy.Client(email, pwd, app_id, secrets, self.settings.user_auth_token, force_english=self.force_english)
         logger.info(f"{YELLOW}Set max quality: {QUALITIES[int(self.quality)]}\n")
 
     def get_tokens(self):
@@ -93,7 +95,7 @@ class QobuzDL:
         ]  
 
     def download_from_id(self, item_id, album=True, alt_path=None):
-        if handle_download_id(self.downloads_db, item_id, add_id=False):
+        if handle_download_id(self.downloads_db, item_id, add_id=False, quality=self.quality):
             logger.info(
                 f"{OFF}This release ID ({item_id}) was already downloaded "
                 "according to the local database.\nUse the '--no-db' flag "
@@ -113,13 +115,14 @@ class QobuzDL:
                 self.no_cover,
                 self.folder_format,
                 self.track_format,
-                # --- PASSING PARAMETERS TO DOWNLOADER ---
+# --- PASSING PARAMETERS TO DOWNLOADER ---
                 self.fetch_lyrics,
                 self.genius_token,
-                self.no_credits # <-- NEW PASS
+                self.no_credits, # <-- NEW PASS
+                self.settings,
+                self.downloads_db,
             )
             dloader.download_id_by_type(not album)
-            handle_download_id(self.downloads_db, item_id, add_id=True)
         except (requests.exceptions.RequestException, NonStreamable) as e:
             logger.error(f"{RED}Error getting release: {e}. Skipping...")
 

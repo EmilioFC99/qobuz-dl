@@ -4,34 +4,59 @@ import os
 import time
 import random
 import subprocess
+import re
 from typing import Tuple
+import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
 
 import requests
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from pathvalidate import sanitize_filename
+from pathvalidate import sanitize_filename, sanitize_filepath
 from tqdm import tqdm
 
 import qobuz_dl.metadata as metadata
 from qobuz_dl.color import OFF, GREEN, RED, YELLOW, CYAN
 from qobuz_dl.exceptions import NonStreamable
+from qobuz_dl.settings import QobuzDLSettings
+from qobuz_dl.utils import get_album_artist, clean_filename
+from qobuz_dl.db import handle_download_id
+from qobuz_dl.constants import DEFAULT_FOLDER, DEFAULT_TRACK, DEFAULT_MULTIPLE_DISC_TRACK, OK_MAX_CHARACTER_LENGTH
+
+def process_folder_format_with_subdirs(folder_format, attr_dict, path=None):
+    path_parts = folder_format.split('/')
+    cleaned_parts = []
+    for part in path_parts:
+        if part:
+            try:
+                formatted_part = part.format(**attr_dict)
+                cleaned_part = sanitize_filepath(clean_filename(formatted_part), replacement_text="_")
+                cleaned_parts.append(cleaned_part)
+            except KeyError as e:
+                logger.warning(f"{YELLOW}Format error ({e}), using original text.{OFF}")
+                cleaned_part = sanitize_filepath(clean_filename(part), replacement_text="_")
+                cleaned_parts.append(cleaned_part)
+    
+    final_path = os.path.join(*cleaned_parts) if cleaned_parts else ""
+    if path and final_path:
+        return os.path.join(path, final_path)
+    return final_path
 
 QL_DOWNGRADE = "FormatRestrictedByFormatAvailability"
 DEFAULT_FORMATS = {
     "MP3": [
-        "{artist} - {album} ({year}) [MP3]",
-        "{tracknumber}. {tracktitle}",
+        "{album_artist} - {album_title} ({year}) [MP3]",
+        "{track_number} - {track_title}",
     ],
     "Unknown": [
-        "{artist} - {album}",
-        "{tracknumber}. {tracktitle}",
+        "{album_artist} - {album_title}",
+        "{track_number} - {track_title}",
     ],
 }
 
-DEFAULT_FOLDER = "{artist} - {album} ({year}) [{bit_depth}B-{sampling_rate}kHz]"
-DEFAULT_TRACK = "{tracknumber}. {tracktitle}"
+EMB_COVER_NAME = "embed_cover.jpg"
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class Download:
@@ -50,7 +75,9 @@ class Download:
         track_format=None,
         fetch_lyrics: bool = False,
         genius_token: str = None,
-        no_credits: bool = False, # <-- NEW FLAG
+        no_credits: bool = False,
+        settings: QobuzDLSettings = None,
+        download_db=None,
     ):
         self.client = client
         self.item_id = item_id
@@ -63,14 +90,25 @@ class Download:
         self.no_cover = no_cover
         self.folder_format = folder_format or DEFAULT_FOLDER
         self.track_format = track_format or DEFAULT_TRACK
-        self.no_credits = no_credits # <-- NEW FLAG ASSIGNMENT
+        self.no_credits = no_credits 
 
-        # --- LYRICS ENGINE (Initialization) ---
         self.fetch_lyrics = fetch_lyrics
         if self.fetch_lyrics:
             self.lyrics_engine = LyricsEngine(genius_token)
 
+        self.settings = settings or QobuzDLSettings()
+        self.download_db = download_db
+        
+        self._original_folder_format = folder_format or DEFAULT_FOLDER
+        self._original_track_format = track_format or DEFAULT_TRACK
+        self._original_multiple_disc_track_format = settings.multiple_disc_track_format if settings else DEFAULT_MULTIPLE_DISC_TRACK
+
     def download_id_by_type(self, track=True):
+        self.folder_format = self._original_folder_format
+        self.track_format = self._original_track_format
+        if self.settings:
+            self.settings.multiple_disc_track_format = self._original_multiple_disc_track_format
+        
         if not track:
             self.download_release()
         else:
@@ -78,83 +116,117 @@ class Download:
 
     def download_release(self):
         count = 0
-        meta = self.client.get_album_meta(self.item_id)
+        album_meta = self.client.get_album_meta(self.item_id)
 
-        if not meta.get("streamable"):
+        if not album_meta.get("streamable"):
             raise NonStreamable("This release is not streamable")
 
         if self.albums_only and (
-            meta.get("release_type") != "album"
-            or meta.get("artist").get("name") == "Various Artists"
+            album_meta.get("release_type") != "album"
+            or album_meta.get("artist").get("name") == "Various Artists"
         ):
-            logger.info(f'{OFF}Ignoring Single/EP/VA: {meta.get("title", "n/a")}')
+            logger.info(f'{OFF}Ignoring Single/EP/VA: {album_meta.get("title", "n/a")}')
             return
 
-        album_title = _get_title(meta)
-        format_info = self._get_format(meta)
+        album_title = _get_title(album_meta)
+        url = album_meta.get("url", "")
+        release_date = album_meta.get("release_date_original", "")
+
+        format_info = self._get_format(album_meta)
         file_format, quality_met, bit_depth, sampling_rate = format_info
 
         if not self.downgrade_quality and not quality_met:
             logger.info(f"{OFF}Skipping {album_title} as it doesn't meet quality requirement")
             return
 
-        logger.info(f"\n{YELLOW}Downloading: {album_title}\nQuality: {file_format} ({bit_depth}/{sampling_rate})\n")
+        logger.info(
+            f"\n{YELLOW}Downloading: {album_title}\nQuality: {file_format}"
+            f" ({bit_depth}/{sampling_rate})\n{OFF}"
+        )
         
-        album_attr = self._get_album_attr(meta, album_title, file_format, bit_depth, sampling_rate)
-        folder_format, track_format = _clean_format_str(self.folder_format, self.track_format, file_format)
-        sanitized_title = sanitize_filename(folder_format.format(**album_attr))
-        dirn = os.path.join(self.path, sanitized_title)
+        album_attr = self._get_album_attr(
+            album_meta, album_title, file_format, bit_depth, sampling_rate
+        )
+        
+        self._determine_formats(album_meta=album_meta, album_attr=album_attr, tracks_meta=album_meta["tracks"]["items"],
+                                track_attr=None, is_track=False, file_format=file_format, settings=self.settings)
+        
+        dirn = process_folder_format_with_subdirs(self.folder_format, album_attr, self.path)
         os.makedirs(dirn, exist_ok=True)
 
-        # --- AUTOMATIC TRACKLIST CREATION ---
-        self._generate_tracklist(meta, dirn, album_title, file_format, bit_depth, sampling_rate)
+        self._generate_tracklist(album_meta, dirn, album_title, file_format, bit_depth, sampling_rate)
 
-        if self.no_cover:
+        if self.settings.no_cover:
             logger.info(f"{OFF}Skipping cover")
         else:
-            _get_extra(meta["image"]["large"], dirn, og_quality=self.cover_og_quality)
+            _get_extra(album_meta["image"]["large"], dirn, art_size=self.settings.saved_art_size)
 
-        if "goodies" in meta:
-            try:
-                _get_extra(meta["goodies"][0]["url"], dirn, "booklet.pdf")
-            except:  # noqa
-                pass
-                
-        media_numbers = [track["media_number"] for track in meta["tracks"]["items"]]
-        is_multiple = True if len([*{*media_numbers}]) > 1 else False
+        if self.settings.embed_art:
+            _get_extra(album_meta["image"]["large"], dirn, extra=EMB_COVER_NAME, art_size=self.settings.embedded_art_size)
+        else:
+            logger.info(f"{OFF}Skipping embedded art")
+
+        if "goodies" in album_meta:
+            _download_goodies(album_meta, dirn)
+            
+        media_count = album_meta.get("media_count", 1)
+        is_multiple = True if media_count > 1 else False
         
-        for i in meta["tracks"]["items"]:
-            parse = self.client.get_track_url(i["id"], fmt_id=self.quality)
-            if "sample" not in parse and parse["sampling_rate"]:
-                is_mp3 = True if int(self.quality) == 5 else False
+        with concurrent.futures.ThreadPoolExecutor(max_workers=int(self.settings.max_workers)) as executor:
+            futures = []
+            for i in album_meta["tracks"]["items"]:
+                parse = self.client.get_track_url(i["id"], fmt_id=self.quality)
+                if "sample" not in parse and parse["sampling_rate"]:
+                    is_mp3 = True if int(self.quality) == 5 else False
+                    futures.append(
+                        executor.submit(
+                            self._download_and_tag,
+                            dirn,
+                            count,
+                            parse,
+                            i,
+                            album_meta,
+                            False,
+                            is_mp3,
+                            i.get("media_number") if is_multiple else None,
+                        )
+                    )
+                else:
+                    logger.info(f"{OFF}Demo. Skipping")
+                count = count + 1
                 
-                try:
-                    disc_num = int(i.get("media_number", 1))
-                except (ValueError, TypeError):
-                    disc_num = 1
-
-                self._download_and_tag(
-                    dirn,
-                    count,
-                    parse,
-                    i,
-                    meta,
-                    False,
-                    is_mp3,
-                    disc_num if is_multiple else None,
-                )
-            else:
-                logger.info(f"{OFF}Demo. Skipping")
-            count = count + 1
-        logger.info(f"{GREEN}Completed")
+            # NEW WAIT SYSTEM: Allows Python to "listen" for CTRL+C
+            try:
+                for f in futures:
+                    while not f.done():
+                        time.sleep(0.2)
+                        
+                for f in futures:
+                    f.result()
+            except KeyboardInterrupt:
+                logger.error(f"\n{RED}[!] CTRL+C Detected: Forcing termination of ongoing downloads...{OFF}")
+                os._exit(1)
+            except Exception as e:
+                logger.error(f"{RED}[!] Thread Exception: {e}{OFF}")
+            
+        _clean_embed_art(dirn, self.settings)
+        
+        handle_download_id(db_path=self.download_db, item_id=self.item_id, add_id=True, media_type="album",
+                           quality=self.quality, file_format=file_format, quality_met=quality_met,
+                           bit_depth=bit_depth, sampling_rate=sampling_rate, saved_path=dirn,
+                           url=url, release_date=release_date)
+        logger.info(f"{GREEN}Completed{OFF}")
 
     def download_track(self):
         parse = self.client.get_track_url(self.item_id, self.quality)
         if "sample" not in parse and parse["sampling_rate"]:
-            meta = self.client.get_track_meta(self.item_id)
-            track_title = _get_title(meta)
-            logger.info(f"\n{YELLOW}Downloading: {track_title}")
-            format_info = self._get_format(meta, is_track_id=True, track_url_dict=parse)
+            track_meta = self.client.get_track_meta(self.item_id)
+            track_title = _get_title(track_meta)
+            artist = _safe_get(track_meta, "performer", "name")
+            logger.info(f"\n{YELLOW}Downloading: {artist} - {track_title}{OFF}")
+            url = track_meta.get("album", {}).get("url", "")
+            release_date = track_meta.get("release_date_original", "")
+            format_info = self._get_format(track_meta, is_track_id=True, track_url_dict=parse)
             file_format, quality_met, bit_depth, sampling_rate = format_info
 
             folder_format, track_format = _clean_format_str(self.folder_format, self.track_format, str(bit_depth))
@@ -163,21 +235,49 @@ class Download:
                 logger.info(f"{OFF}Skipping {track_title} as it doesn't meet quality requirement")
                 return
                 
-            track_attr = self._get_track_attr(meta, track_title, bit_depth, sampling_rate)
-            sanitized_title = sanitize_filename(folder_format.format(**track_attr))
-
-            dirn = os.path.join(self.path, sanitized_title)
+            track_attr = self._get_track_attr(
+                track_meta, track_title, bit_depth, sampling_rate, file_format
+            )
+            
+            self._determine_formats(album_meta=track_meta.get("album", {}), album_attr=None, tracks_meta=[track_meta],
+                                    track_attr=track_attr, is_track=True, file_format=file_format, settings=self.settings)
+            
+            dirn = process_folder_format_with_subdirs(self.folder_format, track_attr, self.path)
             os.makedirs(dirn, exist_ok=True)
-            if self.no_cover:
+
+            if self.settings.no_cover:
                 logger.info(f"{OFF}Skipping cover")
             else:
-                _get_extra(meta["album"]["image"]["large"], dirn, og_quality=self.cover_og_quality)
+                _get_extra(track_meta["album"]["image"]["large"], dirn, art_size=self.settings.saved_art_size)
+
+            if self.settings.embed_art:
+                _get_extra(track_meta["album"]["image"]["large"], dirn, extra=EMB_COVER_NAME,
+                           art_size=self.settings.embedded_art_size)
+            else:
+                logger.info(f"{OFF}Skipping embedded art")
                 
             is_mp3 = True if int(self.quality) == 5 else False
-            self._download_and_tag(dirn, 1, parse, meta, meta, True, is_mp3, self.embed_art)
+            
+            self._download_and_tag(
+                dirn,
+                1,
+                parse,
+                track_meta,
+                track_meta,
+                True,
+                is_mp3,
+                False,
+            )
+            
+            _clean_embed_art(dirn, self.settings)
+            
+            handle_download_id(db_path=self.download_db, item_id=self.item_id, add_id=True, media_type="track",
+                               quality=self.quality, file_format=file_format, quality_met=quality_met,
+                               bit_depth=bit_depth, sampling_rate=sampling_rate, saved_path=dirn,
+                               url=url, release_date=release_date)
         else:
             logger.info(f"{OFF}Demo. Skipping")
-        logger.info(f"{GREEN}Completed")
+        logger.info(f"{GREEN}Completed{OFF}")
 
     def _download_and_tag(
         self,
@@ -191,16 +291,21 @@ class Download:
         multiple=None,
     ):
         extension = ".mp3" if is_mp3 else ".flac"
-        
-        # 1. INTER-TRACK DELAY: Pause to reduce Akamai CDN throttling
         time.sleep(1)
 
+        try:
+            url = track_url_dict["url"]
+        except KeyError:
+            logger.info(f"{OFF}Track not available for download")
+            return
+
         total_discs = album_or_track_metadata.get('media_count', 1)
-        if multiple and total_discs > 1:
+        if multiple and total_discs > 1 and (not self.settings.multiple_disc_one_dir):
             try:
                 d_num = int(multiple) if not isinstance(multiple, bool) else 1
-            except: d_num = 1
-            root_dir = os.path.join(root_dir, f"Disc {d_num}")
+            except (ValueError, TypeError): 
+                d_num = 1
+            root_dir = os.path.join(root_dir, f"{self.settings.multiple_disc_prefix} {d_num:02}")
         
         if not os.path.exists(root_dir):
             os.makedirs(root_dir, exist_ok=True)
@@ -210,7 +315,6 @@ class Download:
         track_no = str(track_metadata.get('track_number', 0)).zfill(2)
         desc = f"{track_no}. {track_title}"
 
-        # --- CONTROLLED DOWNGRADE LOGIC + SEGMENT DOWNLOAD ---
         FALLBACK_TIERS = [27, 7, 6, 5]
         TIER_NAMES = {27: "24-bit/>96kHz", 7: "24-bit/96kHz", 6: "16-bit/44.1kHz (CD)", 5: "MP3 320kbps"}
         
@@ -227,53 +331,31 @@ class Download:
             if attempt_fmt != int(self.quality):
                 print(f"{YELLOW}[!] Automatic downgrade: Attempting to save in {TIER_NAMES[attempt_fmt]}...{OFF}")
 
+            def get_fresh_url(fmt=attempt_fmt, force_segments=False):
+                return self.client.get_track_url(track_metadata["id"], fmt_id=fmt, force_segments=force_segments)
+
             try:
-                # 1. FAST ATTEMPT (DIRECT URL)
-                fresh_track_dict = self.client.get_track_url(track_metadata["id"], fmt_id=attempt_fmt, force_segments=False)
+                fresh_track_dict = get_fresh_url(force_segments=False)
                 
                 if "url" in fresh_track_dict:
                     try:
                         tqdm_download(fresh_track_dict["url"], filename, desc)
                         success = True
                         final_fmt = attempt_fmt
-                        break # Done! Exit the loop.
+                        break
                     except Exception as e:
                         print(f"{YELLOW}[!] Akamai block detected. Activating fallback segmented download...{OFF}")
-                        # 2. SPECIAL INTERVENTION: Fast download failed, request segmented URL
-                        fresh_track_dict = self.client.get_track_url(track_metadata["id"], fmt_id=attempt_fmt, force_segments=True)
+                        fresh_track_dict = get_fresh_url(force_segments=True)
                 
-                # If we activated segments, proceed with armored download
                 if "url_template" in fresh_track_dict:
                     tqdm_download_segments(fresh_track_dict, filename, desc)
                     success = True
                     final_fmt = attempt_fmt
-                    break # Done! Exit the loop.
-                else:
+                    break
+                elif not success:
                     raise Exception("No valid format returned by the server.")
 
             except Exception as e:
-                # 3. LAST RESORT: If both direct and segments fail, the loop restarts by lowering quality
-                pass
-
-            def get_fresh_url(fmt=attempt_fmt):
-                return self.client.get_track_url(track_metadata["id"], fmt_id=fmt)
-
-            try:
-                fresh_track_dict = get_fresh_url()
-                
-                # HYBRID: Choice between direct URL (mp3/old servers) or URL Template (new segmented servers)
-                if "url" in fresh_track_dict:
-                    tqdm_download(fresh_track_dict["url"], filename, desc)
-                elif "url_template" in fresh_track_dict:
-                    tqdm_download_segments(fresh_track_dict, filename, desc)
-                else:
-                    raise Exception("Track format not supported by the server (Neither URL nor Template)")
-                
-                success = True
-                final_fmt = attempt_fmt
-                break 
-            except Exception as e:
-                # Failed? No problem, the loop moves to the lower quality
                 pass
 
         if not success:
@@ -284,9 +366,18 @@ class Download:
         is_mp3 = True if final_fmt == 5 else False
         extension = ".mp3" if is_mp3 else ".flac"
 
-        artist = _safe_get(track_metadata, "performer", "name")
-        filename_attr = self._get_filename_attr(artist, track_metadata, track_title)
-        formatted_path = sanitize_filename(self.track_format.format(**filename_attr))
+        track_artist = _safe_get(track_metadata, "performer", "name")
+        filename_attr = self._get_filename_attr(
+            track_artist,
+            track_metadata,
+            album_or_track_metadata.get("album", {}) if is_track else album_or_track_metadata
+        )
+
+        if multiple and self.settings.multiple_disc_one_dir:
+            formatted_path = sanitize_filename(clean_filename(self.settings.multiple_disc_track_format.format(**filename_attr)),
+                                               replacement_text="_")
+        else:
+            formatted_path = sanitize_filename(clean_filename(self.track_format.format(**filename_attr)), replacement_text="_")
         final_file = os.path.join(root_dir, formatted_path)[:250] + extension
 
         if os.path.exists(final_file):
@@ -305,14 +396,13 @@ class Download:
                 album_or_track_metadata,
                 is_track,
                 self.embed_art,
+                settings=self.settings,
             )
         except Exception as e:
             print(f"{RED}[!] Error tagging: {e}{OFF}")
 
-        # --- LYRICS ENGINE (Injection) ---
         if getattr(self, 'fetch_lyrics', False) and hasattr(self, 'lyrics_engine'):
-            
-            search_artist = artist if artist else _safe_get(album_or_track_metadata, "artist", "name", default="Unknown")
+            search_artist = _safe_get(track_metadata, "performer", "name") or _safe_get(album_or_track_metadata, "artist", "name", default="Unknown")
             search_album = _safe_get(track_metadata, "album", "title", default="")
             
             self.lyrics_engine.fetch_and_inject(
@@ -323,37 +413,85 @@ class Download:
             )
 
     @staticmethod
-    def _get_filename_attr(artist, track_metadata, track_title):
+    def _get_filename_attr(track_artist, track_metadata: dict, album_metadata: dict):
         return {
-            "artist": artist,
-            "albumartist": _safe_get(track_metadata, "album", "artist", "name", default=artist),
-            "bit_depth": track_metadata["maximum_bit_depth"],
-            "sampling_rate": track_metadata["maximum_sampling_rate"],
-            "tracktitle": track_title,
+            "artist": track_artist,
+            "albumartist": get_album_artist(album_metadata) if get_album_artist(album_metadata) else track_artist,
+            "tracktitle": _get_title(track_metadata),
+            "album_title":  _get_title(album_metadata),
+            "album_title_base": album_metadata.get("title"),
+            "album_artist": get_album_artist(album_metadata) if get_album_artist(album_metadata) else track_artist,
+            "track_id": track_metadata.get("id"),
+            "track_artist": track_artist,
+            "track_composer": _safe_get(track_metadata,"composer", "name"),
+            "track_number": f'{track_metadata.get("track_number", 0):02}',
+            "isrc": track_metadata.get("isrc"),
+            "bit_depth": track_metadata.get("maximum_bit_depth"),
+            "sampling_rate": track_metadata.get("maximum_sampling_rate"),
+            "track_title": _get_title(track_metadata),
+            "track_title_base": track_metadata.get("title"),
             "version": track_metadata.get("version"),
-            "tracknumber": f"{track_metadata['track_number']:02}",
+            "year": track_metadata.get("release_date_original").split("-")[0],
+            "disc_number": f'{track_metadata.get("media_number"):02}',
+            "release_date": track_metadata.get("release_date_original"),
         }
 
     @staticmethod
-    def _get_track_attr(meta, track_title, bit_depth, sampling_rate):
+    def _get_track_attr(meta, track_title, bit_depth, sampling_rate, file_format):
+        album_meta = meta.get("album", {})
         return {
-            "album": meta["album"]["title"],
-            "artist": meta["album"]["artist"]["name"],
+            "album": _get_title(album_meta),
+            "artist": get_album_artist(album_meta) if get_album_artist(album_meta) else _safe_get(meta, "performer", "name"),
             "tracktitle": track_title,
-            "year": meta["album"]["release_date_original"].split("-")[0],
+            "track_title": track_title,
+            "track_title_base": meta.get("title", ""),
+            "album_id": meta.get("id", ""),
+            "album_url": meta.get("url", ""),
+            "album_title": _get_title(album_meta),
+            "album_title_base": album_meta.get("title", ""),
+            "album_artist": get_album_artist(album_meta) if get_album_artist(album_meta) else _safe_get(meta, "performer", "name"),
+            "album_genre": meta.get("genre", {}).get("name", ""),
+            "album_composer": meta.get("composer", {}).get("name", ""),
+            "label": re.sub(r'\s*[\;\/]\s*|\s+\-\s+',' ／ ', ' '.join(meta.get("label",{}).get("name", "").split())).strip(),
+            "copyright": meta.get("copyright", ""),
+            "upc": meta.get("upc", ""),
+            "barcode": meta.get("upc", ""),
+            "release_date": meta.get("release_date_original", ""),
+            "year": meta.get("release_date_original", "").split("-")[0],
+            "media_type": meta.get("product_type", "").capitalize(),
+            "format": file_format,
             "bit_depth": bit_depth,
             "sampling_rate": sampling_rate,
+            "album_version": meta.get("version", ""),
+            "disc_count": meta.get("media_count", ""),
+            "track_count": meta.get("track_count", ""),
         }
 
     @staticmethod
     def _get_album_attr(meta, album_title, file_format, bit_depth, sampling_rate):
         return {
-            "artist": meta["artist"]["name"],
+            "artist": meta.get("artist", {}).get("name", ""),
             "album": album_title,
-            "year": meta["release_date_original"].split("-")[0],
+            "album_id": meta.get("id", ""),
+            "album_url": meta.get("url", ""),
+            "album_title": album_title,
+            "album_title_base": meta.get("title", ""),
+            "album_artist": get_album_artist(meta),
+            "album_genre": meta.get("genre", {}).get("name", ""),
+            "album_composer": meta.get("composer", {}).get("name", ""),
+            "label": re.sub(r'\s*[\;\/]\s*|\s+\-\s+',' ∕ ', ' '.join(meta.get("label",{}).get("name", "").split())).strip(),
+            "copyright": meta.get("copyright", ""),
+            "upc": meta.get("upc", ""),
+            "barcode": meta.get("upc", ""),
+            "release_date": meta.get("release_date_original", ""),
+            "year": meta.get("release_date_original", "").split("-")[0],
+            "media_type": meta.get("product_type", "").capitalize(),
             "format": file_format,
             "bit_depth": bit_depth,
             "sampling_rate": sampling_rate,
+            "album_version": meta.get("version", ""),
+            "disc_count": meta.get("media_count", 1),
+            "track_count": meta.get("track_count", 1),
         }
 
     def _get_format(self, item_dict, is_track_id=False, track_url_dict=None):
@@ -379,26 +517,76 @@ class Download:
         except (KeyError, requests.exceptions.HTTPError):
             return ("Unknown", quality_met, None, None)
 
-    # --- TRACKLIST ENGINE ---
+    def _determine_formats(self, album_meta, album_attr, tracks_meta, track_attr, is_track, file_format, settings: QobuzDLSettings):
+        format_combinations = [
+            (self._original_folder_format, self._original_track_format, self._original_multiple_disc_track_format),
+            (settings.fallback_folder_format, self._original_track_format, self._original_multiple_disc_track_format),
+            (settings.fallback_folder_format, DEFAULT_TRACK, DEFAULT_MULTIPLE_DISC_TRACK),
+            (DEFAULT_FOLDER, DEFAULT_TRACK, DEFAULT_MULTIPLE_DISC_TRACK)
+        ]
+
+        media_count = album_meta.get("media_count", 1)
+        is_multiple = True if media_count > 1 else False
+        extension = ".flac" if file_format.lower() == "flac" else ".mp3"
+
+        for folder_fmt, track_fmt, multi_disc_fmt in format_combinations:
+            folder_fmt, track_fmt = _clean_format_str(folder_fmt, track_fmt, file_format)
+            valid_combination = True
+            
+            try:
+                if is_track:
+                    root_dir = process_folder_format_with_subdirs(folder_fmt, track_attr)
+                else:
+                    root_dir = process_folder_format_with_subdirs(folder_fmt, album_attr)
+
+                for track_metadata in tracks_meta:
+                    track_artist = _safe_get(track_metadata, "performer", "name")
+                    filename_attr = self._get_filename_attr(track_artist, track_metadata, album_meta)
+
+                    curr_root_dir = root_dir
+                    if is_multiple and self.settings.multiple_disc_one_dir:
+                        track_path = sanitize_filename(clean_filename(multi_disc_fmt.format(**filename_attr)), replacement_text="_")
+                    else:
+                        if is_multiple and not self.settings.multiple_disc_one_dir:
+                            disc_dir = f"{self.settings.multiple_disc_prefix} {track_metadata['media_number']:02}"
+                            curr_root_dir = os.path.join(root_dir, disc_dir)
+                        
+                        track_path = sanitize_filename(clean_filename(track_fmt.format(**filename_attr)), replacement_text="_")
+
+                    final_path = os.path.join(curr_root_dir, track_path + extension)
+                    
+                    if len(final_path) > OK_MAX_CHARACTER_LENGTH:
+                        valid_combination = False
+                        break
+            except (KeyError, ValueError):
+                valid_combination = False
+                continue
+
+            if valid_combination:
+                self.folder_format = folder_fmt
+                self.track_format = track_fmt
+                if self.settings:
+                    self.settings.multiple_disc_track_format = multi_disc_fmt
+                return
+
+        self.folder_format = DEFAULT_FOLDER
+        self.track_format = DEFAULT_TRACK
+
     def _generate_tracklist(self, meta, dirn, album_title, file_format, bit_depth, sampling_rate):
         import re
         import textwrap
         
-        # --- NO CREDITS FLAG CHECK ---
         if self.no_credits:
             return
         
-        # Dynamic filename
         safe_title = sanitize_filename(album_title)
         tracklist_path = os.path.join(dirn, f"{safe_title} - Tracklist.txt")
         
-        # If it already exists, skip to speed up
         if os.path.isfile(tracklist_path):
             return
-
+            
         print(f"{CYAN}[+] Generating Digital Booklet...{OFF}")
         
-        # Extract general metadata
         artist_name = _safe_get(meta, "artist", "name", default="Unknown Artist")
         composer = _safe_get(meta, "composer", "name", default="N/A")
         label = _safe_get(meta, "label", "name", default="Independent")
@@ -407,25 +595,22 @@ class Download:
         
         try:
             with open(tracklist_path, "w", encoding="utf-8") as f:
-                # Extended header
                 f.write("=" * 70 + "\n")
-                f.write(f"ALBUM     : {album_title}\n")
+                f.write(f"ALBUM      : {album_title}\n")
                 if composer != "N/A":
-                    f.write(f"COMPOSER  : {composer}\n")
-                f.write(f"MAIN ART. : {artist_name}\n")
-                f.write(f"LABEL     : {label}\n")
-                f.write(f"GENRE     : {genre}\n")
-                f.write(f"RELEASE   : {release_date}\n")
-                f.write(f"QUALITY   : {file_format} ({bit_depth}-Bit / {sampling_rate} kHz)\n")
+                    f.write(f"COMPOSER   : {composer}\n")
+                f.write(f"MAIN ART.  : {artist_name}\n")
+                f.write(f"LABEL      : {label}\n")
+                f.write(f"GENRE      : {genre}\n")
+                f.write(f"RELEASE    : {release_date}\n")
+                f.write(f"QUALITY    : {file_format} ({bit_depth}-Bit / {sampling_rate} kHz)\n")
                 f.write("=" * 70 + "\n\n")
-
+                
                 tracks = meta.get("tracks", {}).get("items", [])
                 total_discs = max((track.get("media_number", 1) for track in tracks), default=1)
                 current_disc = None 
                 
-                # Loop through each track
                 for track in tracks:
-                    # Multi-Disc Logic
                     disc_num = track.get("media_number", 1)
                     if total_discs > 1 and disc_num != current_disc:
                         if current_disc is not None:
@@ -433,46 +618,37 @@ class Download:
                         f.write(f"--- DISC {disc_num} ---\n\n")
                         current_disc = disc_num
 
-                    # Basic track data
                     t_num = str(track.get("track_number", 0)).zfill(2)
                     t_title = track.get("title", "Unknown Title")
                     
-                    # Duration/Timing
                     duration = int(track.get("duration", 0))
                     mins, secs = divmod(duration, 60)
                     dur_str = f"[{mins:02}:{secs:02}]"
                     
-                    # 1. Print: Number, Title and Duration right-aligned
                     track_header = f"{t_num}. {t_title}"
                     f.write(f"{track_header:<60} {dur_str}\n")
                     
-                    # 2. Print: FULL CREDITS (if present)
                     performers_raw = track.get("performers", "")
                     if performers_raw:
-                        # Qobuz sometimes uses newlines (\n), sometimes " - ". We catch both!
                         perf_lines = re.split(r'\r?\n|\s+-\s+', str(performers_raw))
                         for line in perf_lines:
                             if line.strip():
                                 f.write(f"    * {line.strip()}\n")
                     else:
-                        # Fallback if there are no detailed credits
                         t_artist = _safe_get(track, "performer", "name", default=artist_name)
                         f.write(f"    {t_artist}\n")
                     
-                    f.write("\n") # Blank line before the next track
+                    f.write("\n")
                 
-                # 3. Print: REVIEW at the end of the file
                 description = meta.get("description")
                 if description:
                     f.write("\n" + "=" * 70 + "\n")
                     f.write("ALBUM REVIEW / NOTES\n")
                     f.write("=" * 70 + "\n\n")
                     
-                    # HTML cleanup (Qobuz often uses tags like <br> or <i> in reviews)
                     clean_desc = re.sub(r'<br\s*/?>', '\n', str(description))
                     clean_desc = re.sub(r'<[^<]+>', '', clean_desc)
                     
-                    # Wrap text at 70 characters so it doesn't scroll infinitely to the right
                     paragraphs = clean_desc.split('\n')
                     for p in paragraphs:
                         if p.strip():
@@ -484,12 +660,17 @@ class Download:
             print(f"{RED}[!] Error creating booklet: {e}{OFF}")
 
 
+def _get_description(item: dict, track_title, multiple=None):
+    downloading_title = f"{track_title} [{item.get('bit_depth', '')}/{item.get('sampling_rate', '')}]"
+    if multiple:
+        downloading_title = f"[CD {multiple}] {downloading_title}"
+    return downloading_title
+
 def tqdm_download(url_or_callable, fname, track_name):
     G = "\033[92m"
     Y = "\033[93m"
-    R = "\033[91m"
     C = "\033[96m"
-    O = "\033[0m" 
+    O = "\033[0m"
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -545,7 +726,7 @@ def tqdm_download(url_or_callable, fname, track_name):
                 print(f"{G}  L Completed: {track_name}{O}")
                 return 
 
-        except Exception as e:
+        except Exception:
             if attempt < max_retries - 1:
                 wait = backoff_delays[attempt]
                 print(f"\n{Y}[!] Server block. Retrying in {wait}s ({attempt+1}/{max_retries})...{O}")
@@ -560,18 +741,30 @@ def tqdm_download(url_or_callable, fname, track_name):
         raise Exception("Incomplete download")
 
 def _get_title(item_dict):
-    album_title = item_dict["title"]
+    item_title = item_dict.get("title")
     version = item_dict.get("version")
     if version:
-        album_title = f"{album_title} ({version})" if version.lower() not in album_title.lower() else album_title
-    return album_title
+        item_title = (
+            f"{item_title} ({version})"
+            if version.lower() not in item_title.lower()
+            else item_title
+        )
+    return item_title
 
-def _get_extra(item, dirn, extra="cover.jpg", og_quality=False):
+
+def _get_extra(item, dirn, extra="cover.jpg", art_size=None, og_quality=False):
     extra_file = os.path.join(dirn, extra)
     if os.path.isfile(extra_file):
         logger.info(f"{OFF}{extra} was already downloaded")
         return
-    tqdm_download(item.replace("_600.", "_org.") if og_quality else item, extra_file, extra)
+        
+    if og_quality:
+        art_size = "org"
+
+    if art_size in ["50", "100", "150", "300", "600", "max", "org"]:
+        item = item.replace("_600.", f"_{art_size}.")
+        
+    tqdm_download(item, extra_file, extra)
 
 def _clean_format_str(folder: str, track: str, file_format: str) -> Tuple[str, str]:
     final = []
@@ -598,7 +791,6 @@ def _safe_get(d: dict, *keys, default=None):
             curr = res
     return res
 
-# ---------------- CRYPTOGRAPHIC AND REMUXING ENGINE ----------------
 def tqdm_download_segments(track_url_dict, fname, desc):
     G = "\033[92m"
     O = "\033[0m" 
@@ -608,7 +800,6 @@ def tqdm_download_segments(track_url_dict, fname, desc):
     url_template = track_url_dict["url_template"]
     raw_key = track_url_dict["raw_key"]
 
-    # 1. ULTRA-FAST MB CALCULATION (Multithreaded)
     def get_seg_size(seg_num):
         url = url_template.replace("$SEGMENT$", str(seg_num))
         try:
@@ -617,26 +808,29 @@ def tqdm_download_segments(track_url_dict, fname, desc):
         except:
             return 0
 
-    # We use 8 workers just to calculate the total size in half a second
     total_size = 0
     with ThreadPoolExecutor(max_workers=8) as ex:
-        total_size = sum(ex.map(get_seg_size, range(n_segments + 1)))
+        futures_size = [ex.submit(get_seg_size, i) for i in range(n_segments + 1)]
+        try:
+            for f in futures_size:
+                while not f.done():
+                    time.sleep(0.1)
+                total_size += f.result()
+        except KeyboardInterrupt:
+            os._exit(1)
 
-    # 2. FLUID STREAM DOWNLOAD FUNCTION
     def fetch_segment_fluid(seg_num):
         url = url_template.replace("$SEGMENT$", str(seg_num))
         r = requests.get(url, stream=True, timeout=15)
         r.raise_for_status()
         seg_data = bytearray()
         
-        # Update the bar fluidly every 64KB downloaded
         for chunk in r.iter_content(chunk_size=65536):
             seg_data.extend(chunk)
             bar.update(len(chunk)) 
         return seg_data
 
     try:
-        # Recreate the beautiful progress bar in Megabytes
         with open(tmp_fname, "wb") as file, tqdm(
             total=total_size,
             unit="iB",
@@ -646,7 +840,6 @@ def tqdm_download_segments(track_url_dict, fname, desc):
             bar_format="{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]",
         ) as bar:
 
-            # PHASE 1: Download only the first 2 segments sequentially to steal the cryptographic UUID
             segment_uuid = None
             for i in range(2):
                 seg_data = fetch_segment_fluid(i)
@@ -658,14 +851,19 @@ def tqdm_download_segments(track_url_dict, fname, desc):
                 decrypted = _decrypt_qobuz_segment(seg_data, raw_key, segment_uuid)
                 file.write(decrypted)
 
-            # PHASE 2: THE TURBO. 8 parallel connections updating the bar together!
             if n_segments >= 2:
                 with ThreadPoolExecutor(max_workers=8) as executor:
-                    for seg_data in executor.map(fetch_segment_fluid, range(2, n_segments + 1)):
-                        decrypted = _decrypt_qobuz_segment(seg_data, raw_key, segment_uuid)
-                        file.write(decrypted)
+                    futures_seg = [executor.submit(fetch_segment_fluid, i) for i in range(2, n_segments + 1)]
+                    try:
+                        for f in futures_seg:
+                            while not f.done():
+                                time.sleep(0.2)
+                            seg_data = f.result()
+                            decrypted = _decrypt_qobuz_segment(seg_data, raw_key, segment_uuid)
+                            file.write(decrypted)
+                    except KeyboardInterrupt:
+                        os._exit(1)
 
-        # PHASE 3: Final remuxing
         print(f" {G}  > Assembling the final FLAC file...{O}")
         remux = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", tmp_fname, "-c:a", "copy", "-f", "flac", fname], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
         if remux.returncode != 0:
@@ -736,3 +934,24 @@ def _decrypt_qobuz_segment(segment_data, raw_key, segment_uuid):
                 pointer += counter_len
         pos += size
     return bytes(buf)
+
+def _download_goodies(album_meta, dirn):
+    try:
+        for goody in album_meta.get("goodies", []):
+            if not goody.get("url"):
+                logger.warning("No URL found for the goody, skipping.")
+                continue
+            goody_name = sanitize_filename(clean_filename(f'{album_meta.get("title")} ({goody.get("id")}).pdf'))
+            _get_extra(goody.get("url"), dirn, extra=goody_name)
+    except:
+        logger.error(f"{RED}Error downloading goodies", exc_info=True)
+
+
+def _clean_embed_art(dirn, settings=None):
+    embed_file = os.path.join(dirn, EMB_COVER_NAME)
+    if os.path.exists(embed_file):
+        try:
+            time.sleep(0.5) # Ensures metadata taggers release the file on Windows
+            os.remove(embed_file)
+        except Exception:
+            pass

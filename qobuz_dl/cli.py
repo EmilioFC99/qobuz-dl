@@ -4,11 +4,15 @@ import glob
 import os
 import sys
 import getpass
+import hashlib
+import signal
 
+from qobuz_dl.bundle import Bundle
 from qobuz_dl.color import GREEN, RED, YELLOW, OFF
 from qobuz_dl.commands import qobuz_dl_args
 from qobuz_dl.core import QobuzDL
 from qobuz_dl.downloader import DEFAULT_FOLDER, DEFAULT_TRACK
+from qobuz_dl.settings import QobuzDLSettings
 
 logging.basicConfig(
     level=logging.INFO,
@@ -29,7 +33,6 @@ def _reset_config(config_file):
     logging.info(f"\n{YELLOW}--- QOBUZ-DL CONFIGURATION WIZARD (2026 Update) ---{OFF}")
     config = configparser.ConfigParser()
     
-    # Create specific [qobuz] section to avoid 'corrupted' errors
     config["qobuz"] = {}
     
     email = input("Enter your Qobuz email:\n- ").strip()
@@ -37,14 +40,16 @@ def _reset_config(config_file):
     
     print(f"{YELLOW}[!] If you prefer to use the browser Auth Token, leave the password blank.{OFF}")
     password = getpass.getpass("Enter your password (it will be hidden):\n- ").strip()
-    config["qobuz"]["password"] = password
     
     auth_token = ""
-    if not password:
+    if password:
+        config["qobuz"]["password"] = hashlib.md5(password.encode("utf-8")).hexdigest()
+    else:
+        config["qobuz"]["password"] = ""
         auth_token = input("Paste your browser user_auth_token here:\n- ").strip()
+        
     config["qobuz"]["auth_token"] = auth_token
 
-    # --- NEW: LYRICS CONFIGURATION ---
     fetch_lyrics = input("Do you want to automatically download and inject lyrics? (yes/no) [Default: yes]\n- ").strip().lower()
     config["qobuz"]["fetch_lyrics"] = "false" if fetch_lyrics in ['no', 'n', 'false'] else "true"
     
@@ -53,7 +58,6 @@ def _reset_config(config_file):
         print(f"{YELLOW}[!] To use Genius as a fallback, enter your API Token. Leave blank to only use LRCLIB (Free/No API).{OFF}")
         genius_token = input("Genius API Token:\n- ").strip()
     config["qobuz"]["genius_token"] = genius_token
-    # -----------------------------------
 
     config["qobuz"]["default_folder"] = (
         input("Download folder (press Enter for '.' current directory)\n- ")
@@ -68,16 +72,53 @@ def _reset_config(config_file):
     config["qobuz"]["no_m3u"] = "false"
     config["qobuz"]["albums_only"] = "false"
     config["qobuz"]["no_fallback"] = "false"
-    config["qobuz"]["og_cover"] = "true"
+    config["qobuz"]["og_cover"] = "true" 
     config["qobuz"]["embed_art"] = "true"
     config["qobuz"]["no_cover"] = "false"
     config["qobuz"]["no_database"] = "false"
-    config["qobuz"]["app_id"] = "470123565"
-    config["qobuz"]["secrets"] = "96924823297a47568581f3d537f14b62"
+
+    logging.info(f"{YELLOW}Getting tokens. Please wait...{OFF}")
+    bundle = Bundle()
+    config["qobuz"]["app_id"] = str(bundle.get_app_id())
+    config["qobuz"]["secrets"] = ",".join(bundle.get_secrets().values())
+
     config["qobuz"]["folder_format"] = "{artist} - {album}"
     config["qobuz"]["track_format"] = "{tracknumber} {tracktitle}"
+    config["qobuz"]["fallback_folder_format"] = "{artist} - {album}"
     config["qobuz"]["smart_discography"] = "false"
 
+    config["qobuz"]["no_album_artist_tag"] = "false"
+    config["qobuz"]["no_album_title_tag"] = "false"
+    config["qobuz"]["no_track_artist_tag"] = "false"
+    config["qobuz"]["no_track_title_tag"] = "false"
+    config["qobuz"]["no_release_date_tag"] = "false"
+    config["qobuz"]["no_media_type_tag"] = "false"
+    config["qobuz"]["no_genre_tag"] = "false"
+    config["qobuz"]["no_track_number_tag"] = "false"
+    config["qobuz"]["no_track_total_tag"] = "false"
+    config["qobuz"]["no_disc_number_tag"] = "false"
+    config["qobuz"]["no_disc_total_tag"] = "false"
+    config["qobuz"]["no_composer_tag"] = "false"
+    
+    config["qobuz"]["no_explicit_tag"] = "false"
+    config["qobuz"]["no_copyright_tag"] = "false"
+    config["qobuz"]["no_label_tag"] = "false"
+    
+    config["qobuz"]["no_upc_tag"] = "false"
+    config["qobuz"]["no_isrc_tag"] = "false"
+    
+    config["qobuz"]["fix_md5s"] = "false"
+    
+    config["qobuz"]["embedded_art_size"] = "600"
+    config["qobuz"]["saved_art_size"] = "org"
+    
+    config["qobuz"]["multiple_disc_prefix"] = "CD"
+    config["qobuz"]["multiple_disc_one_dir"] = "false"
+    config["qobuz"]["multiple_disc_track_format"] = "{disc_number}.{track_number} - {track_title}"
+    
+    config["qobuz"]["max_workers"] = "3"
+    config["qobuz"]["user_auth_token"] = ""
+    
     with open(config_file, "w") as configfile:
         config.write(configfile)
         
@@ -94,6 +135,19 @@ def _remove_leftovers(directory):
 
 
 def _handle_commands(qobuz, arguments):
+    # --- NEW CTRL+C HANDLER (Immediate Thread Kill) ---
+    def sigint_handler(sig, frame):
+        print(f"\n\n\033[91m[!] Download forcibly interrupted by the user.\033[0m")
+        print(f"\033[93mPartially downloaded files will be ignored or overwritten on the next run.\033[0m")
+        try:
+            _remove_leftovers(qobuz.directory)
+        except Exception:
+            pass
+        os._exit(1) # <- This kills the entire process instantly!
+        
+    signal.signal(signal.SIGINT, sigint_handler)
+    # -------------------------------------------------------------
+
     try:
         if arguments.command == "dl":
             qobuz.download_list_of_urls(arguments.SOURCE)
@@ -107,10 +161,7 @@ def _handle_commands(qobuz, arguments):
             qobuz.interactive()
 
     except KeyboardInterrupt:
-        logging.info(
-            f"\n{RED}Interrupted by user.{OFF}\n{YELLOW}Already downloaded files will be skipped on the next run.{OFF}"
-        )
-
+        pass
     finally:
         _remove_leftovers(qobuz.directory)
 
@@ -130,8 +181,6 @@ def main():
     config = configparser.ConfigParser()
     config.read(CONFIG_FILE)
 
-    # TICKET FIX: Reading from [qobuz] section instead of [DEFAULT]
-    # We use .get() with fallback to prevent crashes if rows are missing
     try:
         section = "qobuz" if config.has_section("qobuz") else "DEFAULT"
         
@@ -139,7 +188,6 @@ def main():
         token = config.get(section, "auth_token", fallback="")
         password = token if token else config.get(section, "password")
         
-        # --- READ LYRICS SETTINGS ---
         fetch_lyrics = config.getboolean(section, "fetch_lyrics", fallback=False)
         genius_token = config.get(section, "genius_token", fallback=None)
         
@@ -166,13 +214,11 @@ def main():
             default_quality, default_limit, default_folder
         ).parse_args()
         
-        # --- OVERRIDE VIA CLI ARGS ---
         if getattr(arguments, 'no_lyrics', False):
             fetch_lyrics = False
             
         force_english = not getattr(arguments, 'native_lang', False)
-        no_credits_flag = getattr(arguments, 'no_credits', False) # <-- NEW FLAG CAPTURE
-        # -----------------------------
+        no_credits_flag = getattr(arguments, 'no_credits', False) 
         
     except (configparser.Error, KeyError) as error:
         arguments = qobuz_dl_args().parse_args()
@@ -198,9 +244,9 @@ def main():
             pass
         sys.exit(f"{GREEN}Database has been purged.{OFF}")
 
-    # FIX: Resolved hardcoded path issue to support cross-platform usage
     directory_to_use = arguments.directory if hasattr(arguments, 'directory') and arguments.directory else default_folder
 
+    settings = QobuzDLSettings.from_arguments_configparser(arguments, config)
     qobuz = QobuzDL(
         directory_to_use,
         arguments.quality,
@@ -214,11 +260,11 @@ def main():
         folder_format=arguments.folder_format or folder_format,
         track_format=arguments.track_format or track_format,
         smart_discography=arguments.smart_discography or smart_discography,
-        # --- ACTIVATE LYRICS ENGINE & METADATA OVERRIDES ---
         fetch_lyrics=fetch_lyrics,
         genius_token=genius_token,
         force_english=force_english,
-        no_credits=no_credits_flag # <-- NEW PARAMETER PASSED TO CORE
+        no_credits=no_credits_flag,
+        settings=settings,
     )
     
     qobuz.initialize_client(email, password, app_id, secrets)
