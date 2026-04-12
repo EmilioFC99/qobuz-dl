@@ -38,16 +38,12 @@ def _reset_config(config_file):
     email = input("Enter your Qobuz email:\n- ").strip()
     config["qobuz"]["email"] = email
     
-    print(f"{YELLOW}[!] If you prefer to use the browser Auth Token, leave the password blank.{OFF}")
-    password = getpass.getpass("Enter your password (it will be hidden):\n- ").strip()
+    print(f"\n{YELLOW}[!] ATTENTION: Qobuz API blocked direct password login for 3rd party apps.{OFF}")
+    print(f"{YELLOW}[!] You must use your browser Auth Token (F12 > Storage > Local Storage > user_auth_token).{OFF}")
     
-    auth_token = ""
-    if password:
-        config["qobuz"]["password"] = hashlib.md5(password.encode("utf-8")).hexdigest()
-    else:
-        config["qobuz"]["password"] = ""
-        auth_token = input("Paste your browser user_auth_token here:\n- ").strip()
-        
+    auth_token = input("Paste your browser user_auth_token here:\n- ").strip()
+    
+    config["qobuz"]["password"] = ""
     config["qobuz"]["auth_token"] = auth_token
 
     fetch_lyrics = input("Do you want to automatically download and inject lyrics? (yes/no) [Default: yes]\n- ").strip().lower()
