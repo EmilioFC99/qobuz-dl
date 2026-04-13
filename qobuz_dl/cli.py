@@ -247,6 +247,13 @@ def main():
 
     directory_to_use = arguments.directory if hasattr(arguments, 'directory') and arguments.directory else default_folder
 
+    # --- WINDOWS LONG PATH BYPASS ---
+    if os.name == "nt":
+        directory_to_use = os.path.abspath(directory_to_use)
+        if not directory_to_use.startswith("\\\\?\\"):
+            directory_to_use = "\\\\?\\" + directory_to_use
+    # --------------------------------
+
     settings = QobuzDLSettings.from_arguments_configparser(arguments, config)
     qobuz = QobuzDL(
         directory_to_use,
