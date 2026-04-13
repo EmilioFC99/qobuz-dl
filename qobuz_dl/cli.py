@@ -55,13 +55,20 @@ def _reset_config(config_file):
         genius_token = input("Genius API Token:\n- ").strip()
     config["qobuz"]["genius_token"] = genius_token
 
-    config["qobuz"]["default_folder"] = (
-        input("Download folder (press Enter for '.' current directory)\n- ")
-        or "."
+    config["qobuz"]["directory"] = (
+        input("Download folder (press Enter for 'Qobuz Downloads')\n- ")
+        or "Qobuz Downloads"
     )
-    cconfig["qobuz"]["default_folder"] = (
-        input(f"Download folder (press Enter for '{DEFAULT_FOLDER}')\n- ")
+    
+    # FIX: Use correct prompt and key for folder formatting
+    config["qobuz"]["folder_format"] = (
+        input(f"Folder format (press Enter for '{DEFAULT_FOLDER}')\n- ")
         or DEFAULT_FOLDER
+    )
+    
+    config["qobuz"]["default_quality"] = (
+        input("Download quality (5:MP3, 6:FLAC, 7:24b<96, 27:24b>96) [Default 27]\n- ")
+        or "27"
     )
     
     config["qobuz"]["default_limit"] = "500"
@@ -78,7 +85,7 @@ def _reset_config(config_file):
     config["qobuz"]["app_id"] = str(bundle.get_app_id())
     config["qobuz"]["secrets"] = ",".join(bundle.get_secrets().values())
 
-    config["qobuz"]["folder_format"] = "{artist} - {album}"
+    # Removed old folder_format override that caused custom format resets
     config["qobuz"]["track_format"] = "{tracknumber} {tracktitle}"
     config["qobuz"]["fallback_folder_format"] = "{artist} - {album}"
     config["qobuz"]["smart_discography"] = "false"
@@ -131,7 +138,6 @@ def _remove_leftovers(directory):
 
 
 def _handle_commands(qobuz, arguments):
-    # --- NEW CTRL+C HANDLER (Immediate Thread Kill) ---
     def sigint_handler(sig, frame):
         print(f"\n\n\033[91m[!] Download forcibly interrupted by the user.\033[0m")
         print(f"\033[93mPartially downloaded files will be ignored or overwritten on the next run.\033[0m")
@@ -139,10 +145,9 @@ def _handle_commands(qobuz, arguments):
             _remove_leftovers(qobuz.directory)
         except Exception:
             pass
-        os._exit(1) # <- This kills the entire process instantly!
+        os._exit(1)
         
     signal.signal(signal.SIGINT, sigint_handler)
-    # -------------------------------------------------------------
 
     try:
         if arguments.command == "dl":
@@ -187,7 +192,7 @@ def main():
         fetch_lyrics = config.getboolean(section, "fetch_lyrics", fallback=False)
         genius_token = config.get(section, "genius_token", fallback=None)
         
-        default_folder = config.get(section, "default_folder")
+        default_folder = config.get(section, "directory", fallback="Qobuz Downloads")
         default_limit = config.get(section, "default_limit")
         default_quality = config.get(section, "default_quality")
         
