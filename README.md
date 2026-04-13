@@ -20,7 +20,9 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
 
 ### 📁 Advanced Formatting & Storage
 * **Powerful Variables:** `folder_format` and `track_format` now support dozens of new variables (e.g., `{isrc}`, `{barcode}`, `{label}`, `{track_composer}`).
-* **Multi-Disc Routing:** Store multiple disc releases in one single directory or split them using customizable prefixes (e.g., `CD 01`).
+* **Multi-Disc Routing:** Store multiple disc releases in one single directory or split them using customizable prefixes (e.g., `CD 01`). By default, multi-disc releases are neatly split into separate sub-directories (e.g., `Disc 01`, `Disc 02`). You can control this behavior via your configuration file (`config.ini` or `qobuz_dl/settings.py`):
+  * **Merge into a single folder:** Change `multiple_disc_one_dir = False` ➡️ `True`.
+  * **Change the sub-folder name:** Change `multiple_disc_prefix = Disc` ➡️ `CD` (or your preferred naming convention).
 * **Cover Art Sizing:** Granular control over the resolution of embedded artwork vs. locally saved artwork (e.g., `600`, `max`, `org`).
 * **Regional Bypass:** Forces English language for metadata, reviews, and digital booklets regardless of your account's native region (can be toggled off).
 
@@ -31,7 +33,7 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
 #### Installation
 Clone this repository and install the required dependencies:
 
-    git clone [https://github.com/Sei969/qobuz-dl.git](https://github.com/Sei969/qobuz-dl.git)
+    git clone https://github.com/Sei969/qobuz-dl.git
     cd qobuz-dl
     pip3 install -r requirements.txt
 
@@ -64,15 +66,15 @@ To ensure maximum compatibility and avoid namespace conflicts, it is recommended
 
 **Standard Hi-Res Download:**
 
-    python -m qobuz_dl dl [https://play.qobuz.com/album/qxjbxh1dc3xyb](https://play.qobuz.com/album/qxjbxh1dc3xyb) -q 27
+    python -m qobuz_dl dl https://play.qobuz.com/album/qxjbxh1dc3xyb -q 27
 
 **Ultimate Customization (No lyrics, no booklets, native language metadata):**
 
-    python -m qobuz_dl dl [https://play.qobuz.com/album/qxjbxh1dc3xyb](https://play.qobuz.com/album/qxjbxh1dc3xyb) --no-lyrics --no-credits --native-lang
+    python -m qobuz_dl dl https://play.qobuz.com/album/qxjbxh1dc3xyb --no-lyrics --no-credits --native-lang
 
 **Advanced Discography Routing (Save multiple discs in one folder, fix FLAC MD5):**
 
-    python -m qobuz_dl dl [https://play.qobuz.com/artist/2038380](https://play.qobuz.com/artist/2038380) --multiple-disc-one-dir --fix-md5s
+    python -m qobuz_dl dl https://play.qobuz.com/artist/2038380 --multiple-disc-one-dir --fix-md5s
 
 **Interactive Mode:**
 
