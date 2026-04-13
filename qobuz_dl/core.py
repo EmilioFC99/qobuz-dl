@@ -21,6 +21,15 @@ from qobuz_dl.utils import (
 )
 from qobuz_dl.settings import QobuzDLSettings
 
+# --- UI TABLE FORMATTING HELPER ---
+def _align_text(text, width):
+    """Truncates text with '...' if too long, or pads with spaces if too short."""
+    text = str(text)
+    if len(text) > width:
+        return text[:width - 3] + "..."
+    return text.ljust(width)
+# ----------------------------------
+
 WEB_URL = "https://play.qobuz.com/"
 ARTISTS_SELECTOR = "td.chartlist-artist > a"
 TITLE_SELECTOR = "td.chartlist-name > a"
@@ -53,11 +62,10 @@ class QobuzDL:
         "{sampling_rate}kHz]",
         track_format="{tracknumber}. {tracktitle}",
         smart_discography=False,
-# --- LYRICS & METADATA PARAMETERS ---
         fetch_lyrics=False,
         genius_token=None,
         force_english=True,
-        no_credits=False, # <-- NEW
+        no_credits=False,
         settings: QobuzDLSettings = None,
     ):
         self.directory = create_and_return_dir(directory)
@@ -75,15 +83,13 @@ class QobuzDL:
         self.folder_format = folder_format
         self.track_format = track_format
         self.smart_discography = smart_discography
-# --- NEW ASSIGNMENTS ---
         self.fetch_lyrics = fetch_lyrics
         self.genius_token = genius_token
         self.force_english = force_english
-        self.no_credits = no_credits # <-- NEW
+        self.no_credits = no_credits
         self.settings = settings or QobuzDLSettings()
 
     def initialize_client(self, email, pwd, app_id, secrets):
-        # Pass the force_english flag to the API Client and user_auth_token from settings
         self.client = qopy.Client(email, pwd, app_id, secrets, self.settings.user_auth_token, force_english=self.force_english)
         logger.info(f"{YELLOW}Set max quality: {QUALITIES[int(self.quality)]}\n")
 
@@ -115,10 +121,9 @@ class QobuzDL:
                 self.no_cover,
                 self.folder_format,
                 self.track_format,
-# --- PASSING PARAMETERS TO DOWNLOADER ---
                 self.fetch_lyrics,
                 self.genius_token,
-                self.no_credits, # <-- NEW PASS
+                self.no_credits, 
                 self.settings,
                 self.downloads_db,
             )
@@ -163,7 +168,6 @@ class QobuzDL:
             )
 
             if self.smart_discography and url_type == "artist":
-                # change `save_space` and `skip_extras` for customization
                 items = smart_discography_filter(
                     content,
                     save_space=True,
@@ -234,7 +238,7 @@ class QobuzDL:
 
     def search_by_type(self, query, item_type, limit=10, lucky=False):
         if len(query) < 3:
-            logger.info("{RED}Your search query is too short or invalid")
+            logger.info(f"{RED}Your search query is too short or invalid")
             return
 
         possibles = {
@@ -242,28 +246,24 @@ class QobuzDL:
                 "func": self.client.search_albums,
                 "album": True,
                 "key": "albums",
-                "format": "{artist[name]} - {title}",
                 "requires_extra": True,
             },
             "artist": {
                 "func": self.client.search_artists,
                 "album": True,
                 "key": "artists",
-                "format": "{name} - ({albums_count} releases)",
                 "requires_extra": False,
             },
             "track": {
                 "func": self.client.search_tracks,
                 "album": False,
                 "key": "tracks",
-                "format": "{performer[name]} - {title}",
                 "requires_extra": True,
             },
             "playlist": {
                 "func": self.client.search_playlists,
                 "album": False,
                 "key": "playlists",
-                "format": "{name} - ({tracks_count} releases)",
                 "requires_extra": False,
             },
         }
@@ -273,20 +273,32 @@ class QobuzDL:
             results = mode_dict["func"](query, limit)
             iterable = results[mode_dict["key"]]["items"]
             item_list = []
+            
             for i in iterable:
-                fmt = PartialFormatter()
-                text = fmt.format(mode_dict["format"], **i)
                 if mode_dict["requires_extra"]:
-
-                    text = "{} - {} [{}]".format(
-                        text,
-                        format_duration(i["duration"]),
-                        "HI-RES" if i["hires_streamable"] else "LOSSLESS",
-                    )
+                    artist = i.get("artist", {}).get("name") or i.get("performer", {}).get("name") or "Unknown"
+                    title = i.get("title") or i.get("name") or "Unknown"
+                    year = str(i.get("release_date_original") or i.get("release_date") or "    ")[:4]
+                    
+                    if i.get("hires_streamable"):
+                        bit_depth = i.get("maximum_bit_depth", 24)
+                        sampling_rate = i.get("maximum_sampling_rate", 96.0)
+                        quality = f"[HI-RES] {bit_depth}b/{sampling_rate}kHz"
+                    else:
+                        quality = "[ CD ] 16b/44.1kHz"
+                        
+                    # Title width changed to 40 for better fit
+                    text = f"{_align_text(artist, 20)} │ {_align_text(title, 40)} │ {year} │ {quality}"
+                else:
+                    name = i.get("name", "Unknown")
+                    count = i.get("albums_count") if "albums_count" in i else i.get("tracks_count", 0)
+                    desc = "albums" if "albums_count" in i else "tracks"
+                    text = f"{_align_text(name, 50)} │ {count} {desc}"
 
                 url = "{}{}/{}".format(WEB_URL, item_type, i.get("id", ""))
                 item_list.append({"text": text, "url": url} if not lucky else url)
             return item_list
+            
         except (KeyError, IndexError):
             logger.info(f"{RED}Invalid type: {item_type}")
             return
@@ -314,8 +326,9 @@ class QobuzDL:
             selected_type = pick(item_types, "I'll search for:\n[press Intro]")[0][
                 :-1
             ].lower()
-            logger.info(f"{YELLOW}Ok, we'll search for " f"{selected_type}s{RESET}")
+            logger.info(f"{YELLOW}Ok, we'll search for {selected_type}s{RESET}")
             final_url_list = []
+            
             while True:
                 query = input(
                     f"{CYAN}Enter your search: [Ctrl + c to quit]\n" f"-{DF} "
@@ -327,14 +340,32 @@ class QobuzDL:
                 if not options:
                     logger.info(f"{OFF}Nothing found{RESET}")
                     continue
+                
+                # --- DYNAMIC HEADER ALIGNMENT (Fixes the broken columns) ---
+                if selected_type in ["album", "track"]:
+                    artist_h = "ARTIST".ljust(20)
+                    title_h = "TITLE".ljust(40)
+                    year_h = "YEAR".ljust(4)
+                    
+                    table_header = (
+                        f"  {artist_h} │ {title_h} │ {year_h} │ QUALITY\n"
+                        f" ─{'─'*20}─┼─{'─'*40}─┼─{'─'*4}─┼───────────────"
+                    )
+                else:
+                    name_h = "NAME".ljust(50)
+                    table_header = (
+                        f"  {name_h} │ RELEASES\n"
+                        f" ─{'─'*50}─┼──────────"
+                    )
+                # -----------------------------------------------------------
+
                 title = (
                     f'*** RESULTS FOR "{query.title()}" ***\n\n'
-                    "Select [space] the item(s) you want to download "
-                    "(one or more)\nPress Ctrl + c to quit\n"
-                    "Don't select anything to try another search"
+                    "[Use arrows to move, <Space> to select, <Enter> to confirm]\n"
+                    "Press Ctrl + C to quit. Don't select anything to try another search.\n\n"
+                    f"{table_header}"
                 )
                 
-                # --- MODERN PICK FIX FOR OPTIONS ---
                 options_texts = [opt.get("text") for opt in options]
                 selected_items = pick(
                     options_texts,
@@ -344,7 +375,6 @@ class QobuzDL:
                 )
                 
                 if len(selected_items) > 0:
-                    # Ricolleghiamo i testi scelti alle URL originali tramite l'indice i[1]
                     [final_url_list.append(options[i[1]]["url"]) for i in selected_items]
                     
                     y_n = pick(
@@ -364,7 +394,6 @@ class QobuzDL:
                     "is not found)"
                 )
                 
-                # --- MODERN PICK FIX FOR QUALITIES ---
                 qualities_texts = [q.get("q_string") for q in qualities]
                 selected_quality = pick(
                     qualities_texts,
@@ -382,8 +411,6 @@ class QobuzDL:
             return
 
     def download_lastfm_pl(self, playlist_url):
-        # Apparently, last fm API doesn't have a playlist endpoint. If you
-        # find out that it has, please fix this!
         try:
             r = requests.get(playlist_url, timeout=10)
         except requests.exceptions.RequestException as e:
