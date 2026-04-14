@@ -1,6 +1,7 @@
 import logging
 import os
 import sys
+import time
 
 import requests
 from pathvalidate import sanitize_filename
@@ -129,6 +130,11 @@ class QobuzDL:
             dloader.download_id_by_type(not album)
         except (requests.exceptions.RequestException, NonStreamable) as e:
             logger.error(f"{RED}Error getting release: {e}. Skipping...")
+            
+        # --- HUMAN BEHAVIOR DELAY ---
+        if getattr(self, 'delay', 0) > 0:
+            logger.info(f"{YELLOW}[*] Sleeping for {self.delay} seconds to prevent rate limiting...{OFF}")
+            time.sleep(self.delay)
 
     def handle_url(self, url):
         possibles = {
@@ -194,6 +200,9 @@ class QobuzDL:
             logger.info(f"{OFF}Nothing to download")
             return
         for url in urls:
+            # --- FIX QOBUZ NEW DOMAIN LINKS ---
+            url = url.replace("open.qobuz.com", "play.qobuz.com")
+            
             if "last.fm" in url:
                 self.download_lastfm_pl(url)
             elif os.path.isfile(url):
@@ -438,11 +447,24 @@ class QobuzDL:
             return
 
         # Step 3: Send valid IDs to the downloader engine
+        
+        # Save original settings to restore them later
+        original_folder_format = self.folder_format
+        original_multi_disc_setting = self.settings.multiple_disc_one_dir
+        
+        # Force flat folder structure for the playlist
+        self.folder_format = "."
+        self.settings.multiple_disc_one_dir = True
+        
         for t_id in track_ids:
             try:
                 self.download_from_id(t_id, False, pl_directory)
             except Exception as e:
                 logger.error(f"{RED}[!] Failed to queue track ID {t_id}: {e}{OFF}")
+
+        # Restore original settings for subsequent downloads
+        self.folder_format = original_folder_format
+        self.settings.multiple_disc_one_dir = original_multi_disc_setting
 
         if not self.no_m3u_for_playlists:
             make_m3u(pl_directory)

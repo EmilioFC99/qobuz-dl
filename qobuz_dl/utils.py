@@ -72,7 +72,8 @@ def make_m3u(pl_directory):
             track_list.append(index)
 
     if len(track_list) > 1:
-        with open(os.path.join(pl_directory, pl_name), "w") as pl:
+        # --- FIX: FORZIAMO L'UTF-8 PER I CARATTERI SPECIALI ---
+        with open(os.path.join(pl_directory, pl_name), "w", encoding="utf-8") as pl:
             pl.write("\n\n".join(track_list))
 
 

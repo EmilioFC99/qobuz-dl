@@ -492,6 +492,7 @@ class Client:
     def get_artist_meta(self, id): return self.multi_meta("artist/get", "albums_count", id, None)
     def get_plist_meta(self, id): return self.multi_meta("playlist/get", "tracks_count", id, None)
     def get_label_meta(self, id): return self.multi_meta("label/get", "albums_count", id, None)
+    def get_album_meta(self, id): return self.api_call("album/get", id=id)
     
     def cfg_setup(self):
         for secret in self.secrets:

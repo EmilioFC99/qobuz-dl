@@ -144,6 +144,15 @@ def add_common_arg(custom_parser, default_folder, default_quality):
         artist, and deluxe/live/collection albums. Gives preference to remastered
         albums, high bit depth/dynamic range, and low sampling rates (to save space).""",
     )
+    
+    # --- HUMAN BEHAVIOR DELAY ---
+    custom_parser.add_argument(
+        "--delay",
+        type=int,
+        default=0,
+        help="Wait a specified number of seconds between track downloads to prevent server bans.",
+    )
+
     # --- NEW COMMANDS FOR ULTIMATE FEATURES ---
     custom_parser.add_argument(
         "--no-lyrics",

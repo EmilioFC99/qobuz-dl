@@ -15,6 +15,7 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
 ### 🚀 Resilient Download Engine
 * **Segmented Download & Remuxing:** Bypasses Akamai CDN throttling with a high-speed segmented download engine and automatic FFmpeg remuxing.
 * **Multithreaded Downloading:** Concurrent track downloads for blazing-fast album fetching.
+* **Clean Multithreading UI:** Intelligently switches to a clutter-free, static logging system displaying precise file sizes (MB) during concurrent downloads. This prevents terminal visual glitches and "cursor wars" with the Lyrics Engine, while preserving the classic animated progress bars for sequential (`--delay`) downloads.
 * **Smart Quality Fallback:** Automatically downgrades to the next best available quality if the requested tier is restricted by the server, ensuring your download queue never crashes.
 * **Authentication Bypass:** Log in securely using your browser's `user_auth_token` if standard password authentication is blocked. Graciously handles Free/Studio accounts.
 
@@ -25,11 +26,12 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
   * **Permanently (via Config file):** Edit your `config.ini` (or `qobuz_dl/settings.py`) and set `multiple_disc_one_dir = True` and/or `multiple_disc_prefix = CD`.
 * **Cover Art Sizing:** Granular control over the resolution of embedded artwork vs. locally saved artwork (e.g., `600`, `max`, `org`).
 * **Regional Bypass:** Forces English language for metadata, reviews, and digital booklets regardless of your account's native region (can be toggled off).
+* **Universal Playlist Generation:** `.m3u` playlist files are now strictly UTF-8 encoded. This guarantees a 100% crash-free experience at the end of massive playlist downloads, smoothly handling tracks with complex Unicode, Japanese, or special full-width characters.
 
-## 🌉 Last.fm Smart Integration
-Import your personalized Last.fm playlists directly into Qobuz! **The original legacy implementation has been entirely removed and replaced by a modern, ground-up refactor to ensure superior stability and performance.** Simply paste a Last.fm playlist URL, and the engine will intelligently bridge the two platforms, finding and downloading the highest quality equivalents.
+### 🌉 Last.fm Smart Integration
+Seamlessly bridge your Last.fm world with Qobuz. Download your personalized playlists and "Loved Tracks" with ease. Enjoy seamless downloading of massive playlists with zero crashes at the finish line, keeping all your album covers and metadata perfectly intact.
 
-### Smart Track Matching & Interactive Mode
+#### Smart Track Matching & Interactive Mode
 Track names often differ slightly between platforms (e.g., missing "Remastered" tags, differently formatted featured artists). To prevent downloading incorrect songs (like live covers or techno remixes), this fork utilizes a mathematical **Fuzzy Matching Algorithm**:
 
 * **Auto-Accept (> 75% similarity):** Perfect or near-perfect matches are automatically queued and downloaded.
@@ -37,7 +39,9 @@ Track names often differ slightly between platforms (e.g., missing "Remastered" 
 * **Interactive Selection (60% - 74% similarity):** For borderline matches, the engine pauses and activates an interactive prompt. It displays the original Last.fm target alongside the Qobuz result, allowing you to manually approve or reject the track (`[y/n]`).
 
 **Usage:**
-    python -m qobuz_dl dl https://www.last.fm/user/<your profile>/playlists/<playlist_id>
+```bash
+python -m qobuz_dl dl [https://www.last.fm/user/](https://www.last.fm/user/)<your profile>/playlists/<playlist_id>
+```
 
 ## 📥 Getting Started
 
@@ -46,62 +50,80 @@ Track names often differ slightly between platforms (e.g., missing "Remastered" 
 #### Installation
 Clone this repository and install the required dependencies:
 
-    git clone https://github.com/Sei969/qobuz-dl.git
-    cd qobuz-dl
-    pip3 install -r requirements.txt
+```bash
+git clone [https://github.com/Sei969/qobuz-dl.git](https://github.com/Sei969/qobuz-dl.git)
+cd qobuz-dl
+pip3 install -r requirements.txt
+```
 
 *(Windows users may also need to run `pip3 install windows-curses` for interactive mode).*
 
 #### Run qobuz-dl
 To ensure maximum compatibility and avoid namespace conflicts, it is recommended to run the script as a Python module from the root folder:
 
-    python -m qobuz_dl
+```bash
+python -m qobuz_dl
+```
 
 > If something fails, run `python -m qobuz_dl -r` to reset your config file and launch the interactive setup wizard.
 
-## 💻 Usage & CLI Arguments
+## 💻 Download Usage
 
-    usage: python -m qobuz_dl dl [-h] [-d PATH] [-q int] [--albums-only] [--no-m3u] [--no-fallback] [--no-db] 
-                                 [-ff PATTERN] [-tf PATTERN] [-s] [--fix-md5s] [-e] [--no-cover]
-                                 [--embedded-art-size {50,100,150,300,600,max,org}] 
-                                 [--saved-art-size {50,100,150,300,600,max,org}] 
-                                 [--multiple-disc-prefix PREFIX] [--multiple-disc-one-dir] 
-                                 [--no-lyrics] [--native-lang] [--no-credits]
-                                 [--no-album-artist-tag] [--no-track-composer-tag] ... 
-                                 SOURCE [SOURCE ...]
+```text
+usage: python -m qobuz_dl dl [-h] [-d PATH] [-q int] [--albums-only] [--no-m3u] [--no-fallback] [--no-db] 
+                             [-ff PATTERN] [-tf PATTERN] [-s] [--fix-md5s] [-e] [--no-cover]
+                             [--embedded-art-size {50,100,150,300,600,max,org}] 
+                             [--saved-art-size {50,100,150,300,600,max,org}] 
+                             [--multiple-disc-prefix PREFIX] [--multiple-disc-one-dir] 
+                             [--no-lyrics] [--native-lang] [--no-credits] [--delay SECONDS]
+                             [--no-album-artist-tag] [--no-track-composer-tag] ... 
+                             SOURCE [SOURCE ...]
+```
 
-### Advanced Formatting Keys
-* **Folder Formatting (`-ff`):** `{album_artist}`, `{album_title}`, `{year}`, `{barcode}`, `{album_genre}`, `{label}`, `{upc}`, `{release_date}`, `{media_type}`, `{format}`, `{bit_depth}`, `{sampling_rate}`, `{disc_count}`, `{track_count}`.
-* **Track Formatting (`-tf`):** `{track_number}`, `{track_title}`, `{track_artist}`, `{track_composer}`, `{isrc}`, `{disc_number}`.
+### Key Arguments
+* **Human-like Delay (`--delay SECONDS`):** Forces a pause (in seconds) between track downloads to prevent IP bans or rate limits. Using this flag automatically disables multithreading and restores the sequential animated progress bars in the terminal.
+* **Advanced Folder Formatting (`-ff`):** `{album_artist}`, `{album_title}`, `{year}`, `{barcode}`, `{album_genre}`, `{label}`, `{upc}`, `{release_date}`, `{media_type}`, `{format}`, `{bit_depth}`, `{sampling_rate}`, `{disc_count}`, `{track_count}`.
+* **Advanced Track Formatting (`-tf`):** `{track_number}`, `{track_title}`, `{track_artist}`, `{track_composer}`, `{isrc}`, `{disc_number}`.
+
 *(Note: System-reserved characters like `/:<>` are automatically sanitized).*
 
 ## 💡 Examples
 
 **Standard Hi-Res Download:**
+```bash
+python -m qobuz_dl dl [https://play.qobuz.com/album/qxjbxh1dc3xyb](https://play.qobuz.com/album/qxjbxh1dc3xyb) -q 27
+```
 
-    python -m qobuz_dl dl https://play.qobuz.com/album/qxjbxh1dc3xyb -q 27
+**Sequential Download with Delay (Safe Mode):**
+```bash
+python -m qobuz_dl dl [https://play.qobuz.com/album/qxjbxh1dc3xyb](https://play.qobuz.com/album/qxjbxh1dc3xyb) --delay 3
+```
 
 **Last.fm Playlist Import:**
-
-    python -m qobuz_dl dl https://www.last.fm/user/vitiko98/playlists/11887574
+```bash
+python -m qobuz_dl dl [https://www.last.fm/user/vitiko98/playlists/11887574](https://www.last.fm/user/vitiko98/playlists/11887574)
+```
 
 **Ultimate Customization (No lyrics, no booklets, native language metadata):**
-
-    python -m qobuz_dl dl https://play.qobuz.com/album/qxjbxh1dc3xyb --no-lyrics --no-credits --native-lang
+```bash
+python -m qobuz_dl dl [https://play.qobuz.com/album/qxjbxh1dc3xyb](https://play.qobuz.com/album/qxjbxh1dc3xyb) --no-lyrics --no-credits --native-lang
+```
 
 **Advanced Discography Routing (Save multiple discs in one folder, fix FLAC MD5):**
-
-    python -m qobuz_dl dl https://play.qobuz.com/artist/2038380 --multiple-disc-one-dir --fix-md5s
+```bash
+python -m qobuz_dl dl [https://play.qobuz.com/artist/2038380](https://play.qobuz.com/artist/2038380) --multiple-disc-one-dir --fix-md5s
+```
 
 **Interactive Mode:**
-
-    python -m qobuz_dl fun -l 10
+```bash
+python -m qobuz_dl fun -l 10
+```
 
 *(Tip: In interactive mode, use `Space` to multi-select several albums to download at once!)*
 
 ## 🏆 Credits
 * **[vitiko98](https://github.com/vitiko98/qobuz-dl)**: The creator of the original `qobuz-dl` project. A huge thanks for laying the foundation of this amazing tool.
-* **[xwell](https://github.com/xwell/qobuz-dl)**: For of the massive tag refactoring, customizable metadata engine, dynamic formatting variables, and "Goodies" integration.
+* **[xwell](https://github.com/xwell/qobuz-dl)**: For the massive tag refactoring, customizable metadata engine, dynamic formatting variables, and "Goodies" integration.
 * **[catap](https://github.com/catap)**: For the segmented download patch, which bypasses the Akamai CDN throttling.
 
 *`qobuz-dl` is also inspired by the discontinued Qo-DL-Reborn (using modules `qopy` and `spoofer` by Sorrow446 and DashLt).*

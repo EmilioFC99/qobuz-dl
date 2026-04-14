@@ -1,10 +1,12 @@
 from .lyrics_engine import LyricsEngine
 import logging
 import os
+import sys
 import time
 import random
 import subprocess
 import re
+import threading
 from typing import Tuple
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
@@ -22,6 +24,15 @@ from qobuz_dl.utils import get_album_artist, clean_filename
 from qobuz_dl.db import handle_download_id
 from qobuz_dl.constants import DEFAULT_FOLDER, DEFAULT_TRACK, DEFAULT_MULTIPLE_DISC_TRACK, OK_MAX_CHARACTER_LENGTH
 
+# UI Lock to prevent text scrambling during multithreading
+print_lock = threading.Lock()
+
+def safe_print(*args, **kwargs):
+    with print_lock:
+        text = " ".join(map(str, args))
+        end = kwargs.get('end', '\n')
+        tqdm.write(text, end=end)
+
 def process_folder_format_with_subdirs(folder_format, attr_dict, path=None):
     path_parts = folder_format.split('/')
     cleaned_parts = []
@@ -30,14 +41,16 @@ def process_folder_format_with_subdirs(folder_format, attr_dict, path=None):
             try:
                 formatted_part = part.format(**attr_dict)
                 cleaned_part = sanitize_filepath(clean_filename(formatted_part), replacement_text="_")
-                cleaned_parts.append(cleaned_part)
+                if cleaned_part:
+                    cleaned_parts.append(cleaned_part)
             except KeyError as e:
                 logger.warning(f"{YELLOW}Format error ({e}), using original text.{OFF}")
                 cleaned_part = sanitize_filepath(clean_filename(part), replacement_text="_")
-                cleaned_parts.append(cleaned_part)
+                if cleaned_part:
+                    cleaned_parts.append(cleaned_part)
     
     final_path = os.path.join(*cleaned_parts) if cleaned_parts else ""
-    if path and final_path:
+    if path is not None:
         return os.path.join(path, final_path)
     return final_path
 
@@ -172,7 +185,23 @@ class Download:
         media_count = album_meta.get("media_count", 1)
         is_multiple = True if media_count > 1 else False
         
-        with concurrent.futures.ThreadPoolExecutor(max_workers=int(self.settings.max_workers)) as executor:
+        # --- SMART SEQUENTIAL vs PARALLEL MODE ---
+        delay_time = getattr(self.settings, 'delay', 0)
+        if delay_time == 0 and '--delay' in sys.argv:
+            try: delay_time = int(sys.argv[sys.argv.index('--delay') + 1])
+            except: pass
+            
+        active_workers = int(getattr(self.settings, 'max_workers', 3))
+        is_parallel = False
+        
+        if delay_time > 0:
+            safe_print(f"{YELLOW}[*] Safety Delay active: Multithreading disabled (Sequential mode).{OFF}")
+            active_workers = 1
+        elif active_workers > 1:
+            is_parallel = True
+            safe_print(f"{YELLOW}[*] Multithreading Enabled ({active_workers} workers): UI optimized for clean parallel logging.{OFF}")
+            
+        with concurrent.futures.ThreadPoolExecutor(max_workers=active_workers) as executor:
             futures = []
             for i in album_meta["tracks"]["items"]:
                 parse = self.client.get_track_url(i["id"], fmt_id=self.quality)
@@ -189,22 +218,21 @@ class Download:
                             False,
                             is_mp3,
                             i.get("media_number") if is_multiple else None,
+                            is_parallel=is_parallel # Injects the behavior modifier
                         )
                     )
                 else:
                     logger.info(f"{OFF}Demo. Skipping")
                 count = count + 1
                 
-            # NEW WAIT SYSTEM: Allows Python to "listen" for CTRL+C
             try:
                 for f in futures:
                     while not f.done():
                         time.sleep(0.2)
-                        
                 for f in futures:
                     f.result()
             except KeyboardInterrupt:
-                logger.error(f"\n{RED}[!] CTRL+C Detected: Forcing termination of ongoing downloads...{OFF}")
+                safe_print(f"\n{RED}[!] CTRL+C Detected: Forcing termination of ongoing downloads...{OFF}")
                 os._exit(1)
             except Exception as e:
                 logger.error(f"{RED}[!] Thread Exception: {e}{OFF}")
@@ -215,7 +243,7 @@ class Download:
                            quality=self.quality, file_format=file_format, quality_met=quality_met,
                            bit_depth=bit_depth, sampling_rate=sampling_rate, saved_path=dirn,
                            url=url, release_date=release_date)
-        logger.info(f"{GREEN}Completed{OFF}")
+        safe_print(f"{GREEN}Completed{OFF}")
 
     def download_track(self):
         parse = self.client.get_track_url(self.item_id, self.quality)
@@ -267,6 +295,7 @@ class Download:
                 True,
                 is_mp3,
                 False,
+                is_parallel=False
             )
             
             _clean_embed_art(dirn, self.settings)
@@ -289,6 +318,7 @@ class Download:
         is_track,
         is_mp3,
         multiple=None,
+        is_parallel=False
     ):
         extension = ".mp3" if is_mp3 else ".flac"
         time.sleep(1)
@@ -329,7 +359,7 @@ class Download:
 
         for attempt_fmt in qualities_to_try:
             if attempt_fmt != int(self.quality):
-                print(f"{YELLOW}[!] Automatic downgrade: Attempting to save in {TIER_NAMES[attempt_fmt]}...{OFF}")
+                safe_print(f"{YELLOW}[!] Automatic downgrade: Attempting to save in {TIER_NAMES[attempt_fmt]}...{OFF}")
 
             def get_fresh_url(fmt=attempt_fmt, force_segments=False):
                 return self.client.get_track_url(track_metadata["id"], fmt_id=fmt, force_segments=force_segments)
@@ -339,16 +369,16 @@ class Download:
                 
                 if "url" in fresh_track_dict:
                     try:
-                        tqdm_download(fresh_track_dict["url"], filename, desc)
+                        tqdm_download(fresh_track_dict["url"], filename, desc, is_parallel=is_parallel)
                         success = True
                         final_fmt = attempt_fmt
                         break
                     except Exception as e:
-                        print(f"{YELLOW}[!] Akamai block detected. Activating fallback segmented download...{OFF}")
+                        safe_print(f"{YELLOW}[!] Akamai block detected. Activating fallback segmented download...{OFF}")
                         fresh_track_dict = get_fresh_url(force_segments=True)
                 
                 if "url_template" in fresh_track_dict:
-                    tqdm_download_segments(fresh_track_dict, filename, desc)
+                    tqdm_download_segments(fresh_track_dict, filename, desc, is_parallel=is_parallel)
                     success = True
                     final_fmt = attempt_fmt
                     break
@@ -359,8 +389,8 @@ class Download:
                 pass
 
         if not success:
-            print(f"\n{RED}[!] TRACK {track_no} DEFINITIVELY DISCARDED AFTER ALL DOWNGRADES.{OFF}")
-            print(f"{YELLOW}[!] Skipping to the next track...{OFF}\n")
+            safe_print(f"\n{RED}[!] TRACK {track_no} DEFINITIVELY DISCARDED AFTER ALL DOWNGRADES.{OFF}")
+            safe_print(f"{YELLOW}[!] Skipping to the next track...{OFF}\n")
             return 
 
         is_mp3 = True if final_fmt == 5 else False
@@ -384,7 +414,7 @@ class Download:
             try:
                 os.remove(final_file)
             except OSError as err:
-                print(f"{YELLOW}[!] Cannot overwrite {final_file}: {err}{OFF}")
+                safe_print(f"{YELLOW}[!] Cannot overwrite {final_file}: {err}{OFF}")
 
         tag_function = metadata.tag_mp3 if is_mp3 else metadata.tag_flac
         try:
@@ -399,18 +429,30 @@ class Download:
                 settings=self.settings,
             )
         except Exception as e:
-            print(f"{RED}[!] Error tagging: {e}{OFF}")
+            safe_print(f"{RED}[!] Error tagging: {e}{OFF}")
 
         if getattr(self, 'fetch_lyrics', False) and hasattr(self, 'lyrics_engine'):
             search_artist = _safe_get(track_metadata, "performer", "name") or _safe_get(album_or_track_metadata, "artist", "name", default="Unknown")
             search_album = _safe_get(track_metadata, "album", "title", default="")
             
-            self.lyrics_engine.fetch_and_inject(
-                file_path=final_file,
-                artist=search_artist,
-                track=track_title,
-                album=search_album
-            )
+            with print_lock:
+                self.lyrics_engine.fetch_and_inject(
+                    file_path=final_file,
+                    artist=search_artist,
+                    track=track_title,
+                    album=search_album
+                )
+
+        # --- HUMAN BEHAVIOR DELAY ---
+        delay_time = getattr(self.settings, 'delay', 0)
+        if delay_time == 0 and '--delay' in sys.argv:
+            try:
+                delay_time = int(sys.argv[sys.argv.index('--delay') + 1])
+            except: pass
+            
+        if delay_time > 0:
+            safe_print(f"{YELLOW}[*] Sleeping for {delay_time} seconds to prevent rate limiting...{OFF}")
+            time.sleep(delay_time)
 
     @staticmethod
     def _get_filename_attr(track_artist, track_metadata: dict, album_metadata: dict):
@@ -585,7 +627,7 @@ class Download:
         if os.path.isfile(tracklist_path):
             return
             
-        print(f"{CYAN}[+] Generating Digital Booklet...{OFF}")
+        safe_print(f"{CYAN}[+] Generating Digital Booklet...{OFF}")
         
         artist_name = _safe_get(meta, "artist", "name", default="Unknown Artist")
         composer = _safe_get(meta, "composer", "name", default="N/A")
@@ -655,9 +697,9 @@ class Download:
                             wrapped_paragraph = textwrap.fill(p.strip(), width=70)
                             f.write(wrapped_paragraph + "\n\n")
 
-            print(f"{GREEN}  L Completed: Digital Booklet.txt (Credits & Review){OFF}")
+            safe_print(f"{GREEN}  L Completed: Digital Booklet.txt (Credits & Review){OFF}")
         except Exception as e:
-            print(f"{RED}[!] Error creating booklet: {e}{OFF}")
+            safe_print(f"{RED}[!] Error creating booklet: {e}{OFF}")
 
 
 def _get_description(item: dict, track_title, multiple=None):
@@ -666,7 +708,7 @@ def _get_description(item: dict, track_title, multiple=None):
         downloading_title = f"[CD {multiple}] {downloading_title}"
     return downloading_title
 
-def tqdm_download(url_or_callable, fname, track_name):
+def tqdm_download(url_or_callable, fname, track_name, is_parallel=False):
     G = "\033[92m"
     Y = "\033[93m"
     C = "\033[96m"
@@ -678,7 +720,13 @@ def tqdm_download(url_or_callable, fname, track_name):
         "Connection": "keep-alive"
     }
 
-    print(f"{C}[+] In progress: {track_name}{O}")
+    if not is_parallel:
+        safe_print(f"{C}[+] In progress: {track_name}{O}")
+        tqdm_desc = f" {G}Downloading{O}"
+        b_format = "{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
+    else:
+        tqdm_desc = ""
+        b_format = ""
 
     downloaded_size = 0
     total_size = 0
@@ -706,15 +754,20 @@ def tqdm_download(url_or_callable, fname, track_name):
                 if total_size == 0:
                     total_size = downloaded_size + int(r.headers.get('content-length', 0))
 
+                if is_parallel and downloaded_size == 0 and attempt == 0:
+                    size_mb = total_size / (1024 * 1024)
+                    safe_print(f"{C}[+] In progress: {track_name} [{size_mb:.1f} MB]{O}")
+
                 with open(fname, mode) as file, tqdm(
                     total=total_size,
                     unit="iB",
                     unit_scale=True,
                     unit_divisor=1024,
-                    desc=f" {G}Downloading{O}",
+                    desc=tqdm_desc,
                     initial=downloaded_size,
-                    bar_format="{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]",
-                    leave=True 
+                    bar_format=b_format,
+                    leave=False,
+                    disable=is_parallel
                 ) as bar:
                     for data in r.iter_content(chunk_size=65536):
                         if data:
@@ -723,13 +776,13 @@ def tqdm_download(url_or_callable, fname, track_name):
                             bar.update(size)
             
             if downloaded_size >= total_size:
-                print(f"{G}  L Completed: {track_name}{O}")
+                safe_print(f"{G}  L Completed: {track_name}{O}")
                 return 
 
         except Exception:
             if attempt < max_retries - 1:
                 wait = backoff_delays[attempt]
-                print(f"\n{Y}[!] Server block. Retrying in {wait}s ({attempt+1}/{max_retries})...{O}")
+                safe_print(f"\n{Y}[!] Server block. Retrying in {wait}s ({attempt+1}/{max_retries})...{O}")
                 time.sleep(wait)
             else:
                 if os.path.exists(fname):
@@ -764,7 +817,7 @@ def _get_extra(item, dirn, extra="cover.jpg", art_size=None, og_quality=False):
     if art_size in ["50", "100", "150", "300", "600", "max", "org"]:
         item = item.replace("_600.", f"_{art_size}.")
         
-    tqdm_download(item, extra_file, extra)
+    tqdm_download(item, extra_file, extra, is_parallel=False)
 
 def _clean_format_str(folder: str, track: str, file_format: str) -> Tuple[str, str]:
     final = []
@@ -791,9 +844,10 @@ def _safe_get(d: dict, *keys, default=None):
             curr = res
     return res
 
-def tqdm_download_segments(track_url_dict, fname, desc):
+def tqdm_download_segments(track_url_dict, fname, track_name, is_parallel=False):
     G = "\033[92m"
     O = "\033[0m" 
+    C = "\033[96m"
     
     tmp_fname = fname + ".mp4"
     n_segments = track_url_dict["n_segments"]
@@ -819,6 +873,16 @@ def tqdm_download_segments(track_url_dict, fname, desc):
         except KeyboardInterrupt:
             os._exit(1)
 
+    if is_parallel:
+        size_mb = total_size / (1024 * 1024)
+        safe_print(f"{C}[+] In progress: {track_name} [{size_mb:.1f} MB]{O}")
+        tqdm_desc = ""
+        b_format = ""
+    else:
+        safe_print(f"{C}[+] In progress: {track_name}{O}")
+        tqdm_desc = f" {G}Segmented Download{O}"
+        b_format = "{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
+
     def fetch_segment_fluid(seg_num):
         url = url_template.replace("$SEGMENT$", str(seg_num))
         r = requests.get(url, stream=True, timeout=15)
@@ -827,7 +891,8 @@ def tqdm_download_segments(track_url_dict, fname, desc):
         
         for chunk in r.iter_content(chunk_size=65536):
             seg_data.extend(chunk)
-            bar.update(len(chunk)) 
+            if not is_parallel:
+                bar.update(len(chunk)) 
         return seg_data
 
     try:
@@ -836,8 +901,10 @@ def tqdm_download_segments(track_url_dict, fname, desc):
             unit="iB",
             unit_scale=True,
             unit_divisor=1024,
-            desc=f" {G}Segmented Download{O}",
-            bar_format="{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]",
+            desc=tqdm_desc,
+            bar_format=b_format,
+            leave=False,
+            disable=is_parallel
         ) as bar:
 
             segment_uuid = None
@@ -864,12 +931,14 @@ def tqdm_download_segments(track_url_dict, fname, desc):
                     except KeyboardInterrupt:
                         os._exit(1)
 
-        print(f" {G}  > Assembling the final FLAC file...{O}")
+        if not is_parallel:
+            safe_print(f" {G}  > Assembling the final FLAC file...{O}")
+            
         remux = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", tmp_fname, "-c:a", "copy", "-f", "flac", fname], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
         if remux.returncode != 0:
             raise ConnectionError(f"FFmpeg remux failed for {fname}")
         
-        print(f"{G}  L Completed: {desc}{O}")
+        safe_print(f"{G}  L Completed: {track_name}{O}")
 
     finally:
         if os.path.isfile(tmp_fname):
