@@ -20,9 +20,9 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
 
 ### 📁 Advanced Formatting & Storage
 * **Powerful Variables:** `folder_format` and `track_format` now support dozens of new variables (e.g., `{isrc}`, `{barcode}`, `{label}`, `{track_composer}`).
-* **Multi-Disc Routing:** Store multiple disc releases in one single directory or split them using customizable prefixes (e.g., `CD 01`). By default, multi-disc releases are neatly split into separate sub-directories (e.g., `Disc 01`, `Disc 02`). You can control this behavior via your configuration file (`config.ini` or `qobuz_dl/settings.py`):
-  * **Merge into a single folder:** Change `multiple_disc_one_dir = False` ➡️ `True`.
-  * **Change the sub-folder name:** Change `multiple_disc_prefix = Disc` ➡️ `CD` (or your preferred naming convention).
+* **Multi-Disc Routing:** Store multiple disc releases in one single directory or split them using customizable prefixes (e.g., `CD 01`). By default, multi-disc releases are neatly split into separate sub-directories (e.g., `Disc 01`, `Disc 02`). You can control this behavior in two ways:
+  * **Temporarily (via CLI flags):** Add `--multiple-disc-one-dir` to your command to merge discs for a specific download, or `--multiple-disc-prefix CD` to change the folder prefix on the fly.
+  * **Permanently (via Config file):** Edit your `config.ini` (or `qobuz_dl/settings.py`) and set `multiple_disc_one_dir = True` and/or `multiple_disc_prefix = CD`.
 * **Cover Art Sizing:** Granular control over the resolution of embedded artwork vs. locally saved artwork (e.g., `600`, `max`, `org`).
 * **Regional Bypass:** Forces English language for metadata, reviews, and digital booklets regardless of your account's native region (can be toggled off).
 
