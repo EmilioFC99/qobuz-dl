@@ -39,7 +39,7 @@ Track names often differ slightly between platforms (e.g., missing "Remastered" 
 
 **Usage:**
 ```bash
-python -m qobuz_dl dl [https://www.last.fm/user/](https://www.last.fm/user/)<your profile>/playlists/<playlist_id>
+python -m qobuz_dl dl [https://www.last.fm/user/](https://www.last.fm/user/)<your_profile>/playlists/<playlist_id>
 ```
 
 ## 📥 Getting Started
