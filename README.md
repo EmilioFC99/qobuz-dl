@@ -10,7 +10,6 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
 * **Massive Tag Control:** Refactored tag engine supports highly detailed classical music metadata. Almost every single tag can be toggled on/off via CLI arguments.
 * **Automatic Lyrics Engine:** Fetches and injects synchronized (`.lrc`) and unsynchronized lyrics using LRCLIB (with a Genius fallback API).
 * **Digital Booklets & Goodies:** Automatically compiles a `.txt` file with a complete tracklist, full credits, metadata, and reviews, while simultaneously downloading official PDF "Goodies" (Booklets).
-* **FLAC Integrity:** Added option to fix MD5 checksums for FLAC files.
 
 ### 🚀 Resilient Download Engine
 * **Segmented Download & Remuxing:** Bypasses Akamai CDN throttling with a high-speed segmented download engine and automatic FFmpeg remuxing.
@@ -71,7 +70,7 @@ python -m qobuz_dl
 
 ```text
 usage: python -m qobuz_dl dl [-h] [-d PATH] [-q int] [--albums-only] [--no-m3u] [--no-fallback] [--no-db] 
-                             [-ff PATTERN] [-tf PATTERN] [-s] [--fix-md5s] [-e] [--no-cover]
+                             [-ff PATTERN] [-tf PATTERN] [-s] [-e] [--no-cover]
                              [--embedded-art-size {50,100,150,300,600,max,org}] 
                              [--saved-art-size {50,100,150,300,600,max,org}] 
                              [--multiple-disc-prefix PREFIX] [--multiple-disc-one-dir] 
@@ -109,9 +108,9 @@ python -m qobuz_dl dl [https://www.last.fm/user/vitiko98/playlists/11887574](htt
 python -m qobuz_dl dl [https://play.qobuz.com/album/qxjbxh1dc3xyb](https://play.qobuz.com/album/qxjbxh1dc3xyb) --no-lyrics --no-credits --native-lang
 ```
 
-**Advanced Discography Routing (Save multiple discs in one folder, fix FLAC MD5):**
+**Advanced Discography Routing (Save multiple discs in one folder):**
 ```bash
-python -m qobuz_dl dl [https://play.qobuz.com/artist/2038380](https://play.qobuz.com/artist/2038380) --multiple-disc-one-dir --fix-md5s
+python -m qobuz_dl dl [https://play.qobuz.com/artist/2038380](https://play.qobuz.com/artist/2038380) --multiple-disc-one-dir
 ```
 
 **Interactive Mode:**
