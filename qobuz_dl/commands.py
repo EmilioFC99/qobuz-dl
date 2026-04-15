@@ -257,12 +257,6 @@ def add_common_arg(custom_parser, default_folder, default_quality):
         action="store_true",
         help="don't add ISRC tag"
     )
-    flac_group = custom_parser.add_argument_group('FLAC options')
-    flac_group.add_argument(
-        "--fix-md5s",
-        action="store_true",
-        help="fix FLAC MD5 checksums"
-    )
     artwork_group = custom_parser.add_argument_group('cover artwork options')
     artwork_group.add_argument(
         "-e", "--embed-art", action="store_true", help="embed cover art into audio files"

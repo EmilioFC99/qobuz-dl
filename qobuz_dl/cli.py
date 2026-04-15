@@ -109,9 +109,7 @@ def _reset_config(config_file):
     
     config["qobuz"]["no_upc_tag"] = "false"
     config["qobuz"]["no_isrc_tag"] = "false"
-    
-    config["qobuz"]["fix_md5s"] = "false"
-    
+          
     config["qobuz"]["embedded_art_size"] = "600"
     config["qobuz"]["saved_art_size"] = "org"
     
