@@ -234,9 +234,27 @@ def _get_tags_to_add(qobuz_album: dict, qobuz_item : dict, settings: QobuzDLSett
     # Artist Information
     if not settings.no_album_artist_tag:
         tags["ALBUMARTIST"] = get_album_artist(qobuz_album)
+        
     if not settings.no_track_artist_tag:
-        tags["ARTIST"] = qobuz_item.get("performer", {}).get("name", "") or qobuz_album.get("artist", {}).get("name",
-                                                                                                              "")
+        # 1. Cattura l'artista principale
+        main_artist = qobuz_item.get("performer", {}).get("name", "") or qobuz_album.get("artist", {}).get("name", "")
+        artists = [main_artist] if main_artist else []
+        
+        # 2. Integrazione patch per catturare gli ospiti
+        performers_str = qobuz_item.get("performers", "")
+        if performers_str:
+            for i in performers_str.split(" - "):
+                if "FeaturedArtist" in i:
+                    artists.append(i.replace(", FeaturedArtist", "").strip())
+        
+        # 3. Salva nel file musicale
+        if len(artists) == 1:
+            tags["ARTIST"] = artists[0]
+        elif len(artists) > 1:
+            tags["ARTIST"] = artists
+        else:
+            tags["ARTIST"] = ""
+
     if not settings.no_composer_tag:
         tags["COMPOSER"] = qobuz_item.get("composer", {}).get("name", "")
 
