@@ -33,6 +33,23 @@ def safe_print(*args, **kwargs):
         end = kwargs.get('end', '\n')
         tqdm.write(text, end=end)
 
+# --- FIX ISSUE #216: Normalizzazione del Release Type ---
+def format_release_type(release_type: str) -> str:
+    """
+    Normalizza il tipo di pubblicazione (release_type) dalle API di Qobuz.
+    Converte 'ep' in 'EP', 'single' in 'Single', 'album' in 'Album', ecc.
+    Ritorna 'Unknown' come fallback robusto in assenza di dati.
+    """
+    if not release_type:
+        return "Unknown"
+    
+    release_type = release_type.lower()
+    if release_type == "ep":
+        return "EP"
+        
+    return release_type.title()
+# --------------------------------------------------------
+
 def process_folder_format_with_subdirs(folder_format, attr_dict, path=None):
     path_parts = folder_format.split('/')
     cleaned_parts = []
@@ -563,6 +580,8 @@ class Download:
             "track_count": meta.get("track_count", ""),
             "ExplicitFlag": "[E]" if album_meta.get("parental_warning") else "",
             "explicit": "[E]" if album_meta.get("parental_warning") else "",
+            # --- FIX ISSUE #216 ---
+            "release_type": format_release_type(album_meta.get("release_type")),
         }
 
     @staticmethod
@@ -592,6 +611,8 @@ class Download:
             "track_count": meta.get("track_count", 1),
             "ExplicitFlag": "[E]" if meta.get("parental_warning") else "",
             "explicit": "[E]" if meta.get("parental_warning") else "",
+            # --- FIX ISSUE #216 ---
+            "release_type": format_release_type(meta.get("release_type")),
         }
 
     def _get_format(self, item_dict, is_track_id=False, track_url_dict=None):
