@@ -81,11 +81,12 @@ usage: python -m qobuz_dl dl [-h] [-d PATH] [-q int] [--albums-only] [--no-m3u] 
                              SOURCE [SOURCE ...]
 ```
 
-### Key Arguments
-* **Explicit Tag:** `{explicit}` or `{ExplicitFlag}`. Adds `[E]` if the content is explicit.
-  * *Example:* `folder_format = {artist} - {album} {ExplicitFlag}`
-* **Advanced Folder Formatting (`-ff`):** Support for `{album_artist}`, `{year}`, `{barcode}`, `{label}`, etc.
-* **Advanced Track Formatting (`-tf`):** Support for `{track_number}`, `{track_title}`, `{isrc}`, etc.
+### 🛠️ Key Formatting Variables
+* **Folder Pattern (`-ff`):** Supports dynamic routing with `{release_type}`, `{album_artist}`, `{year}`, `{label}`, and `{barcode}`.
+* **Track Pattern (`-tf`):** Customize filenames using `{track_number}`, `{track_title}`, `{isrc}`, and `{track_composer}`.
+* **Explicit Flag:** Use `{ExplicitFlag}` or `{explicit}` within your patterns to automatically mark parental advisory content.
+
+*Detailed variable usage and examples can be found in the [Advanced Formatting & Storage](#-advanced-formatting--storage) section.*
 
 ## 🏆 Credits
 * **[vitiko98](https://github.com/vitiko98/qobuz-dl)**: Creator of the original project.
