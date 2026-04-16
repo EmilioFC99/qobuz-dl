@@ -482,7 +482,8 @@ class Download:
             time.sleep(delay_time)
 
     @staticmethod
-    def _get_filename_attr(track_artist, track_metadata: dict, album_metadata: dict):
+    def _get_filename_attr(track_artist, track_metadata: dict, album_metadata: dict):     
+           
         return {
             "artist": track_artist,
             "albumartist": get_album_artist(album_metadata) if get_album_artist(album_metadata) else track_artist,
@@ -503,6 +504,8 @@ class Download:
             "year": track_metadata.get("release_date_original").split("-")[0],
             "disc_number": f'{track_metadata.get("media_number"):02}',
             "release_date": track_metadata.get("release_date_original"),
+            "ExplicitFlag": "[E]" if track_metadata.get("parental_warning") else "",
+            "explicit": "[E]" if track_metadata.get("parental_warning") else "",
         }
 
     @staticmethod
@@ -534,6 +537,8 @@ class Download:
             "album_version": meta.get("version", ""),
             "disc_count": meta.get("media_count", ""),
             "track_count": meta.get("track_count", ""),
+            "ExplicitFlag": "[E]" if album_meta.get("parental_warning") else "",
+            "explicit": "[E]" if album_meta.get("parental_warning") else "",
         }
 
     @staticmethod
@@ -561,6 +566,8 @@ class Download:
             "album_version": meta.get("version", ""),
             "disc_count": meta.get("media_count", 1),
             "track_count": meta.get("track_count", 1),
+            "ExplicitFlag": "[E]" if meta.get("parental_warning") else "",
+            "explicit": "[E]" if meta.get("parental_warning") else "",
         }
 
     def _get_format(self, item_dict, is_track_id=False, track_url_dict=None):
