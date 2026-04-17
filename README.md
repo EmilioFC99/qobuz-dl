@@ -129,13 +129,28 @@ python -m qobuz_dl dl --sync-db "C:\My Music"
 *(Tip: In interactive mode, use `Space` to multi-select several albums to download at once!)*
 ```bash
 python -m qobuz_dl fun -l 10
-```							 
+```
+
+### 🗄️ Database Management & Smart Sync
+The Ultimate Edition includes a powerful local database to keep track of your downloads and completely prevent duplicate downloads. 
+
+* **Smart Library Sync (`--sync-db`):**
+  Already have a local library of downloaded FLACs? You don't need to start from scratch. Run this command to perform a *Reverse Lookup* on your download directory. The engine will scan your existing files and automatically inject them into the local database. The next time you download a massive discography, the program will intelligently skip the albums you already own and only download the missing releases.
+  ```bash
+  python -m qobuz_dl --sync-db
+  ```
+  *(Note: You can also specify a custom path to scan, e.g., `--sync-db /path/to/your/music`)*
+
+* **Purge Database (`-p`, `--purge`):**
+  If you ever need to start fresh, clear your download history, or fix a corrupted state, you can instantly wipe the local database with a single command. No need to manually hunt for hidden system files.
+  ```bash
+  python -m qobuz_dl --purge
+  ```
 
 ### 🛠️ Key Formatting Variables
 
 You can customize your `config.ini` or use the CLI flags `-ff` (Folder Format) and `-tf` (Track Format) with these powerful variables:
 
-* **Database Sync (`--sync-db [PATH]`):** Scans the specified directory to restore missing Qobuz IDs into your local database. If no path is provided, it uses the default download folder.
 * **Folder Pattern (`-ff`):** Supports dynamic routing with `{release_type}`, `{album_artist}`, `{year}`, `{label}`, and `{barcode}`.
 * **Track Pattern (`-tf`):** Customize filenames using `{track_number}`, `{track_title}`, `{isrc}`, and `{track_composer}`.
 * **Explicit Flag:** Use `{ExplicitFlag}` or `{explicit}` within your patterns to automatically mark parental advisory content.
