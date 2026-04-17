@@ -308,8 +308,38 @@ class QobuzDL:
             for i in iterable:
                 if mode_dict["requires_extra"]:
                     artist = i.get("artist", {}).get("name") or i.get("performer", {}).get("name") or "Unknown"
+                    
+                    # --- SMART TITLE: Explicit & Version Tags ---
                     title = i.get("title") or i.get("name") or "Unknown"
+                    if i.get("version"):
+                        title = f"{title} ({i.get('version')})"
+                    if i.get("parental_warning"):
+                        title = f"{title} [E]"
+                    # --------------------------------------------
+                    
                     year = str(i.get("release_date_original") or i.get("release_date") or "    ")[:4]
+                    
+                    # --- RELEASE TYPE (ULTIMATE SMART ENGINE) ---
+                    raw_type = i.get("release_type") or i.get("product_type")
+                    if not raw_type:
+                        t_count = i.get("tracks_count", 0)
+                        duration = i.get("duration", 0) 
+                        
+                        if item_type == "album" and (t_count or duration):
+                            # Se dura 29+ minuti (1740s) o ha 7+ tracce, è un Album
+                            if duration >= 1740 or t_count >= 7:
+                                raw_type = "Album"
+                            # Se ha 1 sola traccia ed è sotto i 29 min, è un Singolo
+                            elif t_count == 1:
+                                raw_type = "Single"
+                            # Tutto ciò che sta nel mezzo (2-6 tracce, <29 min) è un EP
+                            else:
+                                raw_type = "EP"
+                        else:
+                            raw_type = item_type
+                            
+                    rel_type = "EP" if raw_type.lower() == "ep" else raw_type.title()
+                    # --------------------------------------------
                     
                     if i.get("hires_streamable"):
                         bit_depth = i.get("maximum_bit_depth", 24)
@@ -318,8 +348,8 @@ class QobuzDL:
                     else:
                         quality = "[ CD ] 16b/44.1kHz"
                         
-                    # Title width changed to 40 for better fit
-                    text = f"{_align_text(artist, 20)} │ {_align_text(title, 40)} │ {year} │ {quality}"
+                    # Title width 35, Type width 8
+                    text = f"{_align_text(artist, 20)} │ {_align_text(title, 35)} │ {_align_text(rel_type, 8)} │ {year} │ {quality}"
                 else:
                     name = i.get("name", "Unknown")
                     count = i.get("albums_count") if "albums_count" in i else i.get("tracks_count", 0)
@@ -375,12 +405,13 @@ class QobuzDL:
                 # --- DYNAMIC HEADER ALIGNMENT (Fixes the broken columns) ---
                 if selected_type in ["album", "track"]:
                     artist_h = "ARTIST".ljust(20)
-                    title_h = "TITLE".ljust(40)
+                    title_h = "TITLE".ljust(35)  # Ridotto a 35 per fare spazio
+                    type_h = "TYPE".ljust(8)     # Nuova colonna
                     year_h = "YEAR".ljust(4)
                     
                     table_header = (
-                        f"  {artist_h} │ {title_h} │ {year_h} │ QUALITY\n"
-                        f" ─{'─'*20}─┼─{'─'*40}─┼─{'─'*4}─┼───────────────"
+                        f"  {artist_h} │ {title_h} │ {type_h} │ {year_h} │ QUALITY\n"
+                        f" ─{'─'*20}─┼─{'─'*35}─┼─{'─'*8}─┼─{'─'*4}─┼───────────────"
                     )
                 else:
                     name_h = "NAME".ljust(50)
