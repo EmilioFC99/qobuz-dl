@@ -222,9 +222,13 @@ def main():
     except (configparser.Error, KeyError) as error:
         arguments = qobuz_dl_args().parse_args()
         if not arguments.reset:
+            # FIX: Definiamo i codici ANSI localmente per bypassare l'UnboundLocalError
+            RED_C = '\033[91m'
+            YELLOW_C = '\033[93m'
+            OFF_C = '\033[0m'
             sys.exit(
-                f"{RED}Invalid or corrupted configuration ({error}).\n{OFF}"
-                f"{YELLOW}Run 'python -m qobuz_dl -r' to fix this.{OFF}"
+                f"{RED_C}Invalid or corrupted configuration ({error}).\n{OFF_C}"
+                f"{YELLOW_C}Run 'python -m qobuz_dl -r' to fix this.{OFF_C}"
             )
 
     if arguments.reset:
