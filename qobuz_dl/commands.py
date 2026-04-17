@@ -333,6 +333,13 @@ def qobuz_dl_args(
         help="purge/delete downloaded-IDs database",
     )
     parser.add_argument(
+        "--sync-db",
+        metavar="PATH",
+        nargs="?",
+        const="DEFAULT",
+        help="scan local directory to restore missing Qobuz IDs into the database",
+    )
+    parser.add_argument(
         "-sc",
         "--show-config",
         action="store_true",

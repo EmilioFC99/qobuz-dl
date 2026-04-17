@@ -35,6 +35,9 @@ ID3_LEGEND = {
     "comment": id3.COMM,
     "year": id3.TYER,
     "performer": id3.TOPE,
+    # --- DB SYNC FEATURE: CUSTOM QOBUZ IDS ---
+    "QOBUZTRACKID": id3.TXXX,
+    "QOBUZALBUMID": id3.TXXX,
 }
 
 EMB_COVER_NAME = "embed_cover.jpg"
@@ -280,4 +283,16 @@ def _get_tags_to_add(qobuz_album: dict, qobuz_item : dict, settings: QobuzDLSett
         tags["MEDIATYPE"] = qobuz_album.get("product_type", "").upper()
     if not settings.no_explicit_tag:
         tags["ITUNESADVISORY"] = "1" if qobuz_album.get("parental_warning", False) else "0"
+
+    # --- DB SYNC FEATURE: SAVE QOBUZ IDS ---
+    # These invisible tags allow the sync tool to rebuild
+    # the local database instantly by scanning the files
+    track_id = qobuz_item.get("id")
+    if track_id:
+        tags["QOBUZTRACKID"] = str(track_id)
+        
+    album_id = qobuz_album.get("id")
+    if album_id:
+        tags["QOBUZALBUMID"] = str(album_id)
+
     return tags

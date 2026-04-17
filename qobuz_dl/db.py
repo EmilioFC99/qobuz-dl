@@ -95,6 +95,10 @@ def handle_download_id(db_path, item_id, add_id=False, media_type='album', quali
                      saved_path, url, release_date, status),
                 )
                 conn.commit()
+            except sqlite3.IntegrityError:
+                # The item is already in the database. 
+                # Providing clean visual feedback instead of an error or total silence.
+                logger.info(f"{YELLOW}[i] Already in database, skipping.{OFF}")
             except sqlite3.Error as e:
                 logger.error(f"{RED}Unexpected DB error: {e}{OFF}")
         else:

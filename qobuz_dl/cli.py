@@ -243,6 +243,27 @@ def main():
             pass
         sys.exit(f"{GREEN}Database has been purged.{OFF}")
 
+    # --- NEW DB SYNC FEATURE (Lightweight Mode) ---
+    if getattr(arguments, 'sync_db', None):
+        from qobuz_dl.sync import sync_database
+        from qobuz_dl.qopy import Client
+        from qobuz_dl.color import GREEN, OFF
+        
+        # Inizializza un client API leggero per il Reverse Lookup (ignora il downloader pesante)
+        sync_client = Client(email, password, app_id, secrets, user_auth_token=token, force_english=force_english)
+        
+        # Gestione del percorso
+        sync_dir = default_folder if arguments.sync_db == "DEFAULT" else arguments.sync_db
+        
+        if os.name == "nt":
+            sync_dir = os.path.abspath(sync_dir)
+            if not sync_dir.startswith("\\\\?\\"):
+                sync_dir = "\\\\?\\" + sync_dir
+                
+        sync_database(sync_dir, QOBUZ_DB, sync_client)
+        sys.exit(f"\n{GREEN}Database synchronization finished successfully.{OFF}")
+    # ----------------------------------------------
+
     directory_to_use = arguments.directory if hasattr(arguments, 'directory') and arguments.directory else default_folder
 
     # --- WINDOWS LONG PATH BYPASS ---
