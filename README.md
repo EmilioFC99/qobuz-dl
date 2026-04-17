@@ -69,7 +69,6 @@ pip3 install -r requirements.txt
 
 ### Option C: 🐳 Docker Usage (NAS & Home Servers)
 The Ultimate Edition is fully containerized and includes all dependencies (Python, FFmpeg). This is the recommended installation method for Synology, QNAP, Unraid, and headless servers.
-
 ```bash
 # Pull the latest official image
 docker pull ghcr.io/sei969/qobuz-dl:latest
@@ -78,7 +77,15 @@ docker pull ghcr.io/sei969/qobuz-dl:latest
 docker run -it --rm \
   -v /path/to/your/nas/music:/app/QobuzDownloads \
   ghcr.io/sei969/qobuz-dl:latest dl "[https://play.qobuz.com/album/](https://play.qobuz.com/album/)..."
-  ```
+```
+
+### Option D: ☁️ Google Colab (Cloud & Google Drive)
+The fastest way to download directly to your Google Drive at Gigabit speeds, bypassing local network limitations. Zero installation required.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Sei969/qobuz-dl/blob/master/Qobuz_Ultimate_Colab.ipynb)
+
+* **Zero Setup:** Runs entirely in your browser (works seamlessly on smartphones and tablets too).
+* **Usage:** Click the badge above, run the setup cells to mount your Google Drive, paste your Qobuz Auth Token, and start downloading directly to the cloud.
 ## 💻 Usage & Quick Examples
 
 ```text
