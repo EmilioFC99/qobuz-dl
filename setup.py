@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
-pkg_name = "qobuz-dl"
-
+# 1. NEW PACKAGE NAME (Must be unique on PyPI)
+pkg_name = "qobuz-dl-ultimate"
 
 def read_file(fname):
-    with open(fname, "r") as f:
+    # Added encoding="utf-8" to prevent build errors with emojis in README
+    with open(fname, "r", encoding="utf-8") as f:
         return f.read()
-
 
 requirements = [
     "pathvalidate",
@@ -16,20 +16,26 @@ requirements = [
     "pick==1.6.0",
     "beautifulsoup4",
     "colorama",
+    # NOTE: cryptography was used in the original downloader, keeping it for safety
+    "cryptography", 
 ]
 
 setup(
     name=pkg_name,
-    version="1.0.9",
-    author="Vitiko",
-    author_email="vhnz98@gmail.com",
-    description="The complete Lossless and Hi-Res music downloader for Qobuz",
+    # 2. VERSION RESET FOR YOUR RELEASE
+    version="1.0.0", 
+    # 3. AUTHOR INFO
+    author="Riccardo (Sei969)",
+    author_email="Sei969@users.noreply.github.com",
+    description="The Ultimate Lossless and Hi-Res music downloader for Qobuz with ReplayGain and Classical metadata",
     long_description=read_file("README.md"),
     long_description_content_type="text/markdown",
-    url="https://github.com/vitiko98/Qobuz-DL",
+    # 4. LINK TO YOUR FORK
+    url="https://github.com/Sei969/qobuz-dl", 
     install_requires=requirements,
     entry_points={
         "console_scripts": [
+            # Keeping the original command names for backward compatibility
             "qobuz-dl = qobuz_dl:main",
             "qdl = qobuz_dl:main",
         ],
@@ -42,7 +48,3 @@ setup(
     ],
     python_requires=">=3.6",
 )
-
-# rm -f dist/*
-# python3 setup.py sdist bdist_wheel
-# twine upload dist/*
