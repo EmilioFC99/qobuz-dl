@@ -6,7 +6,6 @@ from mutagen.flac import FLAC, Picture
 import mutagen.id3 as id3
 from mutagen.id3 import ID3NoHeaderError
 from qobuz_dl.settings import QobuzDLSettings
-# Rimosso flac_fix_md5s da qui
 from qobuz_dl.utils import get_album_artist
 
 logger = logging.getLogger(__name__)
@@ -41,18 +40,16 @@ ID3_LEGEND = {
     # --- REPLAYGAIN ---
     "replaygain_track_gain": id3.TXXX,
     "replaygain_track_peak": id3.TXXX,
+    # --- CLASSICAL MUSIC ---
+    "conductor": id3.TPE3,
+    "ensemble": id3.TXXX,
+    "work": id3.TIT1,
 }
 
 EMB_COVER_NAME = "embed_cover.jpg"
 
 
 def _get_title_with_version(title: str = "", version: str = "") -> str:
-    """
-    Get the title and append the version to the title, if available
-    :param title:
-    :param version:
-    :return:
-    """
     item_title = title
     if version:
         item_title = (
@@ -83,11 +80,6 @@ def _format_copyright(s: str) -> str:
 
 
 def _format_genres(genres: list) -> str:
-    """Fixes the weirdly formatted genre lists returned by the API.
-    >>> g = ['Pop/Rock', 'Pop/Rock→Rock', 'Pop/Rock→Rock→Alternatif et Indé']
-    >>> _format_genres(g)
-    'Pop, Rock, Alternatif et Indé'
-    """
     genres = re.findall(r"([^\u2192\/]+)", "/".join(genres))
     no_repeats = []
     [no_repeats.append(g) for g in genres if g not in no_repeats]
@@ -105,8 +97,6 @@ def _embed_flac_img(root_dir, audio: FLAC):
         cover_image = multi_emb_image
 
     try:
-        # rest of the metadata still gets embedded
-        # when the image size is too big
         if os.path.getsize(cover_image) > FLAC_MAX_BLOCKSIZE:
             raise Exception(
                 "downloaded cover size too large to embed. "
@@ -138,13 +128,9 @@ def _embed_id3_img(root_dir, audio: id3.ID3):
         audio.add(id3.APIC(3, "image/jpeg", 3, "", cover.read()))
 
 
-# Use KeyError catching instead of dict.get to avoid empty tags
 def tag_flac(
     filename, root_dir, final_name, d: dict, album, istrack=True, em_image=False, settings: QobuzDLSettings = None
 ):
-    """
-    Tag a FLAC file
-    """
     audio = FLAC(filename)
 
     if istrack:
@@ -154,10 +140,8 @@ def tag_flac(
         qobuz_item = d
         qobuz_album = album
 
-    # temporarily holds metadata
     tags = _get_tags_to_add(qobuz_album, qobuz_item, settings=settings)
 
-    # Track Information
     if not settings.no_track_number_tag:
         tags["TRACKNUMBER"] = str(qobuz_item.get("track_number", "1"))
     if not settings.no_track_total_tag:
@@ -167,7 +151,6 @@ def tag_flac(
     if not settings.no_disc_total_tag:
         tags["DISCTOTAL"] = str(qobuz_album.get("media_count", "1"))
 
-    # write metadata in `tags` to file
     for k, v in tags.items():
         if v:
             audio[k] = v
@@ -180,10 +163,6 @@ def tag_flac(
 
 
 def tag_mp3(filename, root_dir, final_name, d, album, istrack=True, em_image=False, settings: QobuzDLSettings = None):
-    """
-    Tag an mp3 file
-    """
-
     try:
         audio = id3.ID3(filename)
     except ID3NoHeaderError:
@@ -196,13 +175,10 @@ def tag_mp3(filename, root_dir, final_name, d, album, istrack=True, em_image=Fal
         qobuz_item = d
         qobuz_album = album
 
-    # temporarily holds metadata
     tags = _get_tags_to_add(qobuz_album, qobuz_item, settings=settings)
 
-    # write metadata in `tags` to file
     for k, v in tags.items():
         if v:
-            # Fix compatibilità ID3_LEGEND minuscolo vs tags maiuscolo
             id3tag = ID3_LEGEND.get(k.lower()) or ID3_LEGEND.get(k)
             if id3tag:
                 if id3tag == id3.TXXX:
@@ -210,7 +186,6 @@ def tag_mp3(filename, root_dir, final_name, d, album, istrack=True, em_image=Fal
                 else:
                     audio[id3tag.__name__] = id3tag(encoding=3, text=v)
 
-    # track information
     audio["TRCK"] = id3.TRCK(encoding=3,
                              text=f'{str(qobuz_item.get("track_number", "1"))}/{str(qobuz_album.get("tracks_count", "1"))}')
     audio["TPOS"] = id3.TPOS(encoding=3,
@@ -222,10 +197,8 @@ def tag_mp3(filename, root_dir, final_name, d, album, istrack=True, em_image=Fal
     audio.save(filename, v2_version=3)
     os.rename(filename, final_name)
 
+
 def _get_tags_to_add(qobuz_album: dict, qobuz_item : dict, settings: QobuzDLSettings = None):
-    """
-    get tags data from album and track metadata
-    """
     tags = dict()
     if not qobuz_album or not qobuz_item:
         return tags
@@ -243,18 +216,15 @@ def _get_tags_to_add(qobuz_album: dict, qobuz_item : dict, settings: QobuzDLSett
         tags["ALBUMARTIST"] = get_album_artist(qobuz_album)
         
     if not settings.no_track_artist_tag:
-        # 1. Cattura l'artista principale
         main_artist = qobuz_item.get("performer", {}).get("name", "") or qobuz_album.get("artist", {}).get("name", "")
         artists = [main_artist] if main_artist else []
         
-        # 2. Integrazione patch per catturare gli ospiti
         performers_str = qobuz_item.get("performers", "")
         if performers_str:
             for i in performers_str.split(" - "):
                 if "FeaturedArtist" in i:
                     artists.append(i.replace(", FeaturedArtist", "").strip())
         
-        # 3. Salva nel file musicale
         if len(artists) == 1:
             tags["ARTIST"] = artists[0]
         elif len(artists) > 1:
@@ -275,7 +245,6 @@ def _get_tags_to_add(qobuz_album: dict, qobuz_item : dict, settings: QobuzDLSett
     if not settings.no_label_tag:
         tags["COPYRIGHT"] = _format_copyright(qobuz_album.get("copyright", "n/a"))
     if not settings.no_label_tag:
-        # Qobuz sometimes has multiple spaces in place of where a single space should be when it comes to Labels
         tags["LABEL"] = re.sub(r'\s+',' ', qobuz_album.get("label", {}).get("name", ""))
     if not settings.no_isrc_tag:
         tags["ISRC"] = qobuz_item.get("isrc", "")
@@ -288,7 +257,7 @@ def _get_tags_to_add(qobuz_album: dict, qobuz_item : dict, settings: QobuzDLSett
     if not settings.no_explicit_tag:
         tags["ITUNESADVISORY"] = "1" if qobuz_album.get("parental_warning", False) else "0"
 
-    # --- NEW: REPLAYGAIN TAGS ---
+    # --- REPLAYGAIN TAGS ---
     audio_info = qobuz_item.get("audio_info", {})
     if audio_info:
         rg_gain = audio_info.get("replaygain_track_gain")
@@ -298,11 +267,38 @@ def _get_tags_to_add(qobuz_album: dict, qobuz_item : dict, settings: QobuzDLSett
             tags["REPLAYGAIN_TRACK_GAIN"] = f"{rg_gain} dB"
         if rg_peak is not None:
             tags["REPLAYGAIN_TRACK_PEAK"] = str(rg_peak)
+
+    # --- CLASSICAL MUSIC TAGS ---
+    work = qobuz_item.get("work")
+    if work:
+        tags["WORK"] = work
+
+    conductors = []
+    ensembles = []
+    performers_str = qobuz_item.get("performers", "")
+    
+    if performers_str:
+        for performer_block in performers_str.split(" - "):
+            # Separa il nome dai ruoli usando la virgola
+            parts = [p.strip() for p in performer_block.split(", ")]
+            if len(parts) > 1:
+                name = parts[0]
+                roles = parts[1:]
+                
+                # Se tra i ruoli c'è il Direttore
+                if "Conductor" in roles:
+                    conductors.append(name)
+                # Se tra i ruoli c'è un'Orchestra o un Coro
+                if any(role in roles for role in ["Orchestra", "Ensemble", "Choir"]):
+                    ensembles.append(name)
+
+    if conductors:
+        tags["CONDUCTOR"] = conductors if len(conductors) > 1 else conductors[0]
+    if ensembles:
+        tags["ENSEMBLE"] = ensembles if len(ensembles) > 1 else ensembles[0]
     # ----------------------------
 
     # --- DB SYNC FEATURE: SAVE QOBUZ IDS ---
-    # These invisible tags allow the sync tool to rebuild
-    # the local database instantly by scanning the files
     track_id = qobuz_item.get("id")
     if track_id:
         tags["QOBUZTRACKID"] = str(track_id)
