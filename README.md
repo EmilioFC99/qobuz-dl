@@ -57,22 +57,29 @@ To prevent downloading incorrect songs, this fork utilizes a mathematical **Fuzz
 
 > ⚠️ **Requirement:** You need an **active subscription** to Qobuz.
 
-### Option A: Pre-built Binaries (Windows x64)
+### Option A: 📦 PyPI Package (Recommended for all platforms)
+The easiest and official way to install the Ultimate Edition. Open your terminal and run:
+```bash
+pip install qobuz-dl-ultimate
+```
+*Once installed, you can launch the program from any folder on your computer by simply typing `qobuz-dl` or `qdl`.*
+
+### Option B: Pre-built Binaries (Windows x64)
 The easiest way to run the program on Windows without installing Python.
 👉 **[Download the latest ZIP here](https://github.com/Sei969/qobuz-dl/releases/latest)**
 * **Portable:** No installation required.
 * **Important:** Just extract the `.zip` and ensure `ffmpeg.exe` and `qobuz-dl-ultimate.exe` are in the same folder.
 
-### Option B: Python Source (Linux, macOS, Windows)
+### Option C: Python Source (Advanced)
 Clone this repository and install the required dependencies:
 ```bash
-git clone https://github.com/Sei969/qobuz-dl.git
+git clone [https://github.com/Sei969/qobuz-dl.git](https://github.com/Sei969/qobuz-dl.git)
 cd qobuz-dl
 pip3 install -r requirements.txt
 ```
 *Run the program using:* `python -m qobuz_dl`
 
-### Option C: 🐳 Docker Usage (NAS & Home Servers)
+### Option D: 🐳 Docker Usage (NAS & Home Servers)
 The Ultimate Edition is fully containerized and includes all dependencies (Python, FFmpeg). This is the recommended installation method for Synology, QNAP, Unraid, and headless servers.
 ```bash
 # Pull the latest official image
@@ -81,10 +88,10 @@ docker pull ghcr.io/sei969/qobuz-dl:latest
 # Example: Run a download and map it to your NAS music folder
 docker run -it --rm \
   -v /path/to/your/nas/music:/app/QobuzDownloads \
-  ghcr.io/sei969/qobuz-dl:latest dl "https://play.qobuz.com/album/..."
+  ghcr.io/sei969/qobuz-dl:latest dl "[https://play.qobuz.com/album/](https://play.qobuz.com/album/)..."
 ```
 
-### Option D: ☁️ Google Colab (Cloud & Google Drive)
+### Option E: ☁️ Google Colab (Cloud & Google Drive)
 The fastest way to download directly to your Google Drive at Gigabit speeds, bypassing local network limitations. Zero installation required.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Sei969/qobuz-dl/blob/master/Qobuz_Ultimate_Colab.ipynb)
