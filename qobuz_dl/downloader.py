@@ -518,20 +518,16 @@ class Download:
             
             combined_indicators = f"{t_genre} {a_genre} {a_genres_list} {performers_str}"
             
-            # 3. Ruthless vocabulary (Broad genres + Roles + Solo Instruments + Formations)
+            # 3. Ruthless vocabulary (Strictly Genres and Formations, NO Instruments to avoid false positives)
             classical_keywords = [
                 # Broad genres and formats
                 "classic", "classique", "opera", "symphon", 
-                "orchestr", "concerto", "sonata", "instrumental",
+                "orchestr", "concerto", "sonata",
                 "requiem", "chorale", "fugue", "prelude", "recital",
                 
                 # Roles and Formations
                 "conductor", "choir", "philharmonic", "ensemble",
-                "chamber", "trio", "quartet", "quintet",
-                
-                # Typical solo instruments (as used by Qobuz)
-                "piano", "violin", "cello", "organ", "harpsichord",
-                "lute", "flute", "oboe", "clarinet", "horn"
+                "chamber", "quartet", "quintet"
             ]
             
             # If any of these words are found, block the lyrics search

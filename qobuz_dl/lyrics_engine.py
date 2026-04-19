@@ -45,10 +45,12 @@ class LyricsEngine:
                 
                 if synced_lyrics:
                     self._save_lrc_file(file_path, synced_lyrics)
-                    self._inject_metadata(file_path, plain_lyrics)
-                    print(f"    ✅ Synchronized lyrics saved!")
+                    # INIEZIONE CORRETTA: Passiamo il testo con i timestamp temporali!
+                    self._inject_metadata(file_path, synced_lyrics)
+                    print(f"    ✅ Synchronized lyrics saved and injected!")
                     return
                 elif plain_lyrics:
+                    # Se non esiste la versione sincronizzata, ripieghiamo su quella statica
                     self._inject_metadata(file_path, plain_lyrics)
                     print(f"    ✅ Standard lyrics injected into metadata!")
                     return
