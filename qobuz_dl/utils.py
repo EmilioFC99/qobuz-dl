@@ -194,28 +194,35 @@ def get_url_info(url):
     return r.groups()
 
 
-def get_album_artist(qobuz_album: dict) -> str:
+def get_album_artist(qobuz_album: dict) -> list:
     """
     Get the album's main artists from the Qobuz API response.
-    If there are multiple main artists, they are separated by " & ".
+    Returns a LIST of strings to ensure true Multi-Artist Tagging 
+    (discrete Vorbis Comments for FLAC files).
     :param qobuz_album: Qobuz API response.
-    :return: The album's main artists.
+    :return: A list of the album's main artists.
     """
     try:
+        # Se la chiave 'artists' non esiste, ritorna il singolo artista in una lista
         if not qobuz_album.get("artists"):
-            return qobuz_album.get("artist", {}).get("name", "")
+            single_artist = qobuz_album.get("artist", {}).get("name", "")
+            return [single_artist] if single_artist else []
 
+        # Filtra l'array isolando solo chi ha il ruolo 'main-artist'
         main_artists = list(filter(lambda a: "main-artist" in a.get("roles", []),
                                    qobuz_album.get("artists", [])))
-        if len(main_artists) > 1:
-            all_but_last_artist = ", ".join(map(lambda a: a["name"], main_artists[:-1]))
-            last_artist = main_artists[-1]["name"]
-            return f"{all_but_last_artist} & {last_artist}"
+        
+        # Estrae i nomi puri e li restituisce come lista separata
+        if main_artists:
+            return [a["name"] for a in main_artists]
         else:
-            return qobuz_album.get("artist", {}).get("name", "")
+            single_artist = qobuz_album.get("artist", {}).get("name", "")
+            return [single_artist] if single_artist else []
+            
     except Exception as e:
         logger.error(f"Error getting album artist: {str(e)}")
-        return qobuz_album.get("artist", {}).get("name", "")
+        single_artist = qobuz_album.get("artist", {}).get("name", "")
+        return [single_artist] if single_artist else []
 
 
 def clean_filename(filename: str) -> str:
