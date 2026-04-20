@@ -24,7 +24,7 @@ Search, explore, and download Lossless and Hi-Res music from [Qobuz](https://www
 * **Multithreaded Downloading:** Concurrent track downloads for blazing-fast album fetching.
 * **Clean Multithreading UI:** Intelligently switches to a clutter-free, static logging system displaying precise file sizes (MB) during concurrent downloads. This prevents terminal visual glitches and "cursor wars" with the Lyrics Engine, while preserving the classic animated progress bars for sequential (`--delay`) downloads.
 * **Smart Quality Fallback:** Automatically downgrades to the next best available quality if the requested tier is restricted by the server, ensuring your download queue never crashes.
-* **Authentication Bypass:** Log in securely using your browser's `user_auth_token` if standard password authentication is blocked. Graciously handles Free/Studio accounts.
+* **Authentication Bypass:** Log in securely using your browser's **Auth Token** if standard password authentication is blocked. Graciously handles Free/Studio accounts.
 
 ### 📁 Advanced Formatting & Storage
 
@@ -99,6 +99,16 @@ The fastest way to download directly to your Google Drive at Gigabit speeds, byp
 
 * **Zero Setup:** Runs entirely in your browser (works seamlessly on smartphones and tablets too).
 * **Usage:** Click the badge above, run the setup cells to mount your Google Drive, paste your Qobuz Auth Token, and start downloading directly to the cloud.
+
+### 🔑 How to get your Auth Token
+Since Qobuz blocked direct password logins for third-party applications, you need to provide your browser's Auth Token during the initial configuration. Here is how to easily find it:
+1. Open the [Qobuz Web Player](https://play.qobuz.com) in your browser and log in.
+2. Press `F12` to open the Developer Tools.
+3. Go to the **Application** tab (Chrome/Edge) or **Storage** tab (Firefox).
+4. In the left sidebar, expand **Local Storage** and click on `https://play.qobuz.com`.
+5. In the list of keys, find **`localuser`**.
+6. At the bottom of the panel (or by expanding the JSON value), look for the **`token`** string.
+7. Copy that alphanumeric string and paste it into the `qobuz-dl` terminal wizard!
 
 ## 💻 Usage & Quick Examples
 
