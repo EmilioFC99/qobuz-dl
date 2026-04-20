@@ -39,9 +39,9 @@ def _reset_config(config_file):
     config["qobuz"]["email"] = email
     
     print(f"\n{YELLOW}[!] ATTENTION: Qobuz API blocked direct password login for 3rd party apps.{OFF}")
-    print(f"{YELLOW}[!] You must use your browser Auth Token (F12 > Storage > Local Storage > user_auth_token).{OFF}")
+    print(f"{YELLOW}[!] You must use your browser Auth Token (F12 > Storage > Local Storage > localuser > token).{OFF}")
     
-    auth_token = input("Paste your browser user_auth_token here:\n- ").strip()
+    auth_token = input("Paste your browser token here:\n- ").strip()
     
     config["qobuz"]["password"] = ""
     config["qobuz"]["auth_token"] = auth_token
