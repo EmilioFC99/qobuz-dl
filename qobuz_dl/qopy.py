@@ -171,6 +171,11 @@ class Client:
     def _normalize_json_strings(self, obj):
         """Recursively normalize Unicode strings in JSON objects (NFC form)"""
         if isinstance(obj, str):
+            # --- WINDOWS PATH FIX: Convert '...' to Unicode Ellipsis (U+2026) ---
+            # Avoid modifying URL links (which contain '://')
+            if "..." in obj and "://" not in obj:
+                obj = obj.replace("...", "…")
+            # --------------------------------------------------------------------
             return unicodedata.normalize('NFC', obj)
         elif isinstance(obj, dict):
             return {k: self._normalize_json_strings(v) for k, v in obj.items()}
