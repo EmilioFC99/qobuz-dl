@@ -66,7 +66,7 @@ class Client:
         self.session_key = None
         
         self.uat = None
-        self.force_english = force_english # Salviamo la tua variabile
+        self.force_english = force_english 
         
         self.auth(email, pwd, user_auth_token)
         self.cfg_setup()
@@ -122,7 +122,7 @@ class Client:
             params = {
                 "app_id": self.id,
                 "user_auth_token": getattr(self, 'uat', None),
-                "type": kwargs.get("fav_type", "albums"), # <-- ORA È DINAMICO!
+                "type": kwargs.get("fav_type", "albums"), 
                 "limit": kwargs.get("limit", 100),
                 "offset": kwargs.get("offset", 0),
                 "request_ts": unix,
@@ -203,7 +203,7 @@ class Client:
             cred = user_info.get("credential") or user_info.get("user", {}).get("credential", {})
             self.label = cred.get("parameters", {}).get("short_label", "Studio")
             
-            # --- FIX: Salviamo l'ID utente strettamente necessario per i preferiti ---
+            # --- FIX: Save user ID strictly required for favorites ---
             self.user_id = user_info.get("id") or user_info.get("user", {}).get("id")
             # -------------------------------------------------------------------------
             
@@ -307,7 +307,7 @@ class Client:
             params = {
                 "app_id": self.id,
                 "user_auth_token": getattr(self, 'uat', None),
-                "user_id": getattr(self, 'user_id', None),  # <-- IL PARAMETRO MANCANTE!
+                "user_id": getattr(self, 'user_id', None), 
                 "type": kwargs.get("fav_type", "albums"),
                 "limit": kwargs.get("limit", 100),
                 "offset": kwargs.get("offset", 0),
@@ -335,7 +335,8 @@ class Client:
             elif epoint == "artist/get": params["artist_id"] = val_id; params["extra"] = "albums"
             elif epoint == "label/get": params["label_id"] = val_id; params["extra"] = "albums"
 
-        if epoint == "user/login":
+        # PATCH: Added favorite/create to POST methods
+        if epoint in ["user/login", "favorite/create"]:
             r = self.session.post(self.base + epoint, data=params)
         elif epoint == "session/start":
             r = self.session.post(
@@ -360,7 +361,7 @@ class Client:
         if epoint == "user/get" and r.status_code == 400: return {}
         r.raise_for_status()
         
-        # Apply xwell's string normalizer to the network call output!
+        # Apply string normalizer to the network call output
         return self._normalize_json_strings(r.json())
 
     def multi_meta(self, epoint, key, id, type):
@@ -385,7 +386,6 @@ class Client:
         print(f"{CYAN}[*] Matching Last.fm tracks with Qobuz database (Fuzzy matching & Interactive mode enabled)...{OFF}")
         valid_track_ids = []
         
-        # Le nostre due soglie intelligenti
         AUTO_ACCEPT_THRESHOLD = 0.75 
         PROMPT_THRESHOLD = 0.60      
         
@@ -403,7 +403,6 @@ class Client:
                 
                 if search_results and "tracks" in search_results and search_results["tracks"]["items"]:
                     for q_track in search_results["tracks"]["items"]:
-                        # Estrazione sicura dei nomi
                         q_artist_raw = q_track.get("performer", {}).get("name", "Unknown")
                         q_title_raw = q_track.get("title", "Unknown")
                         
@@ -418,22 +417,16 @@ class Client:
                         if ratio > highest_ratio:
                             highest_ratio = ratio
                             best_match_id = q_track["id"]
-                            # Salviamo il nome originale (con le maiuscole giuste) per stamparlo bene a schermo
                             best_match_name = f"{q_artist_raw} - {q_title_raw}"
                     
-                    # --- LA LOGICA A 3 VIE ---
-                    
-                    # 1. Match Perfetto (Verde)
                     if highest_ratio >= AUTO_ACCEPT_THRESHOLD and best_match_id:
                         valid_track_ids.append(best_match_id)
                         
-                    # 2. La Zona Grigia (Giallo / Input Utente)
                     elif highest_ratio >= PROMPT_THRESHOLD and best_match_id:
                         print(f"\n{YELLOW}[?] Borderline match detected ({highest_ratio*100:.0f}% similarity){OFF}")
                         print(f"    Target (Last.fm): {item['artist']} - {item['title']}")
                         print(f"    Found  (Qobuz)  : {best_match_name}")
                         
-                        # Mette in pausa il programma e aspetta la tua risposta
                         choice = input(f"{CYAN}    Do you want to download this track anyway? [y/n]: {OFF}").strip().lower()
                         
                         if choice == 'y':
@@ -442,7 +435,6 @@ class Client:
                         else:
                             print(f"{RED}    [-] Track skipped manually.{OFF}")
                             
-                    # 3. Scarto Sicuro (Rosso)
                     else:
                         print(f"{YELLOW}[!] Skipping: '{query}' (Best match was only {highest_ratio*100:.0f}% similar){OFF}")
                         
@@ -481,9 +473,17 @@ class Client:
         try: 
             return self.api_call("favorite/getUserFavorites", fav_type=fav_type, limit=limit, offset=offset)
         except Exception as e: 
-            # Ora se l'API rifiuta la chiamata, lo vedremo scritto in rosso!
             logger.error(f"{RED}[!] API Error fetching favorites: {e}{OFF}")
             return {}
+            
+    def add_favorite_album(self, album_id):
+        """Adds an album to the user's Qobuz favorites."""
+        return self.api_call(
+            "favorite/create", 
+            album_ids=str(album_id),
+            artist_ids="",
+            track_ids=""
+        )
         
     # NEW GET_TRACK_URL (Patch 0004)
     def get_track_url(self, id, fmt_id, force_segments=False):

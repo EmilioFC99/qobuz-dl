@@ -58,6 +58,12 @@ To prevent downloading incorrect songs, this fork utilizes a mathematical **Fuzz
 * **Auto-Skip (< 60%):** Completely wrong tracks are automatically skipped.
 * **Interactive Selection (60% - 74%):** For borderline matches, the engine pauses and activates an interactive prompt allowing you to manually approve or reject the track (`[y/n]`).
 
+### 📡 MusicButler RSS Radar (Automated Favorites Sync)
+Never miss a new release from your tracked artists. The new `radar` command seamlessly integrates with your private **MusicButler** RSS feed to automate your discovery workflow.
+* **Smart Feed Parsing:** Automatically fetches and parses your private RSS/Atom feed to find the latest releases from the artists you follow.
+* **Fuzzy Qobuz Matching:** Queries the Qobuz database to find the exact high-resolution matches for your daily new releases.
+* **Interactive Checkbox UI:** Presents a clean, interactive terminal menu where you can multi-select (`Spacebar`) the fresh releases and instantly inject them into your Qobuz Favorites (`Enter`), ready to be downloaded later via the `fun` mode.
+
 ## 📥 Installation & Setup
 
 > ⚠️ **Requirement:** You need an **active subscription** to Qobuz.
@@ -118,7 +124,7 @@ Since Qobuz blocked direct password logins for third-party applications, you nee
 
 ```text
 [Global Commands & Database Management]
-usage: python -m qobuz_dl [-h] [-r] [-p] [--sync-db [PATH]] [-sc] {interactive,i,fun,dl,lucky,lyrics} ...
+usage: python -m qobuz_dl [-h] [-r] [-p] [--sync-db [PATH]] [-sc] {interactive,i,fun,dl,lucky,lyrics,radar} ...
 
 [Download Usage]
 usage: python -m qobuz_dl dl [-h] [-d PATH] [-q int] [--albums-only] [--no-m3u] [--no-fallback] [--no-db] 
@@ -129,6 +135,12 @@ usage: python -m qobuz_dl dl [-h] [-d PATH] [-q int] [--albums-only] [--no-m3u] 
                              [--no-lyrics] [--native-lang] [--no-credits] [--delay SECONDS]
                              [--no-album-artist-tag] [--no-track-composer-tag] ... 
                              SOURCE [SOURCE ...]
+```
+
+**MusicButler Radar Mode:**
+*(Tip: Run it once to save your RSS link, then run it daily to catch new releases and securely add them to your Qobuz favorites!)*
+```bash
+python -m qobuz_dl radar
 ```
 							 
 **Basic Album/Playlist Download:**

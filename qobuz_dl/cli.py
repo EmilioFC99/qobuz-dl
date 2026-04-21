@@ -177,8 +177,22 @@ def _initial_checks():
 def main():
     _initial_checks()
 
+    # --- RADAR FEATURE (Standalone Intercept) ---
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "radar":
+        from qobuz_dl.radar import run_radar
+        
+        try:
+            run_radar()
+        except KeyboardInterrupt:
+            print("\n\n\033[91m[!] Radar manually interrupted by the user (CTRL+C).\033[0m")
+        sys.exit(0)
+    # --------------------------------------------
+
     config = configparser.ConfigParser(interpolation=None)
     config.read(CONFIG_FILE)
+
+    # ... il resto del file continua normalmente ...
 
     try:
         section = "qobuz" if config.has_section("qobuz") else "DEFAULT"
