@@ -46,6 +46,11 @@ Qobuz-DL Ultimate allows deep customization of your library structure using vari
 * **Multi-Disc Routing:** Store multiple disc releases in one single directory or split them using customizable prefixes (e.g., `CD 01`).
 * **Universal Playlist Generation:** `.m3u` files are strictly UTF-8 encoded, ensuring 100% crash-free generation even with complex Unicode or Japanese characters (Fixes #304).
 
+### ❤️ Native Favorites Sync & Interactive Menu
+Seamlessly bridge your mobile listening habits with your local offline library. Instead of manually copying URLs, launch the Interactive Mode (`fun`) to securely access your personal Qobuz account and browse your **Favorite Albums, Tracks, Artists, and Playlists** directly from the terminal.
+* **Zero-Typing Workflow:** Fetch your private library with a single click without ever leaving the terminal.
+* **Massive Batch Downloading:** Use the `Spacebar` to multi-select dozens of your favorite releases from the clean, minimalist UI and queue them all up for download in seconds.
+
 ### 🌉 Last.fm Smart Integration & Interactive Mode
 Seamlessly bridge your Last.fm world with Qobuz. Download your personalized playlists and "Loved Tracks" with ease. 
 To prevent downloading incorrect songs, this fork utilizes a mathematical **Fuzzy Matching Algorithm**:
