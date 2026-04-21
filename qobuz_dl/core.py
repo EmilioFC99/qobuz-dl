@@ -197,7 +197,7 @@ class QobuzDL:
                 self.settings.multiple_disc_one_dir = True
             # ------------------------------------------------
 
-            # Usiamo enumerate per avere il numero della traccia nella playlist (1, 2, 3...)
+            # Use enumerate to get the track number in the playlist (1, 2, 3...)
             for idx, item in enumerate(items, start=1):
                 self.download_from_id(
                     item["id"],
@@ -267,8 +267,9 @@ class QobuzDL:
 
         return results
 
-    def search_by_type(self, query, item_type, limit=10, lucky=False):
-        if len(query) < 3:
+    def search_by_type(self, query, item_type, limit=10, lucky=False, fav_subtype=None):
+        # Prevent crash if query is None (which happens when searching favorites)
+        if item_type != "favorites" and (not query or len(query) < 3):
             logger.info(f"{RED}Your search query is too short or invalid")
             return
 
@@ -297,12 +298,34 @@ class QobuzDL:
                 "key": "playlists",
                 "requires_extra": False,
             },
+            "favorites": {
+                "func": self.client.get_favorites,
+                "album": True, # Depends on the subtype, defaults to True for pagination
+                "key": "favorites", # Placeholder, handled below
+                "requires_extra": True,
+            }
         }
 
         try:
             mode_dict = possibles[item_type]
-            results = mode_dict["func"](query, limit)
-            iterable = results[mode_dict["key"]]["items"]
+            
+            # --- NEW FAVORITES EXTRACTION LOGIC ---
+            if item_type == "favorites":
+                # API call for favorites
+                results = mode_dict["func"](fav_type=fav_subtype, limit=limit)
+                iterable = results.get(fav_subtype, {}).get("items", [])
+                
+                # Adjust requires_extra based on the subtype for the minimalist table
+                if fav_subtype in ["artists", "playlists"]:
+                    mode_dict["requires_extra"] = False
+                else:
+                    mode_dict["requires_extra"] = True
+            else:
+                # Standard API call
+                results = mode_dict["func"](query, limit)
+                iterable = results[mode_dict["key"]]["items"]
+            # --------------------------------------------
+            
             item_list = []
             
             for i in iterable:
@@ -341,17 +364,24 @@ class QobuzDL:
                     else:
                         quality = "[ CD ] 16b/44.1kHz"
                         
-                    # --- MODIFICA 1 APPLICATA QUI SOTTO: Via le '│', usiamo 3 spazi ---
+                    # --- FIX 1 APPLIED BELOW: Removed '│' separators, using 3 spaces ---
                     text = f"{_align_text(artist, 20)}   {_align_text(title, 35)}   {_align_text(rel_type, 8)}   {year}   {quality}"
                 else:
                     name = i.get("name", "Unknown")
                     count = i.get("albums_count") if "albums_count" in i else i.get("tracks_count", 0)
                     desc = "albums" if "albums_count" in i else "tracks"
                     
-                    # --- MODIFICA 1 APPLICATA QUI SOTTO: Via le '│', usiamo 3 spazi ---
+                    # --- FIX 1 APPLIED BELOW: Removed '│' separators, using 3 spaces ---
                     text = f"{_align_text(name, 50)}   {count} {desc}"
 
-                url = "{}{}/{}".format(WEB_URL, item_type, i.get("id", ""))
+                # --- FAVORITES FIX URL ---
+                if item_type == "favorites" and fav_subtype:
+                    # Remove the trailing 's' (albums -> album, tracks -> track)
+                    url_category = fav_subtype[:-1]
+                else:
+                    url_category = item_type
+                    
+                url = "{}{}/{}".format(WEB_URL, url_category, i.get("id", ""))
                 item_list.append({"text": text, "url": url} if not lucky else url)
             return item_list
             
@@ -363,7 +393,6 @@ class QobuzDL:
         try:
             import pick
             # --- WINDOWS TERMINAL FIX & MULTISELECT LOOK ---
-            # Using clean, aligned square brackets for the multi-select interface
             if hasattr(pick, 'SYMBOL_CIRCLE_EMPTY'):
                 pick.SYMBOL_CIRCLE_EMPTY = '[ ]'
                 pick.SYMBOL_CIRCLE_FILLED = '[X]'
@@ -384,28 +413,49 @@ class QobuzDL:
         ]
 
         try:
-            item_types = ["Albums", "Tracks", "Artists", "Playlists"]
-            selected_type = pick.pick(item_types, "I'll search for:\n[press Intro]")[0][:-1].lower()
-            logger.info(f"{YELLOW}Ok, we'll search for {selected_type}s{RESET}")
+            item_types = ["Albums", "Tracks", "Artists", "Playlists", "Favorites"]
+            
+            # Get the exact choice
+            scelta_raw = pick.pick(item_types, "I'll search for:\n[press Intro]")[0]
+            
+            # Fix trailing 's' slicing (needed for album/track, but breaks Favorites)
+            if scelta_raw == "Favorites":
+                selected_type = "favorites"
+            else:
+                selected_type = scelta_raw[:-1].lower() 
+                
+            logger.info(f"{YELLOW}Ok, we'll search for {selected_type}{RESET}")
             final_url_list = []
             
             while True:
-                query = input(f"{CYAN}Enter your search: [Ctrl + c to quit]\n-{DF} ")
-                logger.info(f"{YELLOW}Searching...{RESET}")
-                options = self.search_by_type(query, selected_type, self.interactive_limit)
+                if selected_type == "favorites":
+                    # --- FAVORITES FLOW: Choose the category instead of typing ---
+                    fav_types = ["Albums", "Tracks", "Artists", "Playlists"]
+                    selected_fav = pick.pick(fav_types, "Which favorites do you want to browse?\n[press Intro]")[0].lower()
+                    
+                    logger.info(f"{YELLOW}Fetching your favorite {selected_fav}...{RESET}")
+                    options = self.search_by_type(None, selected_type, limit=self.interactive_limit, fav_subtype=selected_fav)
+                    query_title = f"My Favorite {selected_fav.title()}"
+                else:
+                    # --- STANDARD FLOW: Type the keyword ---
+                    query = input(f"{CYAN}Enter your search: [Ctrl + c to quit]\n-{DF} ")
+                    logger.info(f"{YELLOW}Searching...{RESET}")
+                    options = self.search_by_type(query, selected_type, self.interactive_limit)
+                    query_title = query.title()
                 
                 if not options:
                     logger.info(f"{OFF}Nothing found{RESET}")
+                    if selected_type == "favorites":
+                        break # Prevent infinite loop if there are no favorites
                     continue
                 
-                # --- CALIBRATED MINIMAL HEADER (7 SPACES FOR PERFECT ALIGNMENT) ---
-                if selected_type in ["album", "track"]:
+                # --- CALIBRATED MINIMAL HEADER (Support for Favorites included) ---
+                if selected_type in ["album", "track"] or (selected_type == "favorites" and selected_fav in ["albums", "tracks"]):
                     artist_h = "ARTIST".ljust(20)
                     title_h = "TITLE".ljust(35)
                     type_h = "TYPE".ljust(8)
                     year_h = "YEAR".ljust(4)
                     
-                    # Using 7 leading spaces to align the 'A' of ARTIST exactly above the first letter of the data
                     table_header = (
                         f"       {artist_h}   {title_h}   {type_h}   {year_h}   QUALITY\n"
                         f"       {'-' * 88}"
@@ -419,7 +469,7 @@ class QobuzDL:
                 # ------------------------------------------------------------------
 
                 title = (
-                    f'*** RESULTS FOR "{query.title()}" ***\n\n'
+                    f'*** RESULTS FOR "{query_title}" ***\n\n'
                     "[Use arrows to move, <Space> to select, <Enter> to confirm]\n"
                     "Press Ctrl + C to quit. Don't select anything to try another search.\n\n"
                     f"{table_header}"
@@ -442,6 +492,8 @@ class QobuzDL:
                         break
                 else:
                     logger.info(f"{YELLOW}Ok, try again...{RESET}")
+                    if selected_type == "favorites":
+                        break # Exit if nothing is selected in favorites
                     continue
                     
             if final_url_list:

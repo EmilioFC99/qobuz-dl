@@ -116,14 +116,15 @@ class Client:
                 "extra": "albums",
             }
         elif epoint == "favorite/getUserFavorites":
-            unix = time.time()
-            # r_sig = "userLibrarygetAlbumsList" + str(unix) + kwargs["sec"]
-            r_sig = "favoritegetUserFavorites" + str(unix) + kwargs["sec"]
+            unix = int(time.time())
+            r_sig = "favoritegetUserFavorites" + str(unix) + kwargs.get("sec", self.sec)
             r_sig_hashed = hashlib.md5(r_sig.encode("utf-8")).hexdigest()
             params = {
                 "app_id": self.id,
-                "user_auth_token": self.uat,
-                "type": "albums",
+                "user_auth_token": getattr(self, 'uat', None),
+                "type": kwargs.get("fav_type", "albums"), # <-- ORA È DINAMICO!
+                "limit": kwargs.get("limit", 100),
+                "offset": kwargs.get("offset", 0),
                 "request_ts": unix,
                 "request_sig": r_sig_hashed,
             }
@@ -196,10 +197,16 @@ class Client:
             user_info = self.api_call("user/get")
             cred = user_info.get("credential") or user_info.get("user", {}).get("credential", {})
             self.label = cred.get("parameters", {}).get("short_label", "Studio")
+            
+            # --- FIX: Salviamo l'ID utente strettamente necessario per i preferiti ---
+            self.user_id = user_info.get("id") or user_info.get("user", {}).get("id")
+            # -------------------------------------------------------------------------
+            
             logger.info(f"{GREEN}Logged: OK (Membership: {self.label}){OFF}")
         except Exception:
             logger.info(f"{YELLOW}[!] Profile validation bypassed.{OFF}")
             self.label = "Studio"
+            self.user_id = None
 
     # NEW CRYPTOGRAPHIC FUNCTIONS (Patch 0004)
     def _modern_sig(self, epoint, params, sec):
@@ -289,13 +296,16 @@ class Client:
                 epoint, params, kwargs.get("sec", self.sec)
             )
         elif epoint == "favorite/getUserFavorites":
-            unix = time.time()
-            r_sig = "favoritegetUserFavorites" + str(unix) + kwargs["sec"]
+            unix = int(time.time())
+            r_sig = "favoritegetUserFavorites" + str(unix) + kwargs.get("sec", self.sec)
             r_sig_hashed = hashlib.md5(r_sig.encode("utf-8")).hexdigest()
             params = {
                 "app_id": self.id,
                 "user_auth_token": getattr(self, 'uat', None),
-                "type": "albums",
+                "user_id": getattr(self, 'user_id', None),  # <-- IL PARAMETRO MANCANTE!
+                "type": kwargs.get("fav_type", "albums"),
+                "limit": kwargs.get("limit", 100),
+                "offset": kwargs.get("offset", 0),
                 "request_ts": unix,
                 "request_sig": r_sig_hashed,
             }
@@ -456,6 +466,19 @@ class Client:
     def search_artists(self, query, limit=20):
         try: return self.api_call("catalog/search", query=query, type="artists", limit=limit)
         except Exception: return {}
+
+    # --- NEW FAVORITES FUNCTION ---
+    def get_favorites(self, fav_type="albums", limit=100, offset=0):
+        """
+        Fetches user favorites dynamically. 
+        fav_type can be: 'albums', 'tracks', 'artists', 'playlists'
+        """
+        try: 
+            return self.api_call("favorite/getUserFavorites", fav_type=fav_type, limit=limit, offset=offset)
+        except Exception as e: 
+            # Ora se l'API rifiuta la chiamata, lo vedremo scritto in rosso!
+            logger.error(f"{RED}[!] API Error fetching favorites: {e}{OFF}")
+            return {}
         
     # NEW GET_TRACK_URL (Patch 0004)
     def get_track_url(self, id, fmt_id, force_segments=False):
