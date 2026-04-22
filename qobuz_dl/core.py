@@ -181,9 +181,10 @@ class QobuzDL:
                     skip_extras=True,
                 )
             else:
-                items = [item[type_dict["iterable_key"]]["items"] for item in content][
-                    0
-                ]
+                items = []
+                for chunk in content:
+                    batch = chunk.get(type_dict["iterable_key"], {}).get("items", [])
+                    items.extend(batch)
 
             logger.info(f"{YELLOW}{len(items)} downloads in queue")
             
