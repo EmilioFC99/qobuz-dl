@@ -383,8 +383,32 @@ class Download:
         is_parallel=False
     ):
         extension = ".mp3" if is_mp3 else ".flac"
-        time.sleep(1)
 
+        track_artist = _safe_get(track_metadata, "performer", "name")
+        filename_attr = self._get_filename_attr(
+            track_artist,
+            track_metadata,
+            album_or_track_metadata.get("album", {}) if is_track else album_or_track_metadata
+        )
+
+        if multiple and self.settings.multiple_disc_one_dir:
+            formatted_path = sanitize_filename(clean_filename(self.settings.multiple_disc_track_format.format(**filename_attr)), replacement_text="_")
+        else:
+            formatted_path = sanitize_filename(clean_filename(self.track_format.format(**filename_attr)), replacement_text="_")
+            
+        max_len = 180
+        if len(formatted_path) > max_len:
+            start_part = formatted_path[:110].rstrip(' ."-_\'')
+            end_part = formatted_path[-60:].lstrip(' ."-_\'')
+            formatted_path = f"{start_part}...{end_part}"
+            
+        final_file = os.path.join(root_dir, formatted_path) + extension
+
+        if os.path.exists(final_file):
+            safe_print(f"{CYAN}[*] Skipping: {os.path.basename(final_file)} (Already exists){OFF}")
+            return 
+
+        time.sleep(1)
         try:
             url = track_url_dict["url"]
         except KeyError:
@@ -458,38 +482,6 @@ class Download:
         is_mp3 = True if final_fmt == 5 else False
         extension = ".mp3" if is_mp3 else ".flac"
 
-        track_artist = _safe_get(track_metadata, "performer", "name")
-        filename_attr = self._get_filename_attr(
-            track_artist,
-            track_metadata,
-            album_or_track_metadata.get("album", {}) if is_track else album_or_track_metadata
-        )
-
-        if multiple and self.settings.multiple_disc_one_dir:
-            formatted_path = sanitize_filename(clean_filename(self.settings.multiple_disc_track_format.format(**filename_attr)), replacement_text="_")
-        else:
-            formatted_path = sanitize_filename(clean_filename(self.track_format.format(**filename_attr)), replacement_text="_")
-            
-        # --- FIX: SMART TRUNCATION (RISOLUZIONE DEFINITIVA) ---
-        # Sganciamo il calcolo dalla cartella. Un singolo nome file può arrivare a 255 caratteri.
-        # Fissiamo un limite iper-sicuro di 180 caratteri totali per la traccia.
-        max_len = 180
-        
-        if len(formatted_path) > max_len:
-            # Conserva i primi 110 caratteri e gli ultimi 60.
-            # .rstrip() e .lstrip() ripuliscono istantaneamente apici, trattini o spazi tagliati a metà.
-            inizio = formatted_path[:110].rstrip(' ."-_\'')
-            fine = formatted_path[-60:].lstrip(' ."-_\'')
-            formatted_path = f"{inizio}...{fine}"
-            
-        final_file = os.path.join(root_dir, formatted_path) + extension
-
-        if os.path.exists(final_file):
-            try:
-                os.remove(final_file)
-            except OSError as err:
-                safe_print(f"{YELLOW}[!] Cannot overwrite {final_file}: {err}{OFF}")
-
         tag_function = metadata.tag_mp3 if is_mp3 else metadata.tag_flac
         try:
             tag_function(
@@ -517,7 +509,6 @@ class Download:
                     album=search_album
                 )
 
-        # --- HUMAN BEHAVIOR DELAY ---
         delay_time = getattr(self.settings, 'delay', 0)
         if delay_time == 0 and '--delay' in sys.argv:
             try:
