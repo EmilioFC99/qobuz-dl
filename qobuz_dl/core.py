@@ -186,6 +186,9 @@ class QobuzDL:
                     batch = chunk.get(type_dict["iterable_key"], {}).get("items", [])
                     items.extend(batch)
 
+            logger.debug(f"Number of chunks: {len(content)}")
+            if content:
+                logger.debug(f"Items in first chunk: {len(content[0].get(type_dict['iterable_key'], {}).get('items', []))}")
             logger.info(f"{YELLOW}{len(items)} downloads in queue")
             
             # --- START PLAYLIST LOGIC (Flat Folder) ---

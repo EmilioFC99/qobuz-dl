@@ -365,14 +365,25 @@ class Client:
         return self._normalize_json_strings(r.json())
 
     def multi_meta(self, epoint, key, id, type):
-        total, offset = 1, 0
-        while total > 0:
-            j = self.api_call(epoint, id=id, offset=offset, type=type)
+        offset = 0
+        limit = 50
+        
+        while True:
+            j = self.api_call(epoint, id=id, offset=offset, limit=limit, type=type)
             res = j[type] if type and type in j else j
+            
+            items_key = "tracks" if "playlist" in epoint else "albums"
+            items = res.get(items_key, {}).get("items", [])
+            
+            if not items:
+                break
+                
             yield res
-            if offset == 0: total = res.get(key, 0) - 500
-            else: total -= 500
-            offset += 500
+            
+            offset += len(items)
+            total_available = res.get(key, 0)
+            if offset >= total_available:
+                break
 
     # --- METADATA FUNCTIONS (Do not delete!) ---
     def get_track_meta(self, id): 
