@@ -31,12 +31,12 @@ class LyricsEngine:
             
             # Try A: Exact match (Artist + Track + Album)
             params = {"artist_name": artist, "track_name": track, "album_name": album}
-            response = requests.get(lrclib_url, params=params, headers=headers, timeout=6) 
+            response = requests.get(lrclib_url, params=params, headers=headers, timeout=12) 
             
             # Try B: If it fails, try again without album (often solves version/remaster issues)
             if response.status_code != 200:
                 params = {"artist_name": artist, "track_name": track}
-                response = requests.get(lrclib_url, params=params, headers=headers, timeout=6)
+                response = requests.get(lrclib_url, params=params, headers=headers, timeout=12)
 
             if response.status_code == 200:
                 data = response.json()
