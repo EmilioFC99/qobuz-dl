@@ -322,11 +322,8 @@ class Download:
             dirn = process_folder_format_with_subdirs(self.folder_format, track_attr, self.path)
             os.makedirs(dirn, exist_ok=True)
 
-            # --- START PLAYLIST COVER FIX ---
-            if getattr(self, 'is_playlist', False):
-                # Skip saving the generic cover.jpg to avoid cluttering the folder with 50 different images
-                logger.info(f"{OFF}Skipping standard cover save to keep playlist folder clean")
-            elif self.settings.no_cover:
+            # --- STANDARD COVER LOGIC ---
+            if self.settings.no_cover:
                 logger.info(f"{OFF}Skipping cover")
             else:
                 _get_extra(track_meta["album"]["image"]["large"], dirn, art_size=self.settings.saved_art_size)
