@@ -301,6 +301,7 @@ def main():
     # ----------------------------------------------
 
     directory_to_use = arguments.directory if hasattr(arguments, 'directory') and arguments.directory else default_folder
+    directory_to_use = os.path.expanduser(directory_to_use)
 
     # --- WINDOWS LONG PATH BYPASS ---
     if os.name == "nt":

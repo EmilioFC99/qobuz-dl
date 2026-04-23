@@ -174,7 +174,7 @@ def format_duration(duration):
 
 
 def create_and_return_dir(directory):
-    fix = os.path.normpath(directory)
+    fix = os.path.abspath(os.path.expanduser(directory))
     os.makedirs(fix, exist_ok=True)
     return fix
 
