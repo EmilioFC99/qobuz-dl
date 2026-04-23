@@ -60,7 +60,7 @@ class QobuzDL:
         downloads_db=None,
         folder_format="{artist} - {album} ({year}) [{bit_depth}B-"
         "{sampling_rate}kHz]",
-        track_format="{tracknumber}. {tracktitle}",
+        track_format="{track_number} - {track_title}",
         smart_discography=False,
         fetch_lyrics=False,
         genius_token=None,
@@ -191,14 +191,8 @@ class QobuzDL:
                 logger.debug(f"Items in first chunk: {len(content[0].get(type_dict['iterable_key'], {}).get('items', []))}")
             logger.info(f"{YELLOW}{len(items)} downloads in queue")
             
-            # --- START PLAYLIST LOGIC (Flat Folder) ---
+            # --- START PLAYLIST LOGIC ---
             is_playlist = (url_type == "playlist")
-            if is_playlist:
-                original_folder_format = self.folder_format
-                original_multi_disc_setting = self.settings.multiple_disc_one_dir
-                
-                self.folder_format = "."
-                self.settings.multiple_disc_one_dir = True
             # ------------------------------------------------
 
             # Use enumerate to get the track number in the playlist (1, 2, 3...)
@@ -211,10 +205,6 @@ class QobuzDL:
                     playlist_index=idx
                 )
 
-            # --- RESTORE SETTINGS ---
-            if is_playlist:
-                self.folder_format = original_folder_format
-                self.settings.multiple_disc_one_dir = original_multi_disc_setting
             # -------------------------------
 
             if url_type == "playlist" and not self.no_m3u_for_playlists:
@@ -545,13 +535,7 @@ class QobuzDL:
 
         # Step 3: Send valid IDs to the downloader engine
         
-        # Save original settings to restore them later
-        original_folder_format = self.folder_format
-        original_multi_disc_setting = self.settings.multiple_disc_one_dir
-        
-        # Force flat folder structure for the playlist
-        self.folder_format = "."
-        self.settings.multiple_disc_one_dir = True
+        # Use the standard folder format for the playlist
         
         # Use enumerate to get the playlist track number (1, 2, 3...)
         for idx, t_id in enumerate(track_ids, start=1):
@@ -565,10 +549,6 @@ class QobuzDL:
                 )
             except Exception as e:
                 logger.error(f"{RED}[!] Failed to queue track ID {t_id}: {e}{OFF}")
-
-        # Restore original settings for subsequent downloads
-        self.folder_format = original_folder_format
-        self.settings.multiple_disc_one_dir = original_multi_disc_setting
 
         if not self.no_m3u_for_playlists:
             make_m3u(pl_directory)
