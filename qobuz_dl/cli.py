@@ -239,7 +239,8 @@ def main():
             fetch_lyrics = False
             
         force_english = not getattr(arguments, 'native_lang', False)
-        no_credits_flag = getattr(arguments, 'no_credits', False) 
+        no_credits_flag = getattr(arguments, 'no_credits', False)
+        playlist_by_album = getattr(arguments, 'playlist_by_album', False)
         
     except (configparser.Error, KeyError) as error:
         arguments = qobuz_dl_args().parse_args()
@@ -335,6 +336,7 @@ def main():
         genius_token=genius_token,
         force_english=force_english,
         no_credits=no_credits_flag,
+        playlist_by_album=playlist_by_album,
         settings=settings,
     )
     
