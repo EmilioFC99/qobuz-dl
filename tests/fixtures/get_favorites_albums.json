@@ -1,0 +1,166 @@
+{
+  "albums": {
+    "offset": 0,
+    "limit": 2,
+    "total": 89,
+    "items": [
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/oc/e1/t0d7e0s28e1oc_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/oc/e1/t0d7e0s28e1oc_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/oc/e1/t0d7e0s28e1oc_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Rameses B",
+          "id": 833585,
+          "albums_count": 196,
+          "slug": "rameses-b",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 833585,
+            "name": "Rameses B",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 807738,
+            "name": "Veela",
+            "roles": [
+              "featured-artist"
+            ]
+          }
+        ],
+        "upc": "0859714148665",
+        "released_at": 1423436400,
+        "label": {
+          "name": "Monstercat",
+          "id": 207843,
+          "albums_count": 4692,
+          "supplier_id": 41,
+          "slug": "monstercat"
+        },
+        "title": "Mountains",
+        "qobuz_id": 58032058,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/mountains-rameses-b-featuring/t0d7e0s28e1oc",
+        "slug": "mountains-rameses-b-featuring",
+        "duration": 273,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            67
+          ],
+          "color": "#0070ef",
+          "name": "Drum & Bass",
+          "id": 67,
+          "slug": "drum-bass"
+        },
+        "maximum_channel_count": 2,
+        "id": "t0d7e0s28e1oc",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2015-02-09",
+        "release_date_download": "2015-02-09",
+        "release_date_stream": "2015-02-09",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1745478000,
+        "hires": false,
+        "hires_streamable": false,
+        "favorited_at": 1655387677
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/pb/lg/tgh5nosz0lgpb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/pb/lg/tgh5nosz0lgpb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/pb/lg/tgh5nosz0lgpb_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Feint",
+          "id": 2251958,
+          "albums_count": 49,
+          "slug": "feint",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2251958,
+            "name": "Feint",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0654367904152",
+        "released_at": 1368741600,
+        "label": {
+          "name": "Monstercat",
+          "id": 207843,
+          "albums_count": 4692,
+          "supplier_id": 41,
+          "slug": "monstercat"
+        },
+        "title": "Lonesong",
+        "qobuz_id": 58058782,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/lonesong-feint/tgh5nosz0lgpb",
+        "slug": "lonesong-feint",
+        "duration": 252,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            67
+          ],
+          "color": "#0070ef",
+          "name": "Drum & Bass",
+          "id": 67,
+          "slug": "drum-bass"
+        },
+        "maximum_channel_count": 2,
+        "id": "tgh5nosz0lgpb",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2013-05-17",
+        "release_date_download": "2013-05-17",
+        "release_date_stream": "2013-05-17",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1745564400,
+        "hires": true,
+        "hires_streamable": true,
+        "favorited_at": 1655387643
+      }
+    ]
+  },
+  "user": {
+    "id": 2077331,
+    "login": "emilioflores"
+  }
+}

@@ -1,0 +1,2053 @@
+{
+  "query": "chill",
+  "albums": {
+    "analytics": {
+      "search_external_id": "7a056d51a61643bb26f7647cfdf74d6d"
+    },
+    "total": 1000,
+    "items": []
+  },
+  "tracks": {
+    "analytics": {
+      "search_external_id": "53e08f8db760888012feb41c5aac4d81"
+    },
+    "total": 1000,
+    "items": []
+  },
+  "artists": {
+    "analytics": {
+      "search_external_id": "1c1376afdbb42c5e07b1c370a2f6981e"
+    },
+    "total": 1000,
+    "items": []
+  },
+  "playlists": {
+    "limit": 2,
+    "offset": 0,
+    "analytics": {
+      "search_external_id": "37b7ad8b9648bdc17eff5f12bc93b36e"
+    },
+    "total": 1000,
+    "items": [
+      {
+        "id": 8282395,
+        "name": "Coffee and Chill",
+        "description": "Life is perfect with a hot cup of coffee and some classical music.",
+        "tracks_count": 82,
+        "users_count": 632,
+        "duration": 15055,
+        "public_at": 1643583600,
+        "created_at": 1643663699,
+        "updated_at": 1776989860,
+        "is_public": true,
+        "is_collaborative": false,
+        "owner": {
+          "id": 1405816,
+          "name": "Naxos"
+        },
+        "indexed_at": 1776989860,
+        "slug": "coffee-and-chill-1",
+        "genres": [
+          {
+            "id": 10,
+            "name": "Classique",
+            "path": [
+              10
+            ],
+            "slug": "classique"
+          }
+        ],
+        "images": [
+          "https://static.qobuz.com/images/covers/hc/pl/lswe6kxcwplhc_50.jpg",
+          "https://static.qobuz.com/images/covers/20/11/0636943901120_50.jpg",
+          "https://static.qobuz.com/images/covers/1a/fy/xcafy2dtyfy1a_50.jpg",
+          "https://static.qobuz.com/images/covers/yb/fr/ryoijg8flfryb_50.jpg"
+        ],
+        "is_published": true,
+        "is_featured": true,
+        "published_from": 1558280640,
+        "published_to": 1893516240,
+        "stores": [
+          "CA-en",
+          "CA-fr",
+          "AR-es",
+          "AT-de",
+          "BE-fr",
+          "BE-nl",
+          "BR-pt",
+          "CH-de",
+          "CH-fr",
+          "CL-es",
+          "CO-es",
+          "DE-de",
+          "ES-es",
+          "FR-fr",
+          "GB-en",
+          "US-en",
+          "IE-en",
+          "IT-it",
+          "LU-de",
+          "LU-fr",
+          "MX-es",
+          "NL-nl",
+          "PT-pt",
+          "DK-en",
+          "FI-en",
+          "NO-en",
+          "SE-en",
+          "AU-en",
+          "NZ-en"
+        ],
+        "tags": [
+          {
+            "featured_tag_id": "24",
+            "name_json": "{\"fr\":\"Humeurs\",\"en\":\"Moods\",\"de\":\"Moods\",\"it\":\"Umori\",\"nl\":\"Moods\",\"es\":\"Humores\",\"pt\":\"Moods\",\"ja\":\"\\u30e0\\u30fc\\u30c9\"}",
+            "slug": "mood",
+            "genre_tag": null,
+            "is_discover": true
+          },
+          {
+            "featured_tag_id": "13",
+            "name_json": "{\"fr\":\"Classique\",\"en\":\"Classical\",\"de\":\"Klassik\",\"it\":\"Musica classica\",\"nl\":\"Classical\",\"es\":\"Cl\\u00e1sica\",\"pt\":\"Cl\\u00e1ssico\"}",
+            "slug": "classical",
+            "genre_tag": {
+              "genre_id": "10",
+              "name": "Classique"
+            },
+            "is_discover": false
+          }
+        ],
+        "image_rectangle": [
+          "https://static.qobuz.com/images/playlists/8282395_5e741a79bca761c1e185c8b2caa8c338_rectangle.jpg"
+        ],
+        "image_rectangle_mini": [
+          "https://static.qobuz.com/images/playlists/8282395_5e741a79bca761c1e185c8b2caa8c338_rectangle_mini.jpg"
+        ],
+        "featured_artists": [],
+        "timestamp_position": 1558280640,
+        "images150": [
+          "https://static.qobuz.com/images/covers/hc/pl/lswe6kxcwplhc_150.jpg",
+          "https://static.qobuz.com/images/covers/20/11/0636943901120_150.jpg",
+          "https://static.qobuz.com/images/covers/1a/fy/xcafy2dtyfy1a_150.jpg",
+          "https://static.qobuz.com/images/covers/yb/fr/ryoijg8flfryb_150.jpg"
+        ],
+        "images300": [
+          "https://static.qobuz.com/images/covers/hc/pl/lswe6kxcwplhc_300.jpg",
+          "https://static.qobuz.com/images/covers/20/11/0636943901120_300.jpg",
+          "https://static.qobuz.com/images/covers/1a/fy/xcafy2dtyfy1a_300.jpg",
+          "https://static.qobuz.com/images/covers/yb/fr/ryoijg8flfryb_300.jpg"
+        ]
+      },
+      {
+        "id": 7802078,
+        "name": "Lo último en Chill Out & Downtempo",
+        "description": "Una selección con los temas más chill de la semana: downtempo, IDM, trip‑hop. Desde beats lo‑fi hasta experimentaciones ambient, encontrarás la música electrónica en sus vertientes más acogedoras.\n\nCon Air, COLA REN, Ruth Mascelli, Ozzy Jones, Matthew Herbert, Tremor, Superpoze, Lukid, Konteks, Leon Vynehall, Jürgen Paape, Joe Armon‑Jones, Max Graef, Apollo Brown, SunKing, rRoxymore, Mechatok, GXNXSIS, Gone Since June, Guedra Guedra, Nightmares On Wax, µ‑ziq, FKJ, james K, Felipe Gordon, Neon Fog, Marysia Osu, Eli Keszler, Joe Nora, Bogdan Raczynski, Mark Van Hoen, Morcheeba, Shanti Celeste…\n\nÚltima actualización el 29 de octubre de 2025\n\nMark Van Hoen © Brooks Gallo",
+        "tracks_count": 80,
+        "users_count": 282,
+        "duration": 16534,
+        "public_at": 1639695600,
+        "created_at": 1639743912,
+        "updated_at": 1776863919,
+        "is_public": true,
+        "is_collaborative": false,
+        "owner": {
+          "id": 1752421,
+          "name": "Qobuz Latinoamérica"
+        },
+        "indexed_at": 1776863919,
+        "slug": "la-seleccion-chill-out-downtempo",
+        "genres": [
+          {
+            "id": 64,
+            "name": "Électronique",
+            "path": [
+              64
+            ],
+            "slug": "electro"
+          },
+          {
+            "id": 133,
+            "name": "Rap",
+            "path": [
+              133
+            ],
+            "slug": "rap-hip-hop"
+          }
+        ],
+        "images": [
+          "https://static.qobuz.com/images/covers/vb/gn/hp88o4pnrgnvb_50.jpg",
+          "https://static.qobuz.com/images/covers/5a/0z/op6tu9mwv0z5a_50.jpg",
+          "https://static.qobuz.com/images/covers/ga/dn/b8531zswcdnga_50.jpg",
+          "https://static.qobuz.com/images/covers/xb/u3/ow930cziku3xb_50.jpg"
+        ],
+        "is_published": true,
+        "is_featured": true,
+        "published_from": 1761817080,
+        "published_to": 1893456000,
+        "stores": [
+          "AR-es",
+          "CL-es",
+          "CO-es",
+          "MX-es"
+        ],
+        "tags": [
+          {
+            "featured_tag_id": "19",
+            "name_json": "{\"fr\":\"Nouveaut\\u00e9s\",\"en\":\"New Releases\",\"de\":\"Neuheiten\",\"it\":\"Novit\\u00e0\",\"nl\":\"New releases\",\"es\":\"Novedades\",\"pt\":\"Novidades\",\"ja\":\"\\u30cb\\u30e5\\u30fc\\u30ea\\u30ea\\u30fc\\u30b9\"}",
+            "slug": "new",
+            "genre_tag": null,
+            "is_discover": true
+          },
+          {
+            "featured_tag_id": "8",
+            "name_json": "{\"fr\":\"Electro\",\"en\":\"Electro\",\"de\":\"Elektro\",\"it\":\"Elettronica\",\"nl\":\"Electro\",\"es\":\"Electro\",\"pt\":\"Electr\\u00f3nica\"}",
+            "slug": "electro",
+            "genre_tag": {
+              "genre_id": "64",
+              "name": "Électronique"
+            },
+            "is_discover": false
+          },
+          {
+            "featured_tag_id": "10",
+            "name_json": "{\"fr\":\"Rap\",\"en\":\"Rap\",\"de\":\"Rap\",\"it\":\"Rap\",\"nl\":\"Rap\",\"es\":\"Rap\",\"pt\":\"Rap\"}",
+            "slug": "rap",
+            "genre_tag": {
+              "genre_id": "133",
+              "name": "Rap"
+            },
+            "is_discover": false
+          }
+        ],
+        "image_rectangle": [
+          "https://static.qobuz.com/images/playlists/7802078_504367588faec3ef271fac30e0b5eeda_rectangle.jpg"
+        ],
+        "image_rectangle_mini": [
+          "https://static.qobuz.com/images/playlists/7802078_504367588faec3ef271fac30e0b5eeda_rectangle_mini.jpg"
+        ],
+        "featured_artists": [],
+        "timestamp_position": 1761817080,
+        "images150": [
+          "https://static.qobuz.com/images/covers/vb/gn/hp88o4pnrgnvb_150.jpg",
+          "https://static.qobuz.com/images/covers/5a/0z/op6tu9mwv0z5a_150.jpg",
+          "https://static.qobuz.com/images/covers/ga/dn/b8531zswcdnga_150.jpg",
+          "https://static.qobuz.com/images/covers/xb/u3/ow930cziku3xb_150.jpg"
+        ],
+        "images300": [
+          "https://static.qobuz.com/images/covers/vb/gn/hp88o4pnrgnvb_300.jpg",
+          "https://static.qobuz.com/images/covers/5a/0z/op6tu9mwv0z5a_300.jpg",
+          "https://static.qobuz.com/images/covers/ga/dn/b8531zswcdnga_300.jpg",
+          "https://static.qobuz.com/images/covers/xb/u3/ow930cziku3xb_300.jpg"
+        ]
+      }
+    ]
+  },
+  "stories": {
+    "analytics": {
+      "search_external_id": "91fe28017c81bdf31478554e9c0edc37"
+    },
+    "total": 11,
+    "items": []
+  },
+  "most_popular": {
+    "limit": 30,
+    "offset": 0,
+    "analytics": {
+      "search_external_id": "869c60c6adb59752aa7700d6efc872ab"
+    },
+    "total": 1000,
+    "items": [
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": "https://static.qobuz.com/images/artists/covers/small/4cc18b38c06dfe54461e440ea69b1dc9.jpg",
+          "image": {
+            "small": "https://static.qobuz.com/images/artists/covers/small/4cc18b38c06dfe54461e440ea69b1dc9.jpg",
+            "medium": "https://static.qobuz.com/images/artists/covers/medium/4cc18b38c06dfe54461e440ea69b1dc9.jpg",
+            "large": "https://static.qobuz.com/images/artists/covers/large/4cc18b38c06dfe54461e440ea69b1dc9.jpg",
+            "extralarge": "https://static.qobuz.com/images/artists/covers/large/4cc18b38c06dfe54461e440ea69b1dc9.jpg",
+            "mega": "https://static.qobuz.com/images/artists/covers/large/4cc18b38c06dfe54461e440ea69b1dc9.jpg"
+          },
+          "name": "Chilly Gonzales",
+          "slug": "chilly-gonzales",
+          "albums_count": 323,
+          "id": 324270
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": null,
+          "image": null,
+          "name": "Relaxing Chill Out Music",
+          "slug": "relaxing-chill-out-music",
+          "albums_count": 1152,
+          "id": 2682576
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": null,
+          "image": null,
+          "name": "Chillhop Music",
+          "slug": "chillhop-music",
+          "albums_count": 208,
+          "id": 7634103
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": "https://static.qobuz.com/images/artists/covers/small/9c2be0b185eaa61812b85041f43449d2.jpg",
+          "image": {
+            "small": "https://static.qobuz.com/images/artists/covers/small/9c2be0b185eaa61812b85041f43449d2.jpg",
+            "medium": "https://static.qobuz.com/images/artists/covers/medium/9c2be0b185eaa61812b85041f43449d2.jpg",
+            "large": "https://static.qobuz.com/images/artists/covers/large/9c2be0b185eaa61812b85041f43449d2.jpg",
+            "extralarge": "https://static.qobuz.com/images/artists/covers/large/9c2be0b185eaa61812b85041f43449d2.jpg",
+            "mega": "https://static.qobuz.com/images/artists/covers/large/9c2be0b185eaa61812b85041f43449d2.jpg"
+          },
+          "name": "Chilla",
+          "slug": "chilla",
+          "albums_count": 153,
+          "id": 1339778
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": null,
+          "image": null,
+          "name": "Ibiza Chill Out",
+          "slug": "ibiza-chill-out",
+          "albums_count": 663,
+          "id": 1350350
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/hb/hv/anzpknwaohvhb_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/hb/hv/anzpknwaohvhb_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/hb/hv/anzpknwaohvhb_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Relaxing Chill Out Music",
+            "id": 2682576,
+            "albums_count": 1152,
+            "slug": "relaxing-chill-out-music",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 2682576,
+              "name": "Relaxing Chill Out Music",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "5056163081795",
+          "released_at": 1559426400,
+          "label": {
+            "name": "RelaxNation Records",
+            "id": 169452,
+            "albums_count": 1089,
+            "supplier_id": 27,
+            "slug": "relaxnation-records"
+          },
+          "title": "Chill Out Piano Hits",
+          "qobuz_id": 61438686,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chill-out-piano-hits-relaxing-chill-out-music/anzpknwaohvhb",
+          "slug": "chill-out-piano-hits-relaxing-chill-out-music",
+          "duration": 4233,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 32,
+          "genre": {
+            "path": [
+              64,
+              69
+            ],
+            "color": "#0070ef",
+            "name": "Lounge",
+            "id": 69,
+            "slug": "lounge"
+          },
+          "maximum_channel_count": 2,
+          "id": "anzpknwaohvhb",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2019-06-02",
+          "release_date_download": "2019-06-02",
+          "release_date_stream": "2019-06-02",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1744009200,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "tracks",
+        "content": {
+          "type": "tracks",
+          "maximum_bit_depth": 24,
+          "copyright": "(P) 2015 Sony Music Entertainment US Latin LLC",
+          "performers": "Farruko, Associated Performer, Main Artist\r - Ky Mani Marley, Associated Performer, Featured Artist\r - Farruko feat. Ky-Mani Marley, Associated Performer\r - Carlos Efrén Reyes Rosado, Composer, Lyricist\r - Maffio, Producer\r - Carlos Peralta, Composer, Lyricist\r - Sharo Torres, Mixing Engineer, Producer, Recording Engineer\r - Kymani Marley, Composer, Lyricist\r - Mike Fuller, Mastering Engineer\r - Robert Fernandez, Composer, Lyricist\r - Marcos G. Pérez, Composer, Lyricist",
+          "audio_info": {
+            "replaygain_track_peak": 1,
+            "replaygain_track_gain": -8.46
+          },
+          "performer": {
+            "name": "Farruko",
+            "id": 875902
+          },
+          "article_ids": {
+            "LLS": 66929603,
+            "SMR": 66929604,
+            "SM2": 328220723
+          },
+          "album": {
+            "image": {
+              "small": "https://static.qobuz.com/images/covers/66/73/0886445327366_230.jpg",
+              "thumbnail": "https://static.qobuz.com/images/covers/66/73/0886445327366_50.jpg",
+              "large": "https://static.qobuz.com/images/covers/66/73/0886445327366_600.jpg"
+            },
+            "maximum_bit_depth": 24,
+            "media_count": 1,
+            "artist": {
+              "image": null,
+              "name": "Farruko",
+              "id": 875902,
+              "albums_count": 411,
+              "slug": "farruko",
+              "picture": null
+            },
+            "upc": "0886445327366",
+            "released_at": 1445551200,
+            "label": {
+              "name": "Sony Music Latin",
+              "id": 4612,
+              "albums_count": 4094,
+              "supplier_id": 23,
+              "slug": "sony-music-latin"
+            },
+            "title": "Visionary",
+            "qobuz_id": 27718376,
+            "version": null,
+            "duration": 3189,
+            "parental_warning": false,
+            "tracks_count": 14,
+            "genre": {
+              "path": [
+                149
+              ],
+              "name": "América latina",
+              "id": 149,
+              "slug": "amerique-latine"
+            },
+            "maximum_channel_count": 2,
+            "id": "0886445327366",
+            "maximum_sampling_rate": 96,
+            "previewable": true,
+            "sampleable": true,
+            "displayable": true,
+            "streamable": true,
+            "streamable_at": 1750143600,
+            "downloadable": false,
+            "purchasable_at": null,
+            "purchasable": false,
+            "release_date_original": "2015-10-23",
+            "release_date_download": "2015-10-23",
+            "release_date_stream": "2015-10-23",
+            "release_date_purchase": "2015-10-23",
+            "hires": true,
+            "hires_streamable": true
+          },
+          "work": null,
+          "composer": {
+            "name": "Robert Fernandez",
+            "id": 90893
+          },
+          "isrc": "USSD11500378",
+          "title": "Chillax",
+          "version": null,
+          "duration": 197,
+          "parental_warning": false,
+          "track_number": 8,
+          "maximum_channel_count": 2,
+          "id": 27718410,
+          "media_number": 1,
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2015-10-23",
+          "release_date_download": "2015-10-23",
+          "release_date_stream": "2015-10-23",
+          "release_date_purchase": "2015-10-23",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1750143600,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/26/05/7333070040526_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/26/05/7333070040526_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/26/05/7333070040526_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Ibiza Chill Out",
+            "id": 1350350,
+            "albums_count": 662,
+            "slug": "ibiza-chill-out",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 10448534,
+              "name": "Ibiza Chill Out, Brazilian Lounge Project and Bossa Cafe en Ibiza",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "7333070040526",
+          "released_at": 1478818800,
+          "label": {
+            "name": "Vault Records Ibiza",
+            "id": 117747,
+            "albums_count": 760,
+            "supplier_id": 41,
+            "slug": "vault-records-ibiza"
+          },
+          "title": "Chill Bar Lounge",
+          "qobuz_id": 37298454,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chill-bar-lounge-ibiza-chill-out-brazilian-lounge-project-and-bossa-cafe-en-ibiza/7333070040526",
+          "slug": "chill-bar-lounge-ibiza-chill-out-brazilian-lounge-project-and-bossa-cafe-en-ibiza",
+          "duration": 7828,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 42,
+          "genre": {
+            "path": [
+              64
+            ],
+            "color": "#0070ef",
+            "name": "Electrónica",
+            "id": 64,
+            "slug": "electro"
+          },
+          "maximum_channel_count": 2,
+          "id": "7333070040526",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2016-11-11",
+          "release_date_download": "2016-11-11",
+          "release_date_stream": "2016-11-11",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1745650800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ob/z0/qnb9wg1syz0ob_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ob/z0/qnb9wg1syz0ob_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ob/z0/qnb9wg1syz0ob_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Mikel",
+            "id": 28981389,
+            "albums_count": 0,
+            "slug": "mikel-11",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 28981389,
+              "name": "Mikel",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 8289152,
+              "name": "GameChops",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0193078813860",
+          "released_at": 1536876000,
+          "label": {
+            "name": "GameChops",
+            "id": 2034820,
+            "albums_count": 355,
+            "supplier_id": 128,
+            "slug": "gamechops-1"
+          },
+          "title": "Zelda & Chill",
+          "qobuz_id": 133326386,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/zelda-chill-mikel-amp-gamechops/qnb9wg1syz0ob",
+          "slug": "zelda-chill-mikel-amp-gamechops",
+          "duration": 2420,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 14,
+          "genre": {
+            "path": [
+              64,
+              129
+            ],
+            "color": "#0070ef",
+            "name": "Dance",
+            "id": 129,
+            "slug": "dance"
+          },
+          "maximum_channel_count": 2,
+          "id": "qnb9wg1syz0ob",
+          "maximum_sampling_rate": 48,
+          "articles": [],
+          "release_date_original": "2018-09-14",
+          "release_date_download": "2018-09-14",
+          "release_date_stream": "2018-09-14",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1760598000,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": "https://static.qobuz.com/images/artists/covers/small/37493b8c4167bc84ca891777cc0fcacd.jpg",
+          "image": {
+            "small": "https://static.qobuz.com/images/artists/covers/small/37493b8c4167bc84ca891777cc0fcacd.jpg",
+            "medium": "https://static.qobuz.com/images/artists/covers/medium/37493b8c4167bc84ca891777cc0fcacd.jpg",
+            "large": "https://static.qobuz.com/images/artists/covers/large/37493b8c4167bc84ca891777cc0fcacd.jpg",
+            "extralarge": "https://static.qobuz.com/images/artists/covers/large/37493b8c4167bc84ca891777cc0fcacd.jpg",
+            "mega": "https://static.qobuz.com/images/artists/covers/large/37493b8c4167bc84ca891777cc0fcacd.jpg"
+          },
+          "name": "Pablo Chill-E",
+          "slug": "pablo-chill-e",
+          "albums_count": 55,
+          "id": 3279857
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": "https://static.qobuz.com/images/artists/covers/small/11e68eb69ccb7e202bd6b39cc55f4176.jpg",
+          "image": {
+            "small": "https://static.qobuz.com/images/artists/covers/small/11e68eb69ccb7e202bd6b39cc55f4176.jpg",
+            "medium": "https://static.qobuz.com/images/artists/covers/medium/11e68eb69ccb7e202bd6b39cc55f4176.jpg",
+            "large": "https://static.qobuz.com/images/artists/covers/large/11e68eb69ccb7e202bd6b39cc55f4176.jpg",
+            "extralarge": "https://static.qobuz.com/images/artists/covers/large/11e68eb69ccb7e202bd6b39cc55f4176.jpg",
+            "mega": "https://static.qobuz.com/images/artists/covers/large/11e68eb69ccb7e202bd6b39cc55f4176.jpg"
+          },
+          "name": "The Chills",
+          "slug": "the-chills",
+          "albums_count": 69,
+          "id": 419319
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/3a/rh/kzyh7a96arh3a_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/3a/rh/kzyh7a96arh3a_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/3a/rh/kzyh7a96arh3a_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Chillhop Music",
+            "id": 7634103,
+            "albums_count": 203,
+            "slug": "chillhop-music",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 7634103,
+              "name": "Chillhop Music",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0745051306878",
+          "released_at": 1741647600,
+          "label": {
+            "name": "Chillhop Music",
+            "id": 1093700,
+            "albums_count": 751,
+            "supplier_id": 41,
+            "slug": "chillhop-music"
+          },
+          "title": "Chillhop Essentials Spring 2025",
+          "qobuz_id": 301894486,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chillhop-essentials-spring-2025-various-artists/kzyh7a96arh3a",
+          "slug": "chillhop-essentials-spring-2025-various-artists",
+          "duration": 4427,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 28,
+          "genre": {
+            "path": [
+              112,
+              119,
+              113
+            ],
+            "color": "#0070ef",
+            "name": "Alternativa & Indie",
+            "id": 113,
+            "slug": "alternatif-et-inde"
+          },
+          "maximum_channel_count": 2,
+          "id": "kzyh7a96arh3a",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2025-03-11",
+          "release_date_download": "2025-03-11",
+          "release_date_stream": "2025-03-11",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1761634800,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ha/b4/r1bek2misb4ha_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ha/b4/r1bek2misb4ha_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ha/b4/r1bek2misb4ha_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Chillhop Music",
+            "id": 7634103,
+            "albums_count": 201,
+            "slug": "chillhop-music",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 7634103,
+              "name": "Chillhop Music",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0723098052217",
+          "released_at": 1749679200,
+          "label": {
+            "name": "Chillhop Music",
+            "id": 1093700,
+            "albums_count": 742,
+            "supplier_id": 41,
+            "slug": "chillhop-music"
+          },
+          "title": "Chillhop Essentials Summer 2025",
+          "qobuz_id": 315138620,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chillhop-essentials-summer-2025-chillhop-music/r1bek2misb4ha",
+          "slug": "chillhop-essentials-summer-2025-chillhop-music",
+          "duration": 4234,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 28,
+          "genre": {
+            "path": [
+              112,
+              119,
+              113
+            ],
+            "color": "#0070ef",
+            "name": "Alternativa & Indie",
+            "id": 113,
+            "slug": "alternatif-et-inde"
+          },
+          "maximum_channel_count": 2,
+          "id": "r1bek2misb4ha",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2025-06-12",
+          "release_date_download": "2025-06-12",
+          "release_date_stream": "2025-06-12",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1749711600,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/49/62/7333070006249_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/49/62/7333070006249_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/49/62/7333070006249_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Lounge Café",
+            "id": 1685708,
+            "albums_count": 3262,
+            "slug": "lounge-cafe",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 10447123,
+              "name": "Lounge Cafe, Chill Lounge Music Bar and Italian Chill Lounge Music DJ",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "7333070006249",
+          "released_at": 1449788400,
+          "label": {
+            "name": "Vault Records Ibiza",
+            "id": 117747,
+            "albums_count": 760,
+            "supplier_id": 41,
+            "slug": "vault-records-ibiza"
+          },
+          "title": "Chill Lounge",
+          "qobuz_id": 27915668,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chill-lounge-lounge-cafe-chill-lounge-music-bar-and-italian-chill-lounge-music-dj/7333070006249",
+          "slug": "chill-lounge-lounge-cafe-chill-lounge-music-bar-and-italian-chill-lounge-music-dj",
+          "duration": 6521,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 35,
+          "genre": {
+            "path": [
+              64
+            ],
+            "color": "#0070ef",
+            "name": "Electrónica",
+            "id": 64,
+            "slug": "electro"
+          },
+          "maximum_channel_count": 2,
+          "id": "7333070006249",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2015-12-11",
+          "release_date_download": "2015-12-11",
+          "release_date_stream": "2015-12-11",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1745218800,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/xb/b8/d12v7xgkmb8xb_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/xb/b8/d12v7xgkmb8xb_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/xb/b8/d12v7xgkmb8xb_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Erich Kunzel",
+            "id": 202499,
+            "albums_count": 118,
+            "slug": "erich-kunzel",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 202499,
+              "name": "Erich Kunzel",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 237420,
+              "name": "Cincinnati Pops Orchestra",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0888072049390",
+          "released_at": 620604000,
+          "label": {
+            "name": "Telarc",
+            "id": 247896,
+            "albums_count": 1348,
+            "supplier_id": 1,
+            "slug": "telarc-3"
+          },
+          "title": "Chiller",
+          "qobuz_id": 46986220,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chiller-cincinnati-pops-orchestra-erich-kunzel/d12v7xgkmb8xb",
+          "slug": "chiller-cincinnati-pops-orchestra-erich-kunzel",
+          "duration": 3492,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 20,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "d12v7xgkmb8xb",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "1989-09-01",
+          "release_date_download": "1989-09-01",
+          "release_date_stream": "1989-09-01",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1749711600,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/58/81/0724385748158_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/58/81/0724385748158_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/58/81/0724385748158_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Richard Elliot",
+            "id": 36467,
+            "albums_count": 41,
+            "slug": "richard-elliot",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 36467,
+              "name": "Richard Elliot",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0724385748158",
+          "released_at": 915145200,
+          "label": {
+            "name": "Blue Note Records",
+            "id": 47868,
+            "albums_count": 3516,
+            "supplier_id": 1,
+            "slug": "blue-note-1"
+          },
+          "title": "Chill Factor",
+          "qobuz_id": 3261455,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chill-factor-richard-elliot/0724385748158",
+          "slug": "chill-factor-richard-elliot",
+          "duration": 3001,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 11,
+          "genre": {
+            "path": [
+              80
+            ],
+            "color": "#0070ef",
+            "name": "Jazz",
+            "id": 80,
+            "slug": "jazz"
+          },
+          "maximum_channel_count": 2,
+          "id": "0724385748158",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "1999-01-01",
+          "release_date_download": "1999-01-01",
+          "release_date_stream": "1999-01-01",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1760511600,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "tracks",
+        "content": {
+          "type": "tracks",
+          "maximum_bit_depth": 24,
+          "copyright": "(P) 2025 RCA Records, under exclusive license from Lloud Co.",
+          "performers": "LISA, MainArtist, AssociatedPerformer, Composer, Lyricist - Mikkel Eriksen, Composer, Lyricist - Tor Hermansen, Composer, Lyricist - Samuel Awuku, Composer, Lyricist - Ali Tamposi, Composer, Lyricist - Billy Walsh, Composer, Lyricist - John Byron, Composer, Lyricist - Amanda \"Kiddo A.I.\" Ibanez, Composer, Lyricist - Laudz, Composer, Lyricist - Zegon, Composer, Lyricist - StarGate, Producer - Kuk Harrell, Vocal Producer - Jelli Dorman, Vocal Engineer - Serban Ghenea, Mixing Engineer - Bryce Bordone, Engineer - Randy Merrill, Mastering Engineer - Peter Edge, A&R Director - Chloe Weise Donovan, A&R Director - Kat Kusion, A&R Director - Jaryn Valdry, A&R Coordinator - Tropkillaz, Producer - Sammy Soso, Producer",
+          "audio_info": {
+            "replaygain_track_peak": 0.954834,
+            "replaygain_track_gain": -9.59
+          },
+          "performer": {
+            "name": "LISA",
+            "id": 21086033
+          },
+          "article_ids": {
+            "LLS": 1060424318,
+            "SMR": 1060424319
+          },
+          "album": {
+            "image": {
+              "small": "https://static.qobuz.com/images/covers/da/gj/pcobvjgcxgjda_230.jpg",
+              "thumbnail": "https://static.qobuz.com/images/covers/da/gj/pcobvjgcxgjda_50.jpg",
+              "large": "https://static.qobuz.com/images/covers/da/gj/pcobvjgcxgjda_600.jpg"
+            },
+            "maximum_bit_depth": 24,
+            "media_count": 1,
+            "artist": {
+              "image": null,
+              "name": "LISA",
+              "id": 21086033,
+              "albums_count": 38,
+              "slug": "lisa-12",
+              "picture": null
+            },
+            "upc": "0196872806434",
+            "released_at": 1740697200,
+            "label": {
+              "name": "Lloud Co./RCA Records",
+              "id": 10166009,
+              "albums_count": 8,
+              "supplier_id": 23,
+              "slug": "lloud-corca-records-1"
+            },
+            "title": "Alter Ego",
+            "qobuz_id": 318799925,
+            "version": null,
+            "duration": 2558,
+            "parental_warning": true,
+            "tracks_count": 15,
+            "genre": {
+              "path": [
+                94,
+                97,
+                193,
+                194
+              ],
+              "name": "K-Pop",
+              "id": 194,
+              "slug": "k-pop"
+            },
+            "maximum_channel_count": 2,
+            "id": "pcobvjgcxgjda",
+            "maximum_sampling_rate": 48,
+            "previewable": true,
+            "sampleable": true,
+            "displayable": true,
+            "streamable": true,
+            "streamable_at": 1775977200,
+            "downloadable": false,
+            "purchasable_at": null,
+            "purchasable": false,
+            "release_date_original": "2025-02-28",
+            "release_date_download": "2025-02-28",
+            "release_date_stream": "2025-02-28",
+            "release_date_purchase": "2025-02-28",
+            "hires": true,
+            "hires_streamable": true
+          },
+          "work": null,
+          "composer": {
+            "name": "LISA",
+            "id": 21086033
+          },
+          "isrc": "USRC12403313",
+          "title": "Chill",
+          "version": null,
+          "duration": 159,
+          "parental_warning": false,
+          "track_number": 12,
+          "maximum_channel_count": 2,
+          "id": 318799937,
+          "media_number": 1,
+          "maximum_sampling_rate": 48,
+          "articles": [],
+          "release_date_original": "2025-02-28",
+          "release_date_download": "2025-02-28",
+          "release_date_stream": "2025-02-28",
+          "release_date_purchase": "2025-02-28",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1775977200,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ga/yy/c6tybzhhdyyga_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ga/yy/c6tybzhhdyyga_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ga/yy/c6tybzhhdyyga_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Delain",
+            "id": 433475,
+            "albums_count": 105,
+            "slug": "delain",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 433475,
+              "name": "Delain",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0840588130887",
+          "released_at": 1581030000,
+          "label": {
+            "name": "Napalm Records Handels GmbH",
+            "id": 157339,
+            "albums_count": 2834,
+            "supplier_id": 17,
+            "slug": "napalm-records-4"
+          },
+          "title": "Apocalypse & Chill",
+          "qobuz_id": 78551838,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/apocalypse-chill-delain/c6tybzhhdyyga",
+          "slug": "apocalypse-chill-delain",
+          "duration": 3364,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 13,
+          "genre": {
+            "path": [
+              116
+            ],
+            "color": "#0070ef",
+            "name": "Metal",
+            "id": 116,
+            "slug": "metal"
+          },
+          "maximum_channel_count": 2,
+          "id": "c6tybzhhdyyga",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2020-02-07",
+          "release_date_download": "2020-02-07",
+          "release_date_stream": "2020-02-07",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1753772400,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/pc/em/p9j34n0akempc_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/pc/em/p9j34n0akempc_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/pc/em/p9j34n0akempc_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Atlantic Chill",
+            "id": 9360615,
+            "albums_count": 7,
+            "slug": "atlantic-chill",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 9360615,
+              "name": "Atlantic Chill",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0075679784742",
+          "released_at": 1618956000,
+          "label": {
+            "name": "Atlantic Chill",
+            "id": 1288992,
+            "albums_count": 76,
+            "supplier_id": 5,
+            "slug": "atlantic-chill"
+          },
+          "title": "Atlantic Chill Vol. 1",
+          "qobuz_id": 119989221,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/atlantic-chill-vol-1-atlantic-chill/p9j34n0akempc",
+          "slug": "atlantic-chill-vol-1-atlantic-chill",
+          "duration": 3191,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 20,
+          "genre": {
+            "path": [
+              133
+            ],
+            "color": "#0070ef",
+            "name": "Hip-Hop/Rap",
+            "id": 133,
+            "slug": "rap-hip-hop"
+          },
+          "maximum_channel_count": 2,
+          "id": "p9j34n0akempc",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2021-04-21",
+          "release_date_download": "2021-04-21",
+          "release_date_stream": "2021-04-21",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1749884400,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/0a/kz/rx19h90rzkz0a_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/0a/kz/rx19h90rzkz0a_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/0a/kz/rx19h90rzkz0a_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Metal up your Brass",
+            "id": 15462912,
+            "albums_count": 1,
+            "slug": "metal-up-your-brass",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 15462912,
+              "name": "Metal up your Brass",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "4170000066095",
+          "released_at": 1663192800,
+          "label": {
+            "name": "Housemaster Records",
+            "id": 77536,
+            "albums_count": 2544,
+            "supplier_id": 32,
+            "slug": "housemaster-records"
+          },
+          "title": "Chill Em All",
+          "qobuz_id": 172716019,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chill-em-all-metal-up-your-brass/rx19h90rzkz0a",
+          "slug": "chill-em-all-metal-up-your-brass",
+          "duration": 3122,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 11,
+          "genre": {
+            "path": [
+              116
+            ],
+            "color": "#0070ef",
+            "name": "Metal",
+            "id": 116,
+            "slug": "metal"
+          },
+          "maximum_channel_count": 2,
+          "id": "rx19h90rzkz0a",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2022-09-15",
+          "release_date_download": "2022-09-15",
+          "release_date_stream": "2022-09-15",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1743836400,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": null,
+          "image": null,
+          "name": "Chilled Jazz Masters",
+          "slug": "chilled-jazz-masters",
+          "albums_count": 861,
+          "id": 1810128
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/eb/fh/ww25n1m6wfheb_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/eb/fh/ww25n1m6wfheb_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/eb/fh/ww25n1m6wfheb_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Red Velvet",
+            "id": 64362,
+            "albums_count": 91,
+            "slug": "red-velvet",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 64362,
+              "name": "Red Velvet",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0888735945885",
+          "released_at": 1699830000,
+          "label": {
+            "name": "Red Velvet (Chill Kill)",
+            "id": 7079287,
+            "albums_count": 2,
+            "supplier_id": 36,
+            "slug": "red-velvet-chill-kill"
+          },
+          "title": "Chill Kill - The 3rd Album",
+          "qobuz_id": 288273480,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chill-kill-the-3rd-album-red-velvet/ww25n1m6wfheb",
+          "slug": "chill-kill-the-3rd-album-red-velvet",
+          "duration": 2005,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 10,
+          "genre": {
+            "path": [
+              94,
+              97,
+              193,
+              194
+            ],
+            "color": "#0070ef",
+            "name": "K-Pop",
+            "id": 194,
+            "slug": "k-pop"
+          },
+          "maximum_channel_count": 2,
+          "id": "ww25n1m6wfheb",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2023-11-13",
+          "release_date_download": "2023-11-13",
+          "release_date_stream": "2023-11-13",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1759993200,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": "https://static.qobuz.com/images/artists/covers/small/f019ad8bb0384fae8e88ce7aa08875b5.jpg",
+          "image": {
+            "small": "https://static.qobuz.com/images/artists/covers/small/f019ad8bb0384fae8e88ce7aa08875b5.jpg",
+            "medium": "https://static.qobuz.com/images/artists/covers/medium/f019ad8bb0384fae8e88ce7aa08875b5.jpg",
+            "large": "https://static.qobuz.com/images/artists/covers/large/f019ad8bb0384fae8e88ce7aa08875b5.jpg",
+            "extralarge": "https://static.qobuz.com/images/artists/covers/large/f019ad8bb0384fae8e88ce7aa08875b5.jpg",
+            "mega": "https://static.qobuz.com/images/artists/covers/large/f019ad8bb0384fae8e88ce7aa08875b5.jpg"
+          },
+          "name": "Chill Bump",
+          "slug": "chill-bump",
+          "albums_count": 40,
+          "id": 941849
+        }
+      },
+      {
+        "type": "tracks",
+        "content": {
+          "type": "tracks",
+          "maximum_bit_depth": 16,
+          "copyright": "℗ 2017 Walt Disney Records",
+          "performers": "Antonina Armato, Producer, ComposerLyricist - Tim James, Producer, ComposerLyricist - Tom Sturges, ComposerLyricist - Steve Hammons, MixingEngineer - Adam Comstock, MixingEngineer - Adam Schmalholz, ComposerLyricist - Booboo Stewart, MainArtist - Disney, MainArtist - Daniel Rowland, Other - Cameron Boyce, MainArtist - Sofia Carson, MainArtist - Mitchell Hope, MainArtist",
+          "audio_info": {
+            "replaygain_track_peak": 0.984436,
+            "replaygain_track_gain": -8.82
+          },
+          "performer": {
+            "name": "Disney",
+            "id": 862132
+          },
+          "article_ids": {
+            "LLS": 95475480,
+            "SMR": 95475481,
+            "SM2": 338221727
+          },
+          "album": {
+            "image": {
+              "small": "https://static.qobuz.com/images/covers/93/68/0005008736893_230.jpg",
+              "thumbnail": "https://static.qobuz.com/images/covers/93/68/0005008736893_50.jpg",
+              "large": "https://static.qobuz.com/images/covers/93/68/0005008736893_600.jpg"
+            },
+            "maximum_bit_depth": 16,
+            "media_count": 1,
+            "artist": {
+              "image": null,
+              "name": "Descendants 2 – Cast",
+              "id": 13376060,
+              "albums_count": 1,
+              "slug": "descendants-2-cast",
+              "picture": null
+            },
+            "upc": "0005008736893",
+            "released_at": 1500588000,
+            "label": {
+              "name": "Walt Disney Records",
+              "id": 1561,
+              "albums_count": 5373,
+              "supplier_id": 1,
+              "slug": "walt-disney-records"
+            },
+            "title": "Descendants 2",
+            "qobuz_id": 39938247,
+            "version": "Original TV Movie Soundtrack",
+            "duration": 2073,
+            "parental_warning": false,
+            "tracks_count": 11,
+            "genre": {
+              "path": [
+                91,
+                92
+              ],
+              "name": "Bandas sonoras de cine",
+              "id": 92,
+              "slug": "bandes-originales-de-films"
+            },
+            "maximum_channel_count": 2,
+            "id": "0005008736893",
+            "maximum_sampling_rate": 44.1,
+            "previewable": true,
+            "sampleable": true,
+            "displayable": true,
+            "streamable": true,
+            "streamable_at": 1753858800,
+            "downloadable": false,
+            "purchasable_at": null,
+            "purchasable": false,
+            "release_date_original": "2017-07-21",
+            "release_date_download": "2017-07-21",
+            "release_date_stream": "2017-07-21",
+            "release_date_purchase": "2017-07-21",
+            "hires": false,
+            "hires_streamable": false,
+            "maximum_technical_specifications": "16 bits / 44.1 kHz - Stereo "
+          },
+          "work": null,
+          "composer": {
+            "name": "Antonina Armato",
+            "id": 154535
+          },
+          "isrc": "USWD11779700",
+          "title": "Chillin' Like a Villain",
+          "version": "From \"Descendants 2\"/Soundtrack Version",
+          "duration": 194,
+          "parental_warning": false,
+          "track_number": 3,
+          "maximum_channel_count": 2,
+          "id": 39938250,
+          "media_number": 1,
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2017-07-21",
+          "release_date_download": "2017-07-21",
+          "release_date_stream": "2017-07-21",
+          "release_date_purchase": "2017-07-21",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1753858800,
+          "hires": false,
+          "hires_streamable": false,
+          "maximum_technical_specifications": "16 bits / 44.1 kHz - Stereo "
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/dc/t0/rkyc8phyut0dc_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/dc/t0/rkyc8phyut0dc_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/dc/t0/rkyc8phyut0dc_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Mikel",
+            "id": 28981389,
+            "albums_count": 0,
+            "slug": "mikel-11",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 28981389,
+              "name": "Mikel",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 8289152,
+              "name": "GameChops",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0195598030932",
+          "released_at": 1605222000,
+          "label": {
+            "name": "GameChops",
+            "id": 2034820,
+            "albums_count": 355,
+            "supplier_id": 128,
+            "slug": "gamechops-1"
+          },
+          "title": "Zelda & Chill II",
+          "qobuz_id": 166903092,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/zelda-chill-ii-mikel-amp-gamechops/rkyc8phyut0dc",
+          "slug": "zelda-chill-ii-mikel-amp-gamechops",
+          "duration": 2338,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 14,
+          "genre": {
+            "path": [
+              64,
+              129
+            ],
+            "color": "#0070ef",
+            "name": "Dance",
+            "id": 129,
+            "slug": "dance"
+          },
+          "maximum_channel_count": 2,
+          "id": "rkyc8phyut0dc",
+          "maximum_sampling_rate": 48,
+          "articles": [],
+          "release_date_original": "2020-11-13",
+          "release_date_download": "2020-11-13",
+          "release_date_stream": "2020-11-13",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1760598000,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": null,
+          "image": null,
+          "name": "Jason \\\"Chilly Gonzales\\\" Beck",
+          "slug": "jason-chilly-gonzales-beck-5",
+          "albums_count": 1,
+          "id": 9316182
+        }
+      },
+      {
+        "type": "tracks",
+        "content": {
+          "type": "tracks",
+          "maximum_bit_depth": 24,
+          "copyright": "(P) 2024 Top Dawg Entertainment, under exclusive license to RCA Records",
+          "performers": "SZA, AssociatedPerformer, MainArtist - Solana Rowe, Composer, Lyricist - Michael Uzowuru, Misc. Producer - Lil Yachty, Producer - Miles McCollum, Composer, Lyricist - Calvin Dickinson, Composer, Lyricist, Producer - Hector Castro, Assistant Mixing Engineer, Engineer - Tommy Turner, Assistant Engineer - Cade Blodgett, Composer, Lyricist - Dale Becker, Mastering Engineer - Leonhard Sitz, Composer, Lyricist - Noah McCorkle, Assistant Mastering Engineer - Adam Burt, Assistant Mastering Engineer - SADPONY, Producer - Cade, Producer - Jeremiah Raisen, Composer, Lyricist - iseeyou, Producer - Julian Friedl, Composer, Lyricist - Caleb Laven, Mixing Engineer - Sean Matsukawa, Mixing Engineer - Kyle McAulay, Assistant Engineer",
+          "audio_info": {
+            "replaygain_track_peak": 1,
+            "replaygain_track_gain": -7.97
+          },
+          "performer": {
+            "name": "SZA",
+            "id": 1617224
+          },
+          "article_ids": {
+            "LLS": 1037400362,
+            "SMR": 1037400363
+          },
+          "album": {
+            "image": {
+              "small": "https://static.qobuz.com/images/covers/ka/94/h4gvv3ksw94ka_230.jpg",
+              "thumbnail": "https://static.qobuz.com/images/covers/ka/94/h4gvv3ksw94ka_50.jpg",
+              "large": "https://static.qobuz.com/images/covers/ka/94/h4gvv3ksw94ka_600.jpg"
+            },
+            "maximum_bit_depth": 24,
+            "media_count": 1,
+            "artist": {
+              "image": null,
+              "name": "SZA",
+              "id": 1617224,
+              "albums_count": 132,
+              "slug": "sza",
+              "picture": null
+            },
+            "upc": "0196871766890",
+            "released_at": 1734649200,
+            "label": {
+              "name": "Top Dawg Entertainment - RCA Records",
+              "id": 171965,
+              "albums_count": 30,
+              "supplier_id": 23,
+              "slug": "top-dawg-entertainment-rca-records"
+            },
+            "title": "SOS Deluxe: LANA",
+            "qobuz_id": 308653840,
+            "version": null,
+            "duration": 6827,
+            "parental_warning": true,
+            "tracks_count": 38,
+            "genre": {
+              "path": [
+                127,
+                132
+              ],
+              "name": "R&B",
+              "id": 132,
+              "slug": "rb"
+            },
+            "maximum_channel_count": 2,
+            "id": "h4gvv3ksw94ka",
+            "maximum_sampling_rate": 44.1,
+            "previewable": true,
+            "sampleable": true,
+            "displayable": true,
+            "streamable": true,
+            "streamable_at": 1774854000,
+            "downloadable": false,
+            "purchasable_at": null,
+            "purchasable": false,
+            "release_date_original": "2024-12-20",
+            "release_date_download": "2024-12-20",
+            "release_date_stream": "2024-12-20",
+            "release_date_purchase": "2024-12-20",
+            "hires": true,
+            "hires_streamable": true
+          },
+          "work": null,
+          "composer": {
+            "name": "Solana Rowe",
+            "id": 2028296
+          },
+          "isrc": "USRC12403829",
+          "title": "Chill Baby",
+          "version": null,
+          "duration": 140,
+          "parental_warning": true,
+          "track_number": 8,
+          "maximum_channel_count": 2,
+          "id": 308653848,
+          "media_number": 1,
+          "maximum_sampling_rate": 48,
+          "articles": [],
+          "release_date_original": "2024-12-20",
+          "release_date_download": "2024-12-20",
+          "release_date_stream": "2024-12-20",
+          "release_date_purchase": "2024-12-20",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1774854000,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "tracks",
+        "content": {
+          "type": "tracks",
+          "maximum_bit_depth": 24,
+          "copyright": "© 2023  Musical Freedom, LLC under exclusive license to Atlantic Recording Corporation. ℗ 2022 Musical Freedom, LLC under exclusive license to Atlantic Recording Corporation.",
+          "performers": "Tiesto, Producer, Mixer, MainArtist - Tijs M Verwest, Writer - Tom Norris, Masterer - Sebastian Atas, Producer, Writer - Victor Sjöstrom, Producer, Writer - Viktor Broberg, Producer, Writer - A Boogie Wit Da Hoodie, Vocals, MainArtist - Artist Julius Dubose, Writer",
+          "audio_info": {
+            "replaygain_track_peak": 1,
+            "replaygain_track_gain": -9.86
+          },
+          "performer": {
+            "name": "Tiësto",
+            "id": 251453
+          },
+          "article_ids": {
+            "LLS": 830171579,
+            "SMR": 830171580
+          },
+          "album": {
+            "image": {
+              "small": "https://static.qobuz.com/images/covers/nb/6k/dfw0tf13y6knb_230.jpg",
+              "thumbnail": "https://static.qobuz.com/images/covers/nb/6k/dfw0tf13y6knb_50.jpg",
+              "large": "https://static.qobuz.com/images/covers/nb/6k/dfw0tf13y6knb_600.jpg"
+            },
+            "maximum_bit_depth": 24,
+            "media_count": 1,
+            "artist": {
+              "image": null,
+              "name": "Tiësto",
+              "id": 251453,
+              "albums_count": 1037,
+              "slug": "tiesto",
+              "picture": null
+            },
+            "upc": "0075679680419",
+            "released_at": 1682028000,
+            "label": {
+              "name": "ATLANTIC RECORDS",
+              "id": 7397,
+              "albums_count": 7340,
+              "supplier_id": 5,
+              "slug": "atlantic-records"
+            },
+            "title": "DRIVE",
+            "qobuz_id": 212719585,
+            "version": null,
+            "duration": 2049,
+            "parental_warning": true,
+            "tracks_count": 13,
+            "genre": {
+              "path": [
+                64,
+                129
+              ],
+              "name": "Dance",
+              "id": 129,
+              "slug": "dance"
+            },
+            "maximum_channel_count": 2,
+            "id": "dfw0tf13y6knb",
+            "maximum_sampling_rate": 44.1,
+            "previewable": true,
+            "sampleable": true,
+            "displayable": true,
+            "streamable": true,
+            "streamable_at": 1752130800,
+            "downloadable": false,
+            "purchasable_at": null,
+            "purchasable": false,
+            "release_date_original": "2023-04-21",
+            "release_date_download": "2023-04-21",
+            "release_date_stream": "2023-04-21",
+            "release_date_purchase": "2023-04-21",
+            "hires": true,
+            "hires_streamable": true
+          },
+          "work": null,
+          "isrc": "CYA112200010",
+          "title": "Chills (LA Hills)",
+          "version": null,
+          "duration": 183,
+          "parental_warning": false,
+          "track_number": 1,
+          "maximum_channel_count": 2,
+          "id": 212719586,
+          "media_number": 1,
+          "maximum_sampling_rate": 48,
+          "articles": [],
+          "release_date_original": "2023-04-21",
+          "release_date_download": "2023-04-21",
+          "release_date_stream": "2023-04-21",
+          "release_date_purchase": "2023-04-21",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1752130800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": null,
+          "image": null,
+          "name": "Chill Mafia Records",
+          "slug": "chill-mafia-records",
+          "albums_count": 14,
+          "id": 9427855
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/0b/ul/zh7wldtx6ul0b_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/0b/ul/zh7wldtx6ul0b_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/0b/ul/zh7wldtx6ul0b_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Chillhop Music",
+            "id": 7634103,
+            "albums_count": 201,
+            "slug": "chillhop-music",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 7634103,
+              "name": "Chillhop Music",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0723098052538",
+          "released_at": 1756936800,
+          "label": {
+            "name": "Chillhop Music",
+            "id": 1093700,
+            "albums_count": 742,
+            "supplier_id": 41,
+            "slug": "chillhop-music"
+          },
+          "title": "Chillhop Essentials Fall 2025",
+          "qobuz_id": 339285931,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/chillhop-essentials-fall-2025-various-artists/zh7wldtx6ul0b",
+          "slug": "chillhop-essentials-fall-2025-various-artists",
+          "duration": 4110,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 28,
+          "genre": {
+            "path": [
+              112,
+              119,
+              113
+            ],
+            "color": "#0070ef",
+            "name": "Alternativa & Indie",
+            "id": 113,
+            "slug": "alternatif-et-inde"
+          },
+          "maximum_channel_count": 2,
+          "id": "zh7wldtx6ul0b",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2025-09-04",
+          "release_date_download": "2025-09-04",
+          "release_date_stream": "2025-09-04",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1756969200,
+          "hires": false,
+          "hires_streamable": false
+        }
+      }
+    ]
+  }
+}
