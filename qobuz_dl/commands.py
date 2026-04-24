@@ -103,7 +103,9 @@ def reorganize_args(subparsers):
     )
     reorg.add_argument(
         "FOLDER",
-        help="the local directory containing the music files to reorganize",
+        nargs="?",
+        default=None,
+        help="the local directory to reorganize (default: download directory from config)",
     )
     strategy = reorg.add_mutually_exclusive_group(required=True)
     strategy.add_argument(

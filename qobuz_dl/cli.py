@@ -313,7 +313,7 @@ def main():
     if arguments.command in ("reorganize", "reorg"):
         from qobuz_dl.reorganize import reorganize_folder
 
-        target_dir = arguments.FOLDER
+        target_dir = arguments.FOLDER or default_folder
         if os.name == "nt":
             target_dir = os.path.abspath(target_dir)
             if not target_dir.startswith("\\\\?\\"):
