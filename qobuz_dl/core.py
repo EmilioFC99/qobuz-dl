@@ -66,6 +66,7 @@ class QobuzDL:
         genius_token=None,
         force_english=True,
         no_credits=False,
+        by_album=False,
         settings: QobuzDLSettings = None,
     ):
         self.directory = create_and_return_dir(directory)
@@ -87,6 +88,7 @@ class QobuzDL:
         self.genius_token = genius_token
         self.force_english = force_english
         self.no_credits = no_credits
+        self.by_album = by_album
         self.settings = settings or QobuzDLSettings()
 
     def initialize_client(self, email, pwd, app_id, secrets):
@@ -163,6 +165,8 @@ class QobuzDL:
                 f'{RED}Invalid url: "{url}". Use urls from ' "https://play.qobuz.com!"
             )
             return
+        is_playlist = (url_type == "playlist")
+
         if type_dict["func"]:
             content = [item for item in type_dict["func"](item_id)]
             content_name = content[0]["name"]
@@ -170,9 +174,13 @@ class QobuzDL:
                 f"{YELLOW}Downloading all the music from {content_name} "
                 f"({url_type})!"
             )
-            new_path = create_and_return_dir(
-                os.path.join(self.directory, sanitize_filename(content_name))
-            )
+
+            if self.by_album:
+                new_path = self.directory
+            else:
+                new_path = create_and_return_dir(
+                    os.path.join(self.directory, sanitize_filename(content_name))
+                )
 
             if self.smart_discography and url_type == "artist":
                 items = smart_discography_filter(
@@ -190,35 +198,46 @@ class QobuzDL:
             if content:
                 logger.debug(f"Items in first chunk: {len(content[0].get(type_dict['iterable_key'], {}).get('items', []))}")
             logger.info(f"{YELLOW}{len(items)} downloads in queue")
-            
-            # --- START PLAYLIST LOGIC (Flat Folder) ---
-            is_playlist = (url_type == "playlist")
-            if is_playlist:
+
+            if is_playlist and self.by_album:
+                for item in items:
+                    self.download_from_id(
+                        item["id"],
+                        False,
+                        None,
+                        is_playlist=False,
+                        playlist_index=None
+                    )
+            elif is_playlist:
                 original_folder_format = self.folder_format
                 original_multi_disc_setting = self.settings.multiple_disc_one_dir
-                
+
                 self.folder_format = "."
                 self.settings.multiple_disc_one_dir = True
-            # ------------------------------------------------
 
-            # Use enumerate to get the track number in the playlist (1, 2, 3...)
-            for idx, item in enumerate(items, start=1):
-                self.download_from_id(
-                    item["id"],
-                    True if type_dict["iterable_key"] == "albums" else False,
-                    new_path,
-                    is_playlist=is_playlist,
-                    playlist_index=idx
-                )
+                for idx, item in enumerate(items, start=1):
+                    self.download_from_id(
+                        item["id"],
+                        False,
+                        new_path,
+                        is_playlist=True,
+                        playlist_index=idx
+                    )
 
-            # --- RESTORE SETTINGS ---
-            if is_playlist:
                 self.folder_format = original_folder_format
                 self.settings.multiple_disc_one_dir = original_multi_disc_setting
-            # -------------------------------
 
-            if url_type == "playlist" and not self.no_m3u_for_playlists:
-                make_m3u(new_path)
+                if not self.no_m3u_for_playlists:
+                    make_m3u(new_path)
+            else:
+                for idx, item in enumerate(items, start=1):
+                    self.download_from_id(
+                        item["id"],
+                        True if type_dict["iterable_key"] == "albums" else False,
+                        new_path,
+                        is_playlist=False,
+                        playlist_index=None
+                    )
         else:
             self.download_from_id(item_id, type_dict["album"])
 
@@ -530,45 +549,54 @@ class QobuzDL:
         # Extract an ID from the Last.fm URL to name the folder
         pl_id = playlist_url.rstrip('/').split('/')[-1]
         pl_title = sanitize_filename(f"LastFM_Playlist_{pl_id}")
-        pl_directory = os.path.join(self.directory, pl_title)
-        
+
         logger.info(
             f"{YELLOW}Downloading playlist: {pl_title} ({len(tracks_list)} tracks){RESET}"
         )
 
         # Step 2: Convert to Qobuz IDs using our new method in qopy.py
         track_ids = self.client.get_track_ids_from_list(tracks_list)
-        
+
         if not track_ids:
             logger.info(f"{RED}[!] No matching tracks found on Qobuz. Aborting.{OFF}")
             return
 
         # Step 3: Send valid IDs to the downloader engine
-        
-        # Save original settings to restore them later
-        original_folder_format = self.folder_format
-        original_multi_disc_setting = self.settings.multiple_disc_one_dir
-        
-        # Force flat folder structure for the playlist
-        self.folder_format = "."
-        self.settings.multiple_disc_one_dir = True
-        
-        # Use enumerate to get the playlist track number (1, 2, 3...)
-        for idx, t_id in enumerate(track_ids, start=1):
-            try:
-                self.download_from_id(
-                    t_id, 
-                    False, 
-                    pl_directory, 
-                    is_playlist=True, 
-                    playlist_index=idx
-                )
-            except Exception as e:
-                logger.error(f"{RED}[!] Failed to queue track ID {t_id}: {e}{OFF}")
+        if self.by_album:
+            for t_id in track_ids:
+                try:
+                    self.download_from_id(
+                        t_id,
+                        False,
+                        None,
+                        is_playlist=False,
+                        playlist_index=None
+                    )
+                except Exception as e:
+                    logger.error(f"{RED}[!] Failed to queue track ID {t_id}: {e}{OFF}")
+        else:
+            pl_directory = os.path.join(self.directory, pl_title)
 
-        # Restore original settings for subsequent downloads
-        self.folder_format = original_folder_format
-        self.settings.multiple_disc_one_dir = original_multi_disc_setting
+            original_folder_format = self.folder_format
+            original_multi_disc_setting = self.settings.multiple_disc_one_dir
 
-        if not self.no_m3u_for_playlists:
-            make_m3u(pl_directory)
+            self.folder_format = "."
+            self.settings.multiple_disc_one_dir = True
+
+            for idx, t_id in enumerate(track_ids, start=1):
+                try:
+                    self.download_from_id(
+                        t_id,
+                        False,
+                        pl_directory,
+                        is_playlist=True,
+                        playlist_index=idx
+                    )
+                except Exception as e:
+                    logger.error(f"{RED}[!] Failed to queue track ID {t_id}: {e}{OFF}")
+
+            self.folder_format = original_folder_format
+            self.settings.multiple_disc_one_dir = original_multi_disc_setting
+
+            if not self.no_m3u_for_playlists:
+                make_m3u(pl_directory)
