@@ -1,0 +1,3745 @@
+{
+  "id": 36819,
+  "name": "Daft Punk",
+  "albums_as_primary_artist_count": 112,
+  "albums_as_primary_composer_count": 66,
+  "albums_count": 76,
+  "slug": "daft-punk",
+  "picture": null,
+  "image": {
+    "small": "https://static.qobuz.com/images/artists/covers/small/01070e8186c711139b41a04d8640f9e0.jpg",
+    "medium": "https://static.qobuz.com/images/artists/covers/medium/01070e8186c711139b41a04d8640f9e0.jpg",
+    "large": "https://static.qobuz.com/images/artists/covers/large/01070e8186c711139b41a04d8640f9e0.jpg",
+    "extralarge": "https://static.qobuz.com/images/artists/covers/large/01070e8186c711139b41a04d8640f9e0.jpg",
+    "mega": "https://static.qobuz.com/images/artists/covers/large/01070e8186c711139b41a04d8640f9e0.jpg"
+  },
+  "similar_artist_ids": [
+    224109,
+    48495,
+    53277,
+    65661,
+    73186,
+    108700,
+    140087,
+    172656,
+    222294,
+    25576,
+    298457,
+    326714,
+    607125,
+    678492,
+    713678,
+    1372987,
+    2124320,
+    3044542,
+    38992,
+    38332,
+    39778,
+    41878,
+    41883,
+    38372,
+    36245,
+    42638,
+    36501,
+    36500,
+    41896,
+    204119,
+    204734,
+    40894,
+    561522,
+    15053,
+    218022,
+    523041,
+    344695,
+    103032,
+    67698,
+    43820,
+    46868,
+    925213,
+    640534,
+    2002287,
+    2530621,
+    551856,
+    5339836,
+    489247,
+    45975,
+    386110,
+    67834,
+    103037,
+    273489,
+    42781,
+    177421,
+    210650,
+    2157407,
+    2433693,
+    111983,
+    740895,
+    40726,
+    262483,
+    2770031,
+    54517,
+    44271,
+    326422,
+    333478,
+    388502,
+    13044022,
+    2643877,
+    2429448,
+    99689,
+    1960679,
+    1922871,
+    1613993,
+    1213277,
+    126046,
+    655933,
+    556703,
+    552534,
+    322106,
+    428739
+  ],
+  "information": null,
+  "biography": {
+    "summary": "Ya sea como pioneros de la música house francesa en la década del 90, favoritos de colegas y críticos en la del 2000 o superestrellas mundiales en la de 2010, los Daft Punk siempre han sido uno de los grupos más distintivos e influyentes de la música bailable contemporánea. Con su original mezcla de acid house con tecno, pop, indie rock y hip-hop, el dúo parisino causó sensación desde sus mismos comienzos con el aclamado debut Homework (1997),…",
+    "content": "Ya sea como pioneros de la música house francesa en la década del 90, favoritos de colegas y críticos en la del 2000 o superestrellas mundiales en la de 2010, los Daft Punk siempre han sido uno de los grupos más distintivos e influyentes de la música bailable contemporánea. Con su original mezcla de acid house con tecno, pop, indie rock y hip-hop, el dúo parisino causó sensación desde sus mismos comienzos con el aclamado debut Homework (1997), aunque el éxito masivo solo llegaría con Random Access Memories (2013), álbum por el cual obtuvieron cinco premios Grammy. Tras dedicar los siguientes años a diversos proyectos y colaborar con artistas como The Weeknd, Arcade Fire o Charlotte Gainsbourg, Daft Punk anunció su separación en 2021.\n<br />&copy TiVo",
+    "source": "Rovi",
+    "language": "es"
+  },
+  "albums": {
+    "total": 76,
+    "offset": 0,
+    "limit": 50,
+    "items": [
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/87/70/0886443927087_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/87/70/0886443927087_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/87/70/0886443927087_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 162,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0886443927087",
+        "released_at": 1369000800,
+        "label": {
+          "name": "Columbia",
+          "id": 4592,
+          "albums_count": 27862,
+          "supplier_id": 23,
+          "slug": "columbia"
+        },
+        "title": "Random Access Memories",
+        "qobuz_id": 9140023,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/random-access-memories-daft-punk/0886443927087",
+        "slug": "random-access-memories-daft-punk",
+        "duration": 4470,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 13,
+        "genre": {
+          "path": [
+            64
+          ],
+          "color": "#0070ef",
+          "name": "Electrónica",
+          "id": 64,
+          "slug": "electro"
+        },
+        "maximum_channel_count": 2,
+        "id": "0886443927087",
+        "maximum_sampling_rate": 88.2,
+        "articles": [],
+        "release_date_original": "2013-05-20",
+        "release_date_download": "2013-05-20",
+        "release_date_stream": "2013-05-20",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763881200,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/50/06/0724384960650_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/50/06/0724384960650_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/50/06/0724384960650_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 170,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724384960650",
+        "released_at": 983919600,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Discovery",
+        "qobuz_id": 3142537,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/discovery-daft-punk/0724384960650",
+        "slug": "discovery-daft-punk",
+        "duration": 3662,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 14,
+        "genre": {
+          "path": [
+            64
+          ],
+          "color": "#0070ef",
+          "name": "Electrónica",
+          "id": 64,
+          "slug": "electro"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724384960650",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2001-03-07",
+        "release_date_download": "2001-03-07",
+        "release_date_stream": "2001-03-07",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1772521200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/58/09/0724384260958_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/58/09/0724384260958_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/58/09/0724384260958_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 172,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724384260958",
+        "released_at": 853369200,
+        "label": {
+          "name": "Parlophone France",
+          "id": 49433,
+          "albums_count": 1267,
+          "supplier_id": 5,
+          "slug": "parlophone-france"
+        },
+        "title": "Homework",
+        "qobuz_id": 2370792,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/homework-daft-punk/0724384260958",
+        "slug": "homework-daft-punk",
+        "duration": 4422,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 16,
+        "genre": {
+          "path": [
+            64
+          ],
+          "color": "#0070ef",
+          "name": "Electrónica",
+          "id": 64,
+          "slug": "electro"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724384260958",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "1997-01-16",
+        "release_date_download": "1997-01-16",
+        "release_date_stream": "1997-01-16",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1775718000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/lc/48/d7rchuzba48lc_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/lc/48/d7rchuzba48lc_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/lc/48/d7rchuzba48lc_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0050087478704",
+        "released_at": 1291676400,
+        "label": {
+          "name": "Walt Disney Records",
+          "id": 1561,
+          "albums_count": 5320,
+          "supplier_id": 1,
+          "slug": "walt-disney-records"
+        },
+        "title": "TRON: Legacy - The Complete Edition",
+        "qobuz_id": 108744291,
+        "version": "Original Motion Picture Soundtrack",
+        "url": "https://www.qobuz.com/fr-fr/album/tron-legacy-the-complete-edition-daft-punk/d7rchuzba48lc",
+        "slug": "tron-legacy-the-complete-edition-daft-punk",
+        "duration": 4976,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 31,
+        "genre": {
+          "path": [
+            91,
+            92
+          ],
+          "color": "#0070ef",
+          "name": "Bandas sonoras de cine",
+          "id": 92,
+          "slug": "bandes-originales-de-films"
+        },
+        "maximum_channel_count": 2,
+        "id": "d7rchuzba48lc",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2010-12-07",
+        "release_date_download": "2010-12-07",
+        "release_date_stream": "2010-12-07",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1752130800,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/xb/cg/apk748lfvcgxb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/xb/cg/apk748lfvcgxb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/xb/cg/apk748lfvcgxb_600.jpg",
+          "back": null
+        },
+        "media_count": 2,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0196589921154",
+        "released_at": 1369000800,
+        "label": {
+          "name": "Columbia - Legacy",
+          "id": 4637,
+          "albums_count": 4643,
+          "supplier_id": 23,
+          "slug": "columbia-legacy"
+        },
+        "title": "Random Access Memories ",
+        "qobuz_id": 209446459,
+        "version": "10th Anniversary Edition",
+        "url": "https://www.qobuz.com/fr-fr/album/random-access-memories-daft-punk/apk748lfvcgxb",
+        "slug": "random-access-memories-daft-punk",
+        "duration": 6599,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 22,
+        "genre": {
+          "path": [
+            64
+          ],
+          "color": "#0070ef",
+          "name": "Electrónica",
+          "id": 64,
+          "slug": "electro"
+        },
+        "maximum_channel_count": 2,
+        "id": "apk748lfvcgxb",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2013-05-20",
+        "release_date_download": "2013-05-20",
+        "release_date_stream": "2013-05-20",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763881200,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/57/58/5099951165857_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/57/58/5099951165857_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/57/58/5099951165857_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 163,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "5099951165857",
+        "released_at": 1193871600,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Alive 2007",
+        "qobuz_id": 2370960,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/alive-2007-daft-punk/5099951165857",
+        "slug": "alive-2007-daft-punk",
+        "duration": 5033,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 13,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "5099951165857",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2007-11-01",
+        "release_date_download": "2007-11-01",
+        "release_date_stream": "2007-11-01",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1767682800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/52/62/0724356356252_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/52/62/0724356356252_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/52/62/0724356356252_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724356356252",
+        "released_at": 1110754800,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Human After All",
+        "qobuz_id": 2370762,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/human-after-all-daft-punk/0724356356252",
+        "slug": "human-after-all-daft-punk",
+        "duration": 2735,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 10,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724356356252",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2005-03-14",
+        "release_date_download": "2005-03-14",
+        "release_date_stream": "2005-03-14",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1758092400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/vc/qh/hal01o4skqhvc_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/vc/qh/hal01o4skqhvc_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/vc/qh/hal01o4skqhvc_600.jpg",
+          "back": null
+        },
+        "media_count": 2,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0190296240911",
+        "released_at": 853714800,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Homework ",
+        "qobuz_id": 147639406,
+        "version": "25th Anniversary Edition",
+        "url": "https://www.qobuz.com/fr-fr/album/homework-daft-punk/hal01o4skqhvc",
+        "slug": "homework-daft-punk",
+        "duration": 10910,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 31,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "hal01o4skqhvc",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "1997-01-20",
+        "release_date_download": "1997-01-20",
+        "release_date_stream": "1997-01-20",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1764054000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/51/05/0094635840551_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/51/05/0094635840551_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/51/05/0094635840551_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0094635840551",
+        "released_at": 1143756000,
+        "label": {
+          "name": "Parlophone France",
+          "id": 49433,
+          "albums_count": 1267,
+          "supplier_id": 5,
+          "slug": "parlophone-france"
+        },
+        "title": "Musique Vol. 1 (1993 - 2005)",
+        "qobuz_id": 2601880,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/musique-vol-1-1993-2005-daft-punk/0094635840551",
+        "slug": "musique-vol-1-1993-2005-daft-punk",
+        "duration": 4502,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 15,
+        "genre": {
+          "path": [
+            64
+          ],
+          "color": "#0070ef",
+          "name": "Electrónica",
+          "id": 64,
+          "slug": "electro"
+        },
+        "maximum_channel_count": 2,
+        "id": "0094635840551",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2006-03-31",
+        "release_date_download": "2006-03-31",
+        "release_date_stream": "2006-03-31",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1764140400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ia/ck/ny0jfan20ckia_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ia/ck/ny0jfan20ckia_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ia/ck/ny0jfan20ckia_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 178,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0050087239633",
+        "released_at": 1293836400,
+        "label": {
+          "name": "Walt Disney Records",
+          "id": 1561,
+          "albums_count": 5373,
+          "supplier_id": 1,
+          "slug": "walt-disney-records"
+        },
+        "title": "TRON: Legacy Reconfigured",
+        "qobuz_id": 54259145,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/tron-legacy-reconfigured-daft-punk/ny0jfan20ckia",
+        "slug": "tron-legacy-reconfigured-daft-punk",
+        "duration": 4661,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 15,
+        "genre": {
+          "path": [
+            64
+          ],
+          "color": "#0070ef",
+          "name": "Electrónica",
+          "id": 64,
+          "slug": "electro"
+        },
+        "maximum_channel_count": 2,
+        "id": "ny0jfan20ckia",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2011-01-01",
+        "release_date_download": "2011-01-01",
+        "release_date_stream": "2011-01-01",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1776841200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ia/2e/g76onzmzj2eia_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ia/2e/g76onzmzj2eia_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ia/2e/g76onzmzj2eia_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Guy Manuel De Homem Christo",
+          "id": 48213,
+          "albums_count": 19,
+          "slug": "guy-manuel-de-homem-christo",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "5034644330297",
+        "released_at": 1734044400,
+        "label": {
+          "name": "Daft Life Ltd.",
+          "id": 7512846,
+          "albums_count": 2,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd"
+        },
+        "title": "Veridis Quo",
+        "qobuz_id": 306664877,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/veridis-quo-daft-punk/g76onzmzj2eia",
+        "slug": "veridis-quo-daft-punk",
+        "duration": 509,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "g76onzmzj2eia",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-12-13",
+        "release_date_download": "2024-12-13",
+        "release_date_stream": "2024-12-13",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1764226800,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ia/eq/ziloabhygeqia_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ia/eq/ziloabhygeqia_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ia/eq/ziloabhygeqia_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 177,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0050087236182",
+        "released_at": 1291330800,
+        "label": {
+          "name": "Walt Disney Records",
+          "id": 1561,
+          "albums_count": 5373,
+          "supplier_id": 1,
+          "slug": "walt-disney-records"
+        },
+        "title": "TRON: Legacy",
+        "qobuz_id": 54259122,
+        "version": "From \"TRON: Legacy\"/Score",
+        "url": "https://www.qobuz.com/fr-fr/album/tron-legacy-daft-punk/ziloabhygeqia",
+        "slug": "tron-legacy-daft-punk",
+        "duration": 3515,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 22,
+        "genre": {
+          "path": [
+            91,
+            92
+          ],
+          "color": "#0070ef",
+          "name": "Bandas sonoras de cine",
+          "id": 92,
+          "slug": "bandes-originales-de-films"
+        },
+        "maximum_channel_count": 2,
+        "id": "ziloabhygeqia",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2010-12-03",
+        "release_date_download": "2010-12-03",
+        "release_date_stream": "2010-12-03",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1776841200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/51/17/0724389411751_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/51/17/0724389411751_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/51/17/0724389411751_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 160,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389411751",
+        "released_at": 860968800,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Around The World",
+        "qobuz_id": 5147209,
+        "version": "Remixes",
+        "url": "https://www.qobuz.com/fr-fr/album/around-the-world-daft-punk/0724389411751",
+        "slug": "around-the-world-daft-punk",
+        "duration": 1422,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 4,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389411751",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "1997-04-14",
+        "release_date_download": "1997-04-14",
+        "release_date_stream": "1997-04-14",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763535600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/59/89/0724359638959_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/59/89/0724359638959_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/59/89/0724359638959_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 150,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724359638959",
+        "released_at": 1070233200,
+        "label": {
+          "name": "Parlophone France",
+          "id": 49433,
+          "albums_count": 1267,
+          "supplier_id": 5,
+          "slug": "parlophone-france"
+        },
+        "title": "Daft Club",
+        "qobuz_id": 2370774,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/daft-club-daft-punk/0724359638959",
+        "slug": "daft-club-daft-punk",
+        "duration": 4379,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 14,
+        "genre": {
+          "path": [
+            64
+          ],
+          "color": "#0070ef",
+          "name": "Electrónica",
+          "id": 64,
+          "slug": "electro"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724359638959",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2003-12-01",
+        "release_date_download": "2003-12-01",
+        "release_date_stream": "2003-12-01",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1749884400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/54/45/0724354764554_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/54/45/0724354764554_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/54/45/0724354764554_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 160,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724354764554",
+        "released_at": 1068764400,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Something About Us ",
+        "qobuz_id": 3257593,
+        "version": "Love Theme from Interstella",
+        "url": "https://www.qobuz.com/fr-fr/album/something-about-us-daft-punk/0724354764554",
+        "slug": "something-about-us-daft-punk",
+        "duration": 1103,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 4,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724354764554",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2003-11-14",
+        "release_date_download": "2003-11-14",
+        "release_date_stream": "2003-11-14",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763535600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/lb/bs/jggm5n5i7bslb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/lb/bs/jggm5n5i7bslb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/lb/bs/jggm5n5i7bslb_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0196871049191",
+        "released_at": 1681941600,
+        "label": {
+          "name": "Columbia - Legacy",
+          "id": 4637,
+          "albums_count": 4645,
+          "supplier_id": 23,
+          "slug": "columbia-legacy"
+        },
+        "title": "GLBTM (Studio Outtakes)",
+        "qobuz_id": 206279301,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/glbtm-studio-outtakes-daft-punk/jggm5n5i7bslb",
+        "slug": "glbtm-studio-outtakes-daft-punk",
+        "duration": 813,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "jggm5n5i7bslb",
+        "maximum_sampling_rate": 88.2,
+        "articles": [],
+        "release_date_original": "2023-04-20",
+        "release_date_download": "2023-04-20",
+        "release_date_stream": "2023-04-20",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763967600,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/01/35/0825646243501_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/01/35/0825646243501_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/01/35/0825646243501_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0825646243501",
+        "released_at": 1111273200,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Human After All (Remixes)",
+        "qobuz_id": 18531560,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/human-after-all-remixes-daft-punk/0825646243501",
+        "slug": "human-after-all-remixes-daft-punk",
+        "duration": 5063,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 15,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0825646243501",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2005-03-20",
+        "release_date_download": "2005-03-20",
+        "release_date_stream": "2005-03-20",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763535600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/pa/6z/m02mn8hq96zpa_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/pa/6z/m02mn8hq96zpa_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/pa/6z/m02mn8hq96zpa_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Junior Kimbrough",
+          "id": 199432,
+          "albums_count": 38,
+          "slug": "junior-kimbrough",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 199432,
+            "name": "Junior Kimbrough",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "featured-artist"
+            ]
+          }
+        ],
+        "upc": "0196006144814",
+        "released_at": 1614294000,
+        "label": {
+          "name": "Fat Possum",
+          "id": 15877,
+          "albums_count": 1100,
+          "supplier_id": 17,
+          "slug": "fat-possum"
+        },
+        "title": "I Gotta Try You Girl ",
+        "qobuz_id": 116066183,
+        "version": "Daft Punk Edit",
+        "url": "https://www.qobuz.com/fr-fr/album/i-gotta-try-you-girl-junior-kimbrough/m02mn8hq96zpa",
+        "slug": "i-gotta-try-you-girl-junior-kimbrough",
+        "duration": 936,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            2,
+            3
+          ],
+          "color": "#0070ef",
+          "name": "Blues",
+          "id": 3,
+          "slug": "blues"
+        },
+        "maximum_channel_count": 2,
+        "id": "m02mn8hq96zpa",
+        "maximum_sampling_rate": 88.2,
+        "articles": [],
+        "release_date_original": "2021-02-26",
+        "release_date_download": "2021-02-26",
+        "release_date_stream": "2021-02-26",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1734073200,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/57/11/0724389721157_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/57/11/0724389721157_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/57/11/0724389721157_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389721157",
+        "released_at": 976230000,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "One More Time",
+        "qobuz_id": 5120484,
+        "version": "Remixes",
+        "url": "https://www.qobuz.com/fr-fr/album/one-more-time-daft-punk/0724389721157",
+        "slug": "one-more-time-daft-punk",
+        "duration": 1033,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389721157",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2000-12-08",
+        "release_date_download": "2000-12-08",
+        "release_date_stream": "2000-12-08",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1764054000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/58/68/0724389796858_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/58/68/0724389796858_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/58/68/0724389796858_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 160,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389796858",
+        "released_at": 1003442400,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Harder Better Faster Stronger",
+        "qobuz_id": 5120488,
+        "version": "Remixes",
+        "url": "https://www.qobuz.com/fr-fr/album/harder-better-faster-stronger-daft-punk/0724389796858",
+        "slug": "harder-better-faster-stronger-daft-punk",
+        "duration": 1370,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 4,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389796858",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2001-10-19",
+        "release_date_download": "2001-10-19",
+        "release_date_stream": "2001-10-19",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763535600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/50/39/0724381113950_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/50/39/0724381113950_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/50/39/0724381113950_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 150,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724381113950",
+        "released_at": 1001887200,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Alive 1997",
+        "qobuz_id": 2209425,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/alive-1997-daft-punk/0724381113950",
+        "slug": "alive-1997-daft-punk",
+        "duration": 2731,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724381113950",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2001-10-01",
+        "release_date_download": "2001-10-01",
+        "release_date_stream": "2001-10-01",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1749884400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ca/3n/zum5wz57d3nca_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ca/3n/zum5wz57d3nca_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ca/3n/zum5wz57d3nca_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 406059,
+            "name": "Todd Edwards",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0196589957634",
+        "released_at": 1679439600,
+        "label": {
+          "name": "Columbia - Legacy",
+          "id": 4637,
+          "albums_count": 4645,
+          "supplier_id": 23,
+          "slug": "columbia-legacy"
+        },
+        "title": "The Writing of Fragments of Time",
+        "qobuz_id": 202192439,
+        "version": "feat. Todd Edwards",
+        "url": "https://www.qobuz.com/fr-fr/album/the-writing-of-fragments-of-time-daft-punk-todd-edwards/zum5wz57d3nca",
+        "slug": "the-writing-of-fragments-of-time-daft-punk-todd-edwards",
+        "duration": 776,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "zum5wz57d3nca",
+        "maximum_sampling_rate": 88.2,
+        "articles": [],
+        "release_date_original": "2023-03-22",
+        "release_date_download": "2023-03-22",
+        "release_date_stream": "2023-03-22",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763967600,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/55/09/5099951980955_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/55/09/5099951980955_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/55/09/5099951980955_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "5099951980955",
+        "released_at": 1003701600,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Harder, Better, Faster, Stronger ",
+        "qobuz_id": 4685420,
+        "version": "Live",
+        "url": "https://www.qobuz.com/fr-fr/album/harder-better-faster-stronger-daft-punk/5099951980955",
+        "slug": "harder-better-faster-stronger-daft-punk",
+        "duration": 497,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "5099951980955",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2001-10-22",
+        "release_date_download": "2001-10-22",
+        "release_date_stream": "2001-10-22",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1764140400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/54/95/0724389399554_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/54/95/0724389399554_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/54/95/0724389399554_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 150,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389399554",
+        "released_at": 825721200,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "DA FUNK",
+        "qobuz_id": 5147205,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/da-funk-daft-punk/0724389399554",
+        "slug": "da-funk-daft-punk",
+        "duration": 975,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389399554",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "1996-03-02",
+        "release_date_download": "1996-03-02",
+        "release_date_stream": "1996-03-02",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1759302000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/51/51/0724389455151_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/51/51/0724389455151_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/51/51/0724389455151_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 161,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389455151",
+        "released_at": 873669600,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Burnin'",
+        "qobuz_id": 10300916,
+        "version": "Remixes",
+        "url": "https://www.qobuz.com/fr-fr/album/burnin-daft-punk/0724389455151",
+        "slug": "burnin-daft-punk",
+        "duration": 1365,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 4,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389455151",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "1997-09-08",
+        "release_date_download": "1997-09-08",
+        "release_date_stream": "1997-09-08",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1759302000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/52/76/0724389747652_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/52/76/0724389747652_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/52/76/0724389747652_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 160,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389747652",
+        "released_at": 985302000,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Aerodynamic",
+        "qobuz_id": 10300934,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/aerodynamic-daft-punk/0724389747652",
+        "slug": "aerodynamic-daft-punk",
+        "duration": 680,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389747652",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2001-03-23",
+        "release_date_download": "2001-03-23",
+        "release_date_stream": "2001-03-23",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763535600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/51/99/0724389769951_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/51/99/0724389769951_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/51/99/0724389769951_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 160,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389769951",
+        "released_at": 991951200,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Digital Love",
+        "qobuz_id": 5145477,
+        "version": "Mixes",
+        "url": "https://www.qobuz.com/fr-fr/album/digital-love-daft-punk/0724389769951",
+        "slug": "digital-love-daft-punk",
+        "duration": 840,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389769951",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2001-06-08",
+        "release_date_download": "2001-06-08",
+        "release_date_stream": "2001-06-08",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763535600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/57/21/0724389482157_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/57/21/0724389482157_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/57/21/0724389482157_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 161,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389482157",
+        "released_at": 885510000,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Revolution 909",
+        "qobuz_id": 5120475,
+        "version": "Remixes",
+        "url": "https://www.qobuz.com/fr-fr/album/revolution-909-daft-punk/0724389482157",
+        "slug": "revolution-909-daft-punk",
+        "duration": 1157,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 4,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389482157",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "1998-01-23",
+        "release_date_download": "1998-01-23",
+        "release_date_stream": "1998-01-23",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1764054000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/0b/84/uigtggstf840b_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/0b/84/uigtggstf840b_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/0b/84/uigtggstf840b_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Black Box",
+          "id": 129886,
+          "albums_count": 324,
+          "slug": "black-box",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 129886,
+            "name": "Black Box",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0197045536639",
+        "released_at": 1658959200,
+        "label": {
+          "name": "Black Box",
+          "id": 2292915,
+          "albums_count": 41,
+          "supplier_id": 128,
+          "slug": "black-box-7"
+        },
+        "title": "One More Time",
+        "qobuz_id": 163340384,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/one-more-time-black-box/uigtggstf840b",
+        "slug": "one-more-time-black-box",
+        "duration": 576,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "uigtggstf840b",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2022-07-28",
+        "release_date_download": "2022-07-28",
+        "release_date_stream": "2022-07-28",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1708844400,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/51/30/0724386833051_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/51/30/0724386833051_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/51/30/0724386833051_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 160,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724386833051",
+        "released_at": 1106607600,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Robot Rock ",
+        "qobuz_id": 4405562,
+        "version": "Edit",
+        "url": "https://www.qobuz.com/fr-fr/album/robot-rock-daft-punk/0724386833051",
+        "slug": "robot-rock-daft-punk",
+        "duration": 186,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724386833051",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2005-01-25",
+        "release_date_download": "2005-01-25",
+        "release_date_stream": "2005-01-25",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763535600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/1a/yg/zsntngrcryg1a_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/1a/yg/zsntngrcryg1a_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/1a/yg/zsntngrcryg1a_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Martin Miller",
+          "id": 1243310,
+          "albums_count": 105,
+          "slug": "martin-miller",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 1243310,
+            "name": "Martin Miller",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 120711,
+            "name": "Kirk Fletcher",
+            "roles": [
+              "featured-artist"
+            ]
+          }
+        ],
+        "upc": "0196863744196",
+        "released_at": 1652392800,
+        "label": {
+          "name": "Martin Miller",
+          "id": 3282052,
+          "albums_count": 54,
+          "supplier_id": 128,
+          "slug": "martin-miller-3"
+        },
+        "title": "Get Lucky (feat. Kirk Fletcher)",
+        "qobuz_id": 157336474,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/get-lucky-feat-kirk-fletcher-martin-miller/zsntngrcryg1a",
+        "slug": "get-lucky-feat-kirk-fletcher-martin-miller",
+        "duration": 422,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            112,
+            117
+          ],
+          "color": "#0070ef",
+          "name": "Pop",
+          "id": 117,
+          "slug": "pop"
+        },
+        "maximum_channel_count": 2,
+        "id": "zsntngrcryg1a",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2022-05-13",
+        "release_date_download": "2022-05-13",
+        "release_date_stream": "2022-05-13",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1708671600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/58/99/0724389799958_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/58/99/0724389799958_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/58/99/0724389799958_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 160,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724389799958",
+        "released_at": 1003701600,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Harder, Better, Faster, Stronger",
+        "qobuz_id": 9359118,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/harder-better-faster-stronger-daft-punk/0724389799958",
+        "slug": "harder-better-faster-stronger-daft-punk",
+        "duration": 504,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724389799958",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2001-10-22",
+        "release_date_download": "2001-10-22",
+        "release_date_stream": "2001-10-22",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1763535600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/51/11/0060255731151_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/51/11/0060255731151_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/51/11/0060255731151_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "The Weeknd",
+          "id": 687008,
+          "albums_count": 984,
+          "slug": "the-weeknd",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 687008,
+            "name": "The Weeknd",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "featured-artist"
+            ]
+          }
+        ],
+        "upc": "0060255731151",
+        "released_at": 1474495200,
+        "label": {
+          "name": "The Weeknd - Lyric",
+          "id": 9631806,
+          "albums_count": 0,
+          "supplier_id": 1,
+          "slug": "the-weeknd-lyric"
+        },
+        "title": "Starboy",
+        "qobuz_id": 36304045,
+        "version": "Kygo Remix",
+        "url": "https://www.qobuz.com/fr-fr/album/starboy-daft-punk-the-weeknd/0060255731151",
+        "slug": "starboy-daft-punk-the-weeknd",
+        "duration": 245,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0060255731151",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2016-09-22",
+        "release_date_download": "2016-09-22",
+        "release_date_stream": "2016-09-22",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1769151600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/52/96/0724387259652_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/52/96/0724387259652_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/52/96/0724387259652_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 150,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724387259652",
+        "released_at": 1114120800,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Technologic ",
+        "qobuz_id": 4707483,
+        "version": "Radio Edit",
+        "url": "https://www.qobuz.com/fr-fr/album/technologic-daft-punk/0724387259652",
+        "slug": "technologic-daft-punk",
+        "duration": 166,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "0724387259652",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2005-04-22",
+        "release_date_download": "2005-04-22",
+        "release_date_stream": "2005-04-22",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1749884400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/50/73/5099951127350_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/50/73/5099951127350_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/50/73/5099951127350_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "5099951127350",
+        "released_at": 1003701600,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Harder, Better, Faster, Stronger ",
+        "qobuz_id": 4908886,
+        "version": "Alive Radio Edit 2007",
+        "url": "https://www.qobuz.com/fr-fr/album/harder-better-faster-stronger-daft-punk/5099951127350",
+        "slug": "harder-better-faster-stronger-daft-punk",
+        "duration": 204,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            112,
+            117
+          ],
+          "color": "#0070ef",
+          "name": "Pop",
+          "id": 117,
+          "slug": "pop"
+        },
+        "maximum_channel_count": 2,
+        "id": "5099951127350",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2001-10-22",
+        "release_date_download": "2001-10-22",
+        "release_date_stream": "2001-10-22",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1764140400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/xb/kc/xiwlni70akcxb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/xb/kc/xiwlni70akcxb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/xb/kc/xiwlni70akcxb_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Baby Rockstar",
+          "id": 2492945,
+          "albums_count": 82,
+          "slug": "baby-rockstar",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2492945,
+            "name": "Baby Rockstar",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0888608705707",
+        "released_at": 1393887600,
+        "label": {
+          "name": "Helisek Music Publishing",
+          "id": 107887,
+          "albums_count": 168,
+          "supplier_id": 17,
+          "slug": "helisek-music-publishing"
+        },
+        "title": "Lullaby Renditions of Daft Punk - Random Access Memories",
+        "qobuz_id": 76803284,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/lullaby-renditions-of-daft-punk-random-access-memories-baby-rockstar/xiwlni70akcxb",
+        "slug": "lullaby-renditions-of-daft-punk-random-access-memories-baby-rockstar",
+        "duration": 3698,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 13,
+        "genre": {
+          "path": [],
+          "color": "#0070ef",
+          "name": "Infantil",
+          "id": 167,
+          "slug": "enfants"
+        },
+        "maximum_channel_count": 2,
+        "id": "xiwlni70akcxb",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2014-03-04",
+        "release_date_download": "2014-03-04",
+        "release_date_stream": "2014-03-04",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1706598000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/3b/cf/frjqnh8p6cf3b_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/3b/cf/frjqnh8p6cf3b_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/3b/cf/frjqnh8p6cf3b_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Tabula Musica Orchestra",
+          "id": 11560056,
+          "albums_count": 1,
+          "slug": "tabula-musica-orchestra",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 11560056,
+            "name": "Tabula Musica Orchestra",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0196251005137",
+        "released_at": 1622412000,
+        "label": {
+          "name": "2976925 Records DK",
+          "id": 2397999,
+          "albums_count": 1,
+          "supplier_id": 128,
+          "slug": "2976925-records-dk"
+        },
+        "title": "Electro Symphony",
+        "qobuz_id": 135897574,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/electro-symphony-tabula-musica-orchestra/frjqnh8p6cf3b",
+        "slug": "electro-symphony-tabula-musica-orchestra",
+        "duration": 1573,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 10,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "frjqnh8p6cf3b",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2021-05-31",
+        "release_date_download": "2021-05-31",
+        "release_date_stream": "2021-05-31",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1709967600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/59/12/5099991411259_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/59/12/5099991411259_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/59/12/5099991411259_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 150,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "5099991411259",
+        "released_at": 1340316000,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Human After All ",
+        "qobuz_id": 5608434,
+        "version": "Medley",
+        "url": "https://www.qobuz.com/fr-fr/album/human-after-all-daft-punk/5099991411259",
+        "slug": "human-after-all-daft-punk",
+        "duration": 199,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "5099991411259",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2012-06-22",
+        "release_date_download": "2012-06-22",
+        "release_date_stream": "2012-06-22",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1749970800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/na/hd/vpemaz3urhdna_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/na/hd/vpemaz3urhdna_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/na/hd/vpemaz3urhdna_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 159,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0190296236327",
+        "released_at": 1645484400,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 31,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Homework ",
+        "qobuz_id": 147639207,
+        "version": "Remixes",
+        "url": "https://www.qobuz.com/fr-fr/album/homework-daft-punk/vpemaz3urhdna",
+        "slug": "homework-daft-punk",
+        "duration": 6473,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 15,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "vpemaz3urhdna",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2022-02-22",
+        "release_date_download": "2022-02-22",
+        "release_date_stream": "2022-02-22",
+        "purchasable": false,
+        "streamable": false,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": null,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/tc/7q/qcpa54mt87qtc_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/tc/7q/qcpa54mt87qtc_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/tc/7q/qcpa54mt87qtc_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Daft Punk",
+          "id": 36819,
+          "albums_count": 150,
+          "slug": "daft-punk",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 36819,
+            "name": "Daft Punk",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0724387244252",
+        "released_at": 1041375600,
+        "label": {
+          "name": "Daft Life Ltd. - ADA France",
+          "id": 1876403,
+          "albums_count": 30,
+          "supplier_id": 5,
+          "slug": "daft-life-ltd-ada-france"
+        },
+        "title": "Face to Face ",
+        "qobuz_id": 93143879,
+        "version": "Demon Remix",
+        "url": "https://www.qobuz.com/fr-fr/album/face-to-face-daft-punk/qcpa54mt87qtc",
+        "slug": "face-to-face-daft-punk",
+        "duration": 419,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "qcpa54mt87qtc",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2003-01-01",
+        "release_date_download": "2003-01-01",
+        "release_date_stream": "2003-01-01",
+        "purchasable": false,
+        "streamable": false,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": null,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/zb/jv/h7jkaulfejvzb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/zb/jv/h7jkaulfejvzb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/zb/jv/h7jkaulfejvzb_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "C.H.A.Y.",
+          "id": 4229194,
+          "albums_count": 39,
+          "slug": "chay-1",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 4229194,
+            "name": "C.H.A.Y.",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0199732175701",
+        "released_at": 1759442400,
+        "label": {
+          "name": "CHAYsounds",
+          "id": 3136058,
+          "albums_count": 25,
+          "supplier_id": 128,
+          "slug": "chaysounds"
+        },
+        "title": "DOIN' IT RIGHT",
+        "qobuz_id": 354532802,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/doin-it-right-chay/h7jkaulfejvzb",
+        "slug": "doin-it-right-chay",
+        "duration": 157,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "h7jkaulfejvzb",
+        "maximum_sampling_rate": 48,
+        "articles": [],
+        "release_date_original": "2025-10-03",
+        "release_date_download": "2025-10-03",
+        "release_date_stream": "2025-10-03",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1759474800,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/cb/6t/wfiyuab2h6tcb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/cb/6t/wfiyuab2h6tcb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/cb/6t/wfiyuab2h6tcb_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Vigitars2dio",
+          "id": 24689677,
+          "albums_count": 3,
+          "slug": "vigitars2dio",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 24689677,
+            "name": "Vigitars2dio",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0840093519979",
+        "released_at": 1733266800,
+        "label": {
+          "name": "Vigitars2dio",
+          "id": 7432473,
+          "albums_count": 2,
+          "supplier_id": 95,
+          "slug": "vigitars2dio"
+        },
+        "title": "Aerodynamic",
+        "qobuz_id": 302613606,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/aerodynamic-vigitars2dio/wfiyuab2h6tcb",
+        "slug": "aerodynamic-vigitars2dio",
+        "duration": 199,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            112,
+            117
+          ],
+          "color": "#0070ef",
+          "name": "Pop",
+          "id": 117,
+          "slug": "pop"
+        },
+        "maximum_channel_count": 2,
+        "id": "wfiyuab2h6tcb",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-12-04",
+        "release_date_download": "2024-12-04",
+        "release_date_stream": "2024-12-04",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1738306800,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/oa/78/snduejxe478oa_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/oa/78/snduejxe478oa_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/oa/78/snduejxe478oa_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AshenedHeart",
+          "id": 15392422,
+          "albums_count": 6,
+          "slug": "ashenedheart",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 15392422,
+            "name": "AshenedHeart",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0197144717311",
+        "released_at": 1660514400,
+        "label": {
+          "name": "4240310 Records DK",
+          "id": 3828825,
+          "albums_count": 6,
+          "supplier_id": 128,
+          "slug": "4240310-records-dk"
+        },
+        "title": "Something About Us",
+        "qobuz_id": 172564378,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/something-about-us-ashenedheart/snduejxe478oa",
+        "slug": "something-about-us-ashenedheart",
+        "duration": 232,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "snduejxe478oa",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2022-08-15",
+        "release_date_download": "2022-08-15",
+        "release_date_stream": "2022-08-15",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1708758000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/lc/57/frol9y5n557lc_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/lc/57/frol9y5n557lc_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/lc/57/frol9y5n557lc_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Nightcore Girl",
+          "id": 12870485,
+          "albums_count": 169,
+          "slug": "nightcore-girl",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 12870485,
+            "name": "Nightcore Girl",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "5063535507326",
+        "released_at": 1715292000,
+        "label": {
+          "name": "X Records",
+          "id": 1489841,
+          "albums_count": 1345,
+          "supplier_id": 110,
+          "slug": "x-records-7"
+        },
+        "title": "starboy ",
+        "qobuz_id": 267787874,
+        "version": "nightcore",
+        "url": "https://www.qobuz.com/fr-fr/album/starboy-nightcore-girl/frol9y5n557lc",
+        "slug": "starboy-nightcore-girl",
+        "duration": 52,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            112,
+            117
+          ],
+          "color": "#0070ef",
+          "name": "Pop",
+          "id": 117,
+          "slug": "pop"
+        },
+        "maximum_channel_count": 2,
+        "id": "frol9y5n557lc",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-05-10",
+        "release_date_download": "2024-05-10",
+        "release_date_stream": "2024-05-10",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1747378800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/8a/hh/zmjpofq01hh8a_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/8a/hh/zmjpofq01hh8a_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/8a/hh/zmjpofq01hh8a_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "TM.",
+          "id": 15217116,
+          "albums_count": 63,
+          "slug": "tm-16",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 15217116,
+            "name": "TM.",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0859719802968",
+        "released_at": 1760047200,
+        "label": {
+          "name": "TM.",
+          "id": 7236135,
+          "albums_count": 54,
+          "supplier_id": 95,
+          "slug": "tm-43"
+        },
+        "title": "Tron",
+        "qobuz_id": 361901442,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/tron-tm/zmjpofq01hh8a",
+        "slug": "tron-tm",
+        "duration": 141,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            133
+          ],
+          "color": "#0070ef",
+          "name": "Hip-Hop/Rap",
+          "id": 133,
+          "slug": "rap-hip-hop"
+        },
+        "maximum_channel_count": 2,
+        "id": "zmjpofq01hh8a",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-10-10",
+        "release_date_download": "2025-10-10",
+        "release_date_stream": "2025-10-10",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1775113200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/xa/2p/m5386hzra2pxa_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/xa/2p/m5386hzra2pxa_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/xa/2p/m5386hzra2pxa_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "PierGen",
+          "id": 11231241,
+          "albums_count": 13,
+          "slug": "piergen",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 11231241,
+            "name": "PierGen",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0195595104902",
+        "released_at": 1599775200,
+        "label": {
+          "name": "NFM Music",
+          "id": 2290103,
+          "albums_count": 11,
+          "supplier_id": 128,
+          "slug": "nfm-music"
+        },
+        "title": "The Son of Flynn",
+        "qobuz_id": 134525580,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/the-son-of-flynn-piergen/m5386hzra2pxa",
+        "slug": "the-son-of-flynn-piergen",
+        "duration": 89,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "m5386hzra2pxa",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2020-09-11",
+        "release_date_download": "2020-09-11",
+        "release_date_stream": "2020-09-11",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1708153200,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/bb/b9/cgg3wsikqb9bb_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/bb/b9/cgg3wsikqb9bb_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/bb/b9/cgg3wsikqb9bb_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Flint",
+          "id": 297192,
+          "albums_count": 102,
+          "slug": "flint",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 297192,
+            "name": "Flint",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0197146773889",
+        "released_at": 1664056800,
+        "label": {
+          "name": "Sound Sanctuary",
+          "id": 3820617,
+          "albums_count": 15,
+          "supplier_id": 128,
+          "slug": "sound-sanctuary"
+        },
+        "title": "Flo-Dynamic (Remix)",
+        "qobuz_id": 177168812,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/flo-dynamic-remix-flint/cgg3wsikqb9bb",
+        "slug": "flo-dynamic-remix-flint",
+        "duration": 138,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "cgg3wsikqb9bb",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2022-09-25",
+        "release_date_download": "2022-09-25",
+        "release_date_stream": "2022-09-25",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1708758000,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/lc/bc/qv1eldcarbclc_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/lc/bc/qv1eldcarbclc_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/lc/bc/qv1eldcarbclc_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "rosie xo",
+          "id": 21132062,
+          "albums_count": 413,
+          "slug": "rosie-xo",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 21132062,
+            "name": "rosie xo",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 4164831,
+            "name": "Brown Eyed Girl",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "5063473006875",
+        "released_at": 1705532400,
+        "label": {
+          "name": "X Records",
+          "id": 1489841,
+          "albums_count": 1345,
+          "supplier_id": 110,
+          "slug": "x-records-7"
+        },
+        "title": "starboy",
+        "qobuz_id": 264264749,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/starboy-rosie-xo/qv1eldcarbclc",
+        "slug": "starboy-rosie-xo",
+        "duration": 58,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            112,
+            117
+          ],
+          "color": "#0070ef",
+          "name": "Pop",
+          "id": 117,
+          "slug": "pop"
+        },
+        "maximum_channel_count": 2,
+        "id": "qv1eldcarbclc",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-01-18",
+        "release_date_download": "2024-01-18",
+        "release_date_stream": "2024-01-18",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1747378800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/6b/k8/djol0btwqk86b_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/6b/k8/djol0btwqk86b_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/6b/k8/djol0btwqk86b_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Dark Academia",
+          "id": 19224584,
+          "albums_count": 410,
+          "slug": "dark-academia",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 19224584,
+            "name": "Dark Academia",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 4164831,
+            "name": "Brown Eyed Girl",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "5063501592981",
+        "released_at": 1705532400,
+        "label": {
+          "name": "X Records",
+          "id": 1489841,
+          "albums_count": 1345,
+          "supplier_id": 110,
+          "slug": "x-records-7"
+        },
+        "title": "starboy",
+        "qobuz_id": 264267271,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/starboy-dark-academia/djol0btwqk86b",
+        "slug": "starboy-dark-academia",
+        "duration": 83,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            112,
+            117
+          ],
+          "color": "#0070ef",
+          "name": "Pop",
+          "id": 117,
+          "slug": "pop"
+        },
+        "maximum_channel_count": 2,
+        "id": "djol0btwqk86b",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-01-18",
+        "release_date_download": "2024-01-18",
+        "release_date_stream": "2024-01-18",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1747292400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/9x/7t/tkkb78ylu7t9x_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/9x/7t/tkkb78ylu7t9x_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/9x/7t/tkkb78ylu7t9x_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Northsnd",
+          "id": 21430088,
+          "albums_count": 181,
+          "slug": "northsnd",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 21430088,
+            "name": "Northsnd",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0821406919501",
+        "released_at": 1773442800,
+        "label": {
+          "name": "VYNZΞ RECORDS",
+          "id": 8938500,
+          "albums_count": 70,
+          "supplier_id": 128,
+          "slug": "vynz-records"
+        },
+        "title": "Veridis Quo",
+        "qobuz_id": 394714617,
+        "version": "Radio Edit",
+        "url": "https://www.qobuz.com/fr-fr/album/veridis-quo-northsnd/tkkb78ylu7t9x",
+        "slug": "veridis-quo-northsnd",
+        "duration": 249,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "tkkb78ylu7t9x",
+        "maximum_sampling_rate": 48,
+        "articles": [],
+        "release_date_original": "2026-03-14",
+        "release_date_download": "2026-03-14",
+        "release_date_stream": "2026-03-14",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1775286000,
+        "hires": true,
+        "hires_streamable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,3770 @@
+{
+  "id": 9322512,
+  "name": "Cyclops Recordings",
+  "slug": "cyclops-recordings-1",
+  "supplier_id": 266,
+  "albums_count": 142,
+  "image": null,
+  "description": null,
+  "albums": {
+    "offset": 0,
+    "limit": 50,
+    "total": 142,
+    "items": [
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/v4/x3/st9cejdgdx3v4_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/v4/x3/st9cejdgdx3v4_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/v4/x3/st9cejdgdx3v4_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Eyelander",
+          "id": 11180793,
+          "albums_count": 20,
+          "slug": "eyelander",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 11180793,
+            "name": "Eyelander",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 2407597,
+            "name": "Insidius",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918926581",
+        "released_at": 1776981600,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 144,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "CONFLICT OF INTEREST",
+        "qobuz_id": 403004032,
+        "version": null,
+        "url": "/mx-es/album/conflict-of-interest-eyelander-insidius/st9cejdgdx3v4",
+        "slug": "conflict-of-interest-eyelander-insidius",
+        "duration": 373,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "st9cejdgdx3v4",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2026-04-24",
+        "release_date_download": "2026-04-24",
+        "release_date_stream": "2026-04-24",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1777014000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/6h/p3/zybgncrjbp36h_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/6h/p3/zybgncrjbp36h_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/6h/p3/zybgncrjbp36h_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 344991,
+            "name": "Inez",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918949542",
+        "released_at": 1776376800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Eyes Cut Deeper (feat. Inéz)",
+        "qobuz_id": 406401101,
+        "version": null,
+        "url": "/mx-es/album/eyes-cut-deeper-feat-inez-subtronics-inez/zybgncrjbp36h",
+        "slug": "eyes-cut-deeper-feat-inez-subtronics-inez",
+        "duration": 192,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "zybgncrjbp36h",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2026-04-17",
+        "release_date_download": "2026-04-17",
+        "release_date_stream": "2026-04-17",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1776409200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/w9/in/rmiiwzb5oinw9_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/w9/in/rmiiwzb5oinw9_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/w9/in/rmiiwzb5oinw9_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Disentr",
+          "id": 12847742,
+          "albums_count": 23,
+          "slug": "disentr",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 12847742,
+            "name": "Disentr",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918926574",
+        "released_at": 1775772000,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 84,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Other Worlds",
+        "qobuz_id": 403000346,
+        "version": null,
+        "url": "/mx-es/album/other-worlds-disentr/rmiiwzb5oinw9",
+        "slug": "other-worlds-disentr",
+        "duration": 192,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "rmiiwzb5oinw9",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2026-04-10",
+        "release_date_download": "2026-04-10",
+        "release_date_stream": "2026-04-10",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1775804400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/69/al/t8vzyqm0dal69_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/69/al/t8vzyqm0dal69_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/69/al/t8vzyqm0dal69_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "OSSIEN",
+          "id": 14890197,
+          "albums_count": 18,
+          "slug": "ossien",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 14890197,
+            "name": "OSSIEN",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918852125",
+        "released_at": 1773356400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 7,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "OVERTURE",
+        "qobuz_id": 391062391,
+        "version": null,
+        "url": "/mx-es/album/overture-ossien/t8vzyqm0dal69",
+        "slug": "overture-ossien",
+        "duration": 218,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "t8vzyqm0dal69",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2026-03-13",
+        "release_date_download": "2026-03-13",
+        "release_date_stream": "2026-03-13",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773385200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/20/h6/ogfajvhylh620_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/20/h6/ogfajvhylh620_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/20/h6/ogfajvhylh620_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Warlord",
+          "id": 216107,
+          "albums_count": 46,
+          "slug": "warlord",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 216107,
+            "name": "Warlord",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918856635",
+        "released_at": 1772146800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 9,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "WALLOP",
+        "qobuz_id": 392171458,
+        "version": null,
+        "url": "/mx-es/album/wallop-warlord/ogfajvhylh620",
+        "slug": "wallop-warlord",
+        "duration": 1054,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 4,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "ogfajvhylh620",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2026-02-27",
+        "release_date_download": "2026-02-27",
+        "release_date_stream": "2026-02-27",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1772175600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ha/er/hr2romso4erha_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ha/er/hr2romso4erha_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ha/er/hr2romso4erha_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Disentr",
+          "id": 12847742,
+          "albums_count": 21,
+          "slug": "disentr",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 12847742,
+            "name": "Disentr",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918771808",
+        "released_at": 1770332400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 3,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Run Yo Mouth",
+        "qobuz_id": 382024102,
+        "version": null,
+        "url": "/mx-es/album/run-yo-mouth-disentr/hr2romso4erha",
+        "slug": "run-yo-mouth-disentr",
+        "duration": 182,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "hr2romso4erha",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2026-02-06",
+        "release_date_download": "2026-02-06",
+        "release_date_stream": "2026-02-06",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1770361200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/h3/yw/w5oofh88xywh3_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/h3/yw/w5oofh88xywh3_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/h3/yw/w5oofh88xywh3_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Filthy",
+          "id": 779078,
+          "albums_count": 100,
+          "slug": "filthy",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 779078,
+            "name": "Filthy",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918771792",
+        "released_at": 1769122800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 3,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "The Awakening Sequence EP",
+        "qobuz_id": 382025150,
+        "version": null,
+        "url": "/mx-es/album/the-awakening-sequence-ep-filthy/w5oofh88xywh3",
+        "slug": "the-awakening-sequence-ep-filthy",
+        "duration": 442,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "w5oofh88xywh3",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2026-01-23",
+        "release_date_download": "2026-01-23",
+        "release_date_stream": "2026-01-23",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1769151600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/qi/g5/lhtydqpzig5qi_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/qi/g5/lhtydqpzig5qi_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/qi/g5/lhtydqpzig5qi_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Jiqui",
+          "id": 1861985,
+          "albums_count": 26,
+          "slug": "jiqui",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 1861985,
+            "name": "Jiqui",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918741733",
+        "released_at": 1768518000,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 1,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "KICKBACK",
+        "qobuz_id": 377884698,
+        "version": null,
+        "url": "/mx-es/album/kickback-jiqui/lhtydqpzig5qi",
+        "slug": "kickback-jiqui",
+        "duration": 168,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "lhtydqpzig5qi",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2026-01-16",
+        "release_date_download": "2026-01-16",
+        "release_date_stream": "2026-01-16",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1768546800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/e1/o1/ktu0r9tn8o1e1_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/e1/o1/ktu0r9tn8o1e1_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/e1/o1/ktu0r9tn8o1e1_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "HAMRO",
+          "id": 9041252,
+          "albums_count": 9,
+          "slug": "hamro",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 9041252,
+            "name": "HAMRO",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918713464",
+        "released_at": 1766098800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 5,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "CROWD CONTROL",
+        "qobuz_id": 387920431,
+        "version": null,
+        "url": "/mx-es/album/crowd-control-hamro/ktu0r9tn8o1e1",
+        "slug": "crowd-control-hamro",
+        "duration": 363,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "ktu0r9tn8o1e1",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-12-19",
+        "release_date_download": "2025-12-19",
+        "release_date_stream": "2025-12-19",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1769497200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/o2/f5/et6hhrzv0f5o2_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/o2/f5/et6hhrzv0f5o2_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/o2/f5/et6hhrzv0f5o2_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918637074",
+        "released_at": 1764889200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Fibonacci Pt 2: Infinity",
+        "qobuz_id": 396587817,
+        "version": null,
+        "url": "/mx-es/album/fibonacci-pt-2-infinity-subtronics/et6hhrzv0f5o2",
+        "slug": "fibonacci-pt-2-infinity-subtronics",
+        "duration": 1951,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 10,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "et6hhrzv0f5o2",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-12-05",
+        "release_date_download": "2025-12-05",
+        "release_date_stream": "2025-12-05",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1772002800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/1t/87/p41e9j5q1871t_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/1t/87/p41e9j5q1871t_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/1t/87/p41e9j5q1871t_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918637098",
+        "released_at": 1764802800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Fibonacci",
+        "qobuz_id": 387931331,
+        "version": null,
+        "url": "/mx-es/album/fibonacci-subtronics/p41e9j5q1871t",
+        "slug": "fibonacci-subtronics",
+        "duration": 3506,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 18,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "p41e9j5q1871t",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-12-04",
+        "release_date_download": "2025-12-04",
+        "release_date_stream": "2025-12-04",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1770447600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/lx/ij/bt39op5wmijlx_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/lx/ij/bt39op5wmijlx_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/lx/ij/bt39op5wmijlx_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 2197901,
+            "name": "illenium",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 4715955,
+            "name": "Royal & The Serpent",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918667422",
+        "released_at": 1764716400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Got Away (feat. Royal & the Serpent)",
+        "qobuz_id": 396587900,
+        "version": null,
+        "url": "/mx-es/album/got-away-feat-royal-the-serpent-subtronics-illenium-royal-the-serpent/bt39op5wmijlx",
+        "slug": "got-away-feat-royal-the-serpent-subtronics-illenium-royal-the-serpent",
+        "duration": 214,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "bt39op5wmijlx",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-12-03",
+        "release_date_download": "2025-12-03",
+        "release_date_stream": "2025-12-03",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1772002800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/s1/yl/jzbiayu3xyls1_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/s1/yl/jzbiayu3xyls1_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/s1/yl/jzbiayu3xyls1_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Evalution",
+          "id": 4622478,
+          "albums_count": 23,
+          "slug": "evalution",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 4622478,
+            "name": "Evalution",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 14890197,
+            "name": "OSSIEN",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918494554",
+        "released_at": 1763074800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 15,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Something New",
+        "qobuz_id": 400308520,
+        "version": null,
+        "url": "/mx-es/album/something-new-evalution-ossien/jzbiayu3xyls1",
+        "slug": "something-new-evalution-ossien",
+        "duration": 195,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "jzbiayu3xyls1",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-11-14",
+        "release_date_download": "2025-11-14",
+        "release_date_stream": "2025-11-14",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773126000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ml/g3/zcfeg9jzng3ml_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ml/g3/zcfeg9jzng3ml_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ml/g3/zcfeg9jzng3ml_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Wolfie",
+          "id": 2147424,
+          "albums_count": 184,
+          "slug": "wolfie",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2147424,
+            "name": "Wolfie",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 18149828,
+            "name": "NGHTNDAY",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918552896",
+        "released_at": 1761865200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 10,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Lights Up",
+        "qobuz_id": 399259519,
+        "version": null,
+        "url": "/mx-es/album/lights-up-wolfie-nghtnday/zcfeg9jzng3ml",
+        "slug": "lights-up-wolfie-nghtnday",
+        "duration": 146,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "zcfeg9jzng3ml",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-10-31",
+        "release_date_download": "2025-10-31",
+        "release_date_stream": "2025-10-31",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1772780400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/m7/jz/p180b68mejzm7_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/m7/jz/p180b68mejzm7_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/m7/jz/p180b68mejzm7_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 1107143,
+            "name": "Linney",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918525807",
+        "released_at": 1760047200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Friends (feat. Linney)",
+        "qobuz_id": 400293864,
+        "version": null,
+        "url": "/mx-es/album/friends-feat-linney-subtronics-linney/p180b68mejzm7",
+        "slug": "friends-feat-linney-subtronics-linney",
+        "duration": 196,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "p180b68mejzm7",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-10-10",
+        "release_date_download": "2025-10-10",
+        "release_date_stream": "2025-10-10",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773126000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/no/zz/cwihcw9jazzno_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/no/zz/cwihcw9jazzno_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/no/zz/cwihcw9jazzno_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Liu Kang",
+          "id": 1926980,
+          "albums_count": 7,
+          "slug": "liu-kang",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 1926980,
+            "name": "Liu Kang",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 2147424,
+            "name": "Wolfie",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918525883",
+        "released_at": 1759442400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 15,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Wonkestra",
+        "qobuz_id": 400286962,
+        "version": null,
+        "url": "/mx-es/album/wonkestra-liu-kang-wolfie/cwihcw9jazzno",
+        "slug": "wonkestra-liu-kang-wolfie",
+        "duration": 204,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "cwihcw9jazzno",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-10-03",
+        "release_date_download": "2025-10-03",
+        "release_date_stream": "2025-10-03",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773126000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/65/6b/aahke6jrb6b65_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/65/6b/aahke6jrb6b65_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/65/6b/aahke6jrb6b65_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "FLozone",
+          "id": 2958038,
+          "albums_count": 27,
+          "slug": "flozone",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2958038,
+            "name": "FLozone",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918494547",
+        "released_at": 1758837600,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 15,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Break Up Song / Hot",
+        "qobuz_id": 400308885,
+        "version": null,
+        "url": "/mx-es/album/break-up-song-hot-flozone/aahke6jrb6b65",
+        "slug": "break-up-song-hot-flozone",
+        "duration": 338,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "aahke6jrb6b65",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-09-26",
+        "release_date_download": "2025-09-26",
+        "release_date_stream": "2025-09-26",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773126000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/80/o9/ufr2zllnqo980_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/80/o9/ufr2zllnqo980_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/80/o9/ufr2zllnqo980_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "AMBSHN",
+          "id": 11458420,
+          "albums_count": 5,
+          "slug": "ambshn",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 11458420,
+            "name": "AMBSHN",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918494516",
+        "released_at": 1758232800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 15,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Monkey Mind",
+        "qobuz_id": 400308892,
+        "version": null,
+        "url": "/mx-es/album/monkey-mind-ambshn/ufr2zllnqo980",
+        "slug": "monkey-mind-ambshn",
+        "duration": 104,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "ufr2zllnqo980",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-09-19",
+        "release_date_download": "2025-09-19",
+        "release_date_stream": "2025-09-19",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773126000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/zx/e0/bl5fblju0e0zx_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/zx/e0/bl5fblju0e0zx_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/zx/e0/bl5fblju0e0zx_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 3262339,
+            "name": "Wooli",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 724296,
+            "name": "Level Up",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918483091",
+        "released_at": 1757628000,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Dingus",
+        "qobuz_id": 400942432,
+        "version": null,
+        "url": "/mx-es/album/dingus-subtronics-wooli-level-up/bl5fblju0e0zx",
+        "slug": "dingus-subtronics-wooli-level-up",
+        "duration": 218,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "bl5fblju0e0zx",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-09-12",
+        "release_date_download": "2025-09-12",
+        "release_date_stream": "2025-09-12",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773298800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/sh/nl/f0w1s5bagnlsh_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/sh/nl/f0w1s5bagnlsh_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/sh/nl/f0w1s5bagnlsh_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Disentr",
+          "id": 12847742,
+          "albums_count": 21,
+          "slug": "disentr",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 12847742,
+            "name": "Disentr",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918414507",
+        "released_at": 1756418400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 16,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": ".code",
+        "qobuz_id": 401005673,
+        "version": null,
+        "url": "/mx-es/album/code-disentr/f0w1s5bagnlsh",
+        "slug": "code-disentr",
+        "duration": 393,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "f0w1s5bagnlsh",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-08-29",
+        "release_date_download": "2025-08-29",
+        "release_date_stream": "2025-08-29",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773298800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/s8/7j/yy8pnvpt47js8_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/s8/7j/yy8pnvpt47js8_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/s8/7j/yy8pnvpt47js8_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918405574",
+        "released_at": 1754604000,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Itchy Scratchy",
+        "qobuz_id": 401001664,
+        "version": null,
+        "url": "/mx-es/album/itchy-scratchy-subtronics/yy8pnvpt47js8",
+        "slug": "itchy-scratchy-subtronics",
+        "duration": 192,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "yy8pnvpt47js8",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-08-08",
+        "release_date_download": "2025-08-08",
+        "release_date_stream": "2025-08-08",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773298800,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/61/8a/zx74j7zj68a61_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/61/8a/zx74j7zj68a61_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/61/8a/zx74j7zj68a61_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Ricky West",
+          "id": 623444,
+          "albums_count": 82,
+          "slug": "ricky-west",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 623444,
+            "name": "Ricky West",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918278451",
+        "released_at": 1753394400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 18,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "ISLAND OF DOOM",
+        "qobuz_id": 402084934,
+        "version": null,
+        "url": "/mx-es/album/island-of-doom-ricky-west/zx74j7zj68a61",
+        "slug": "island-of-doom-ricky-west",
+        "duration": 93,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "zx74j7zj68a61",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-07-25",
+        "release_date_download": "2025-07-25",
+        "release_date_stream": "2025-07-25",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773644400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/cu/io/qku98qsd7iocu_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/cu/io/qku98qsd7iocu_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/cu/io/qku98qsd7iocu_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "A Hundred Drums",
+          "id": 4208168,
+          "albums_count": 26,
+          "slug": "a-hundred-drums",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 4208168,
+            "name": "A Hundred Drums",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918232750",
+        "released_at": 1752184800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Fearless",
+        "qobuz_id": 402640578,
+        "version": null,
+        "url": "/mx-es/album/fearless-a-hundred-drums/qku98qsd7iocu",
+        "slug": "fearless-a-hundred-drums",
+        "duration": 540,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "qku98qsd7iocu",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-07-11",
+        "release_date_download": "2025-07-11",
+        "release_date_stream": "2025-07-11",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/2x/ja/qsvmoz0s5ja2x_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/2x/ja/qsvmoz0s5ja2x_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/2x/ja/qsvmoz0s5ja2x_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "A Hundred Drums",
+          "id": 4208168,
+          "albums_count": 26,
+          "slug": "a-hundred-drums",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 4208168,
+            "name": "A Hundred Drums",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918232743",
+        "released_at": 1750975200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Out of Time",
+        "qobuz_id": 402640582,
+        "version": null,
+        "url": "/mx-es/album/out-of-time-a-hundred-drums/qsvmoz0s5ja2x",
+        "slug": "out-of-time-a-hundred-drums",
+        "duration": 190,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "qsvmoz0s5ja2x",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-06-27",
+        "release_date_download": "2025-06-27",
+        "release_date_stream": "2025-06-27",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/qt/k1/eqv5638i7k1qt_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/qt/k1/eqv5638i7k1qt_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/qt/k1/eqv5638i7k1qt_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Veer",
+          "id": 1181547,
+          "albums_count": 273,
+          "slug": "veer",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 1181547,
+            "name": "Veer",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918302873",
+        "released_at": 1750370400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 18,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "DEATH SENTENCE",
+        "qobuz_id": 402078374,
+        "version": null,
+        "url": "/mx-es/album/death-sentence-veer/eqv5638i7k1qt",
+        "slug": "death-sentence-veer",
+        "duration": 163,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "eqv5638i7k1qt",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-06-20",
+        "release_date_download": "2025-06-20",
+        "release_date_stream": "2025-06-20",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773644400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/n6/00/ctkw822xc00n6_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/n6/00/ctkw822xc00n6_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/n6/00/ctkw822xc00n6_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Ricky West",
+          "id": 623444,
+          "albums_count": 82,
+          "slug": "ricky-west",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 623444,
+            "name": "Ricky West",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918278437",
+        "released_at": 1749765600,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 18,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "SPELLCASTER",
+        "qobuz_id": 402083146,
+        "version": null,
+        "url": "/mx-es/album/spellcaster-ricky-west/ctkw822xc00n6",
+        "slug": "spellcaster-ricky-west",
+        "duration": 98,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "ctkw822xc00n6",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-06-13",
+        "release_date_download": "2025-06-13",
+        "release_date_stream": "2025-06-13",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773644400,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/1n/ns/wutmqjvtvns1n_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/1n/ns/wutmqjvtvns1n_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/1n/ns/wutmqjvtvns1n_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 519381,
+            "name": "P Money",
+            "roles": [
+              "featured-artist"
+            ]
+          },
+          {
+            "id": 314647,
+            "name": "Friction",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918253434",
+        "released_at": 1749160800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Legends (feat. P Money)",
+        "qobuz_id": 402632999,
+        "version": null,
+        "url": "/mx-es/album/legends-feat-p-money-subtronics-friction/wutmqjvtvns1n",
+        "slug": "legends-feat-p-money-subtronics-friction",
+        "duration": 167,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "wutmqjvtvns1n",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-06-06",
+        "release_date_download": "2025-06-06",
+        "release_date_stream": "2025-06-06",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ge/ar/cmi5ub4dcarge_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ge/ar/cmi5ub4dcarge_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ge/ar/cmi5ub4dcarge_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Gunpoint",
+          "id": 11031250,
+          "albums_count": 26,
+          "slug": "gunpoint",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 11031250,
+            "name": "Gunpoint",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 7045019,
+            "name": "Saint Miller",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 814302,
+            "name": "Eater",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918202241",
+        "released_at": 1748556000,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Cursed",
+        "qobuz_id": 402662013,
+        "version": null,
+        "url": "/mx-es/album/cursed-gunpoint-saint-miller-eater/cmi5ub4dcarge",
+        "slug": "cursed-gunpoint-saint-miller-eater",
+        "duration": 413,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "cmi5ub4dcarge",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-05-30",
+        "release_date_download": "2025-05-30",
+        "release_date_stream": "2025-05-30",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/09/te/kutfjsp79te09_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/09/te/kutfjsp79te09_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/09/te/kutfjsp79te09_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "SFAM",
+          "id": 2932430,
+          "albums_count": 39,
+          "slug": "sfam",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2932430,
+            "name": "SFAM",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 31984619,
+            "name": "noertheboy",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918223062",
+        "released_at": 1747951200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "ode to courteous ep",
+        "qobuz_id": 402655849,
+        "version": null,
+        "url": "/mx-es/album/ode-to-courteous-ep-sfam-noertheboy/kutfjsp79te09",
+        "slug": "ode-to-courteous-ep-sfam-noertheboy",
+        "duration": 329,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "kutfjsp79te09",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-05-23",
+        "release_date_download": "2025-05-23",
+        "release_date_stream": "2025-05-23",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/9n/fx/j76ay9dspfx9n_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/9n/fx/j76ay9dspfx9n_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/9n/fx/j76ay9dspfx9n_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Ophion",
+          "id": 7800688,
+          "albums_count": 32,
+          "slug": "ophion",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 7800688,
+            "name": "Ophion",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 4261550,
+            "name": "Akeos",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918210888",
+        "released_at": 1747346400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Primordial EP",
+        "qobuz_id": 402666585,
+        "version": null,
+        "url": "/mx-es/album/primordial-ep-ophion-akeos/j76ay9dspfx9n",
+        "slug": "primordial-ep-ophion-akeos",
+        "duration": 534,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "j76ay9dspfx9n",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-05-16",
+        "release_date_download": "2025-05-16",
+        "release_date_stream": "2025-05-16",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/z0/fb/sivvpp0dufbz0_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/z0/fb/sivvpp0dufbz0_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/z0/fb/sivvpp0dufbz0_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 895980,
+            "name": "Flowdan",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918198698",
+        "released_at": 1746136800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Hunter (feat. Flowdan)",
+        "qobuz_id": 402677370,
+        "version": null,
+        "url": "/mx-es/album/hunter-feat-flowdan-subtronics-flowdan/sivvpp0dufbz0",
+        "slug": "hunter-feat-flowdan-subtronics-flowdan",
+        "duration": 220,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "sivvpp0dufbz0",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-05-02",
+        "release_date_download": "2025-05-02",
+        "release_date_stream": "2025-05-02",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/mh/my/v99cxquthmymh_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/mh/my/v99cxquthmymh_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/mh/my/v99cxquthmymh_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Izzy Vadim",
+          "id": 2681372,
+          "albums_count": 26,
+          "slug": "izzy-vadim",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2681372,
+            "name": "Izzy Vadim",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918011805",
+        "released_at": 1745532000,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 43,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Atomic Bomb",
+        "qobuz_id": 403315425,
+        "version": null,
+        "url": "/mx-es/album/atomic-bomb-izzy-vadim/v99cxquthmymh",
+        "slug": "atomic-bomb-izzy-vadim",
+        "duration": 617,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "v99cxquthmymh",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-04-25",
+        "release_date_download": "2025-04-25",
+        "release_date_stream": "2025-04-25",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773990000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ho/uf/nei8c2asnufho_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ho/uf/nei8c2asnufho_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ho/uf/nei8c2asnufho_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "MAD DUBZ",
+          "id": 5351661,
+          "albums_count": 11,
+          "slug": "mad-dubz",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 5351661,
+            "name": "MAD DUBZ",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918184585",
+        "released_at": 1744927200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Evolutions EP",
+        "qobuz_id": 402682209,
+        "version": null,
+        "url": "/mx-es/album/evolutions-ep-mad-dubz/nei8c2asnufho",
+        "slug": "evolutions-ep-mad-dubz",
+        "duration": 984,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 4,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "nei8c2asnufho",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-04-18",
+        "release_date_download": "2025-04-18",
+        "release_date_stream": "2025-04-18",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/8x/vh/nnh83qhzpvh8x_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/8x/vh/nnh83qhzpvh8x_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/8x/vh/nnh83qhzpvh8x_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "STELLER",
+          "id": 854285,
+          "albums_count": 29,
+          "slug": "steller",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 854285,
+            "name": "STELLER",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 575814,
+            "name": "Ragga Twins",
+            "roles": [
+              "featured-artist"
+            ]
+          }
+        ],
+        "upc": "0663918167472",
+        "released_at": 1744322400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 43,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Vibrations (feat. Ragga Twins)",
+        "qobuz_id": 403323826,
+        "version": null,
+        "url": "/mx-es/album/vibrations-feat-ragga-twins-steller/nnh83qhzpvh8x",
+        "slug": "vibrations-feat-ragga-twins-steller",
+        "duration": 210,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "nnh83qhzpvh8x",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-04-11",
+        "release_date_download": "2025-04-11",
+        "release_date_stream": "2025-04-11",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773990000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/eg/yh/wiw9okw88yheg_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/eg/yh/wiw9okw88yheg_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/eg/yh/wiw9okw88yheg_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918137475",
+        "released_at": 1743717600,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Fibonacci Pt 1: Oblivion",
+        "qobuz_id": 402723854,
+        "version": null,
+        "url": "/mx-es/album/fibonacci-pt-1-oblivion-subtronics/wiw9okw88yheg",
+        "slug": "fibonacci-pt-1-oblivion-subtronics",
+        "duration": 1551,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 8,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "wiw9okw88yheg",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-04-04",
+        "release_date_download": "2025-04-04",
+        "release_date_stream": "2025-04-04",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/wf/qr/gjyodbmulqrwf_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/wf/qr/gjyodbmulqrwf_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/wf/qr/gjyodbmulqrwf_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 7238852,
+            "name": "A Little Sound",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918137499",
+        "released_at": 1743544800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Final Breath",
+        "qobuz_id": 402718998,
+        "version": null,
+        "url": "/mx-es/album/final-breath-subtronics-a-little-sound/gjyodbmulqrwf",
+        "slug": "final-breath-subtronics-a-little-sound",
+        "duration": 229,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "gjyodbmulqrwf",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-04-02",
+        "release_date_download": "2025-04-02",
+        "release_date_stream": "2025-04-02",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/fa/7u/fow722v247ufa_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/fa/7u/fow722v247ufa_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/fa/7u/fow722v247ufa_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Neotek",
+          "id": 3809089,
+          "albums_count": 38,
+          "slug": "neotek-10003809089",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 3809089,
+            "name": "Neotek",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918144688",
+        "released_at": 1743116400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Dystopian Feelings",
+        "qobuz_id": 402708565,
+        "version": null,
+        "url": "/mx-es/album/dystopian-feelings-neotek/fow722v247ufa",
+        "slug": "dystopian-feelings-neotek",
+        "duration": 320,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "fow722v247ufa",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-03-28",
+        "release_date_download": "2025-03-28",
+        "release_date_stream": "2025-03-28",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/ia/zy/zu964n02wzyia_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/ia/zy/zu964n02wzyia_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/ia/zy/zu964n02wzyia_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 3262339,
+            "name": "Wooli",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918130414",
+        "released_at": 1742511600,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Lock In",
+        "qobuz_id": 402731028,
+        "version": null,
+        "url": "/mx-es/album/lock-in-subtronics-wooli/zu964n02wzyia",
+        "slug": "lock-in-subtronics-wooli",
+        "duration": 215,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "zu964n02wzyia",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-03-21",
+        "release_date_download": "2025-03-21",
+        "release_date_stream": "2025-03-21",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/pa/bj/thqyh5sjmbjpa_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/pa/bj/thqyh5sjmbjpa_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/pa/bj/thqyh5sjmbjpa_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Izadi",
+          "id": 12319419,
+          "albums_count": 6,
+          "slug": "izadi",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 12319419,
+            "name": "Izadi",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918124222",
+        "released_at": 1741906800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "When Worlds Collide EP",
+        "qobuz_id": 402729334,
+        "version": null,
+        "url": "/mx-es/album/when-worlds-collide-ep-izadi/thqyh5sjmbjpa",
+        "slug": "when-worlds-collide-ep-izadi",
+        "duration": 498,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "thqyh5sjmbjpa",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-03-14",
+        "release_date_download": "2025-03-14",
+        "release_date_stream": "2025-03-14",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/31/h4/o4u1fgh86h431_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/31/h4/o4u1fgh86h431_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/31/h4/o4u1fgh86h431_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "DENNETT",
+          "id": 8018249,
+          "albums_count": 27,
+          "slug": "dennett",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 8018249,
+            "name": "DENNETT",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918089927",
+        "released_at": 1741302000,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 24,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Beat",
+        "qobuz_id": 402741092,
+        "version": null,
+        "url": "/mx-es/album/beat-dennett/o4u1fgh86h431",
+        "slug": "beat-dennett",
+        "duration": 157,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "o4u1fgh86h431",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-03-07",
+        "release_date_download": "2025-03-07",
+        "release_date_stream": "2025-03-07",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773817200,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/hr/ky/cx31hja1okyhr_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/hr/ky/cx31hja1okyhr_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/hr/ky/cx31hja1okyhr_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Capochino",
+          "id": 8375682,
+          "albums_count": 44,
+          "slug": "capochino",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 8375682,
+            "name": "Capochino",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 584999,
+            "name": "Seth David",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918080788",
+        "released_at": 1740697200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 35,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Get That",
+        "qobuz_id": 402948193,
+        "version": null,
+        "url": "/mx-es/album/get-that-capochino-seth-david/cx31hja1okyhr",
+        "slug": "get-that-capochino-seth-david",
+        "duration": 180,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "cx31hja1okyhr",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-02-28",
+        "release_date_download": "2025-02-28",
+        "release_date_stream": "2025-02-28",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773903600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/m1/62/l6papgjkl62m1_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/m1/62/l6papgjkl62m1_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/m1/62/l6papgjkl62m1_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "BRAINWAVEZ",
+          "id": 7368151,
+          "albums_count": 34,
+          "slug": "brainwavez",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 7368151,
+            "name": "BRAINWAVEZ",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918011799",
+        "released_at": 1740092400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 43,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "MVP",
+        "qobuz_id": 403310418,
+        "version": null,
+        "url": "/mx-es/album/mvp-brainwavez/l6papgjkl62m1",
+        "slug": "mvp-brainwavez",
+        "duration": 178,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "l6papgjkl62m1",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-02-21",
+        "release_date_download": "2025-02-21",
+        "release_date_stream": "2025-02-21",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773990000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/t0/7x/xbh8u4jdo7xt0_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/t0/7x/xbh8u4jdo7xt0_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/t0/7x/xbh8u4jdo7xt0_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "TYNAN",
+          "id": 3231212,
+          "albums_count": 61,
+          "slug": "tynan-10003231212",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 3231212,
+            "name": "TYNAN",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918055823",
+        "released_at": 1739487600,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "from the beginning",
+        "qobuz_id": 402959339,
+        "version": null,
+        "url": "/mx-es/album/from-the-beginning-tynan/xbh8u4jdo7xt0",
+        "slug": "from-the-beginning-tynan",
+        "duration": 168,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "xbh8u4jdo7xt0",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-02-14",
+        "release_date_download": "2025-02-14",
+        "release_date_stream": "2025-02-14",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773903600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/74/wm/bgclpkza6wm74_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/74/wm/bgclpkza6wm74_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/74/wm/bgclpkza6wm74_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Nosphere",
+          "id": 6598762,
+          "albums_count": 35,
+          "slug": "nosphere",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 6598762,
+            "name": "Nosphere",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918038383",
+        "released_at": 1738882800,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 35,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "FRIGID TORTURE",
+        "qobuz_id": 402973218,
+        "version": null,
+        "url": "/mx-es/album/frigid-torture-nosphere/bgclpkza6wm74",
+        "slug": "frigid-torture-nosphere",
+        "duration": 717,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 3,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "bgclpkza6wm74",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-02-07",
+        "release_date_download": "2025-02-07",
+        "release_date_stream": "2025-02-07",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773903600,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/f0/hj/rmfwqzehuhjf0_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/f0/hj/rmfwqzehuhjf0_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/f0/hj/rmfwqzehuhjf0_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Brainrack",
+          "id": 3022240,
+          "albums_count": 21,
+          "slug": "brainrack",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 3022240,
+            "name": "Brainrack",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0663918011775",
+        "released_at": 1738278000,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 43,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Business as Usual",
+        "qobuz_id": 403315640,
+        "version": null,
+        "url": "/mx-es/album/business-as-usual-brainrack/rmfwqzehuhjf0",
+        "slug": "business-as-usual-brainrack",
+        "duration": 669,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 4,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "rmfwqzehuhjf0",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-01-31",
+        "release_date_download": "2025-01-31",
+        "release_date_stream": "2025-01-31",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773990000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/x8/xl/w0kc5j44gxlx8_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/x8/xl/w0kc5j44gxlx8_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/x8/xl/w0kc5j44gxlx8_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Nire",
+          "id": 1547227,
+          "albums_count": 52,
+          "slug": "nire",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 1547227,
+            "name": "Nire",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0723277993379",
+        "released_at": 1737673200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 43,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Detour EP",
+        "qobuz_id": 403321156,
+        "version": null,
+        "url": "/mx-es/album/detour-ep-nire/w0kc5j44gxlx8",
+        "slug": "detour-ep-nire",
+        "duration": 784,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 5,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "w0kc5j44gxlx8",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2025-01-24",
+        "release_date_download": "2025-01-24",
+        "release_date_stream": "2025-01-24",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773990000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/o4/5a/i1df33yt55ao4_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/o4/5a/i1df33yt55ao4_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/o4/5a/i1df33yt55ao4_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "XotiX",
+          "id": 7044822,
+          "albums_count": 36,
+          "slug": "xotix",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 7044822,
+            "name": "XotiX",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0723277969657",
+        "released_at": 1734649200,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 43,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "SPACE J'S",
+        "qobuz_id": 403335213,
+        "version": null,
+        "url": "/mx-es/album/space-js-xotix/i1df33yt55ao4",
+        "slug": "space-js-xotix",
+        "duration": 153,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "i1df33yt55ao4",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-12-20",
+        "release_date_download": "2024-12-20",
+        "release_date_stream": "2024-12-20",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1773990000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/1v/eu/r0wvxg0vceu1v_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/1v/eu/r0wvxg0vceu1v_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/1v/eu/r0wvxg0vceu1v_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "HOL!",
+          "id": 7781847,
+          "albums_count": 19,
+          "slug": "hol-1",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 7781847,
+            "name": "HOL!",
+            "roles": [
+              "main-artist"
+            ]
+          },
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0723277949314",
+        "released_at": 1734044400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 48,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Amnesia (HOL! Remix)",
+        "qobuz_id": 405727595,
+        "version": null,
+        "url": "/mx-es/album/amnesia-hol-remix-hol-subtronics/r0wvxg0vceu1v",
+        "slug": "amnesia-hol-remix-hol-subtronics",
+        "duration": 337,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 2,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "r0wvxg0vceu1v",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-12-13",
+        "release_date_download": "2024-12-13",
+        "release_date_stream": "2024-12-13",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1774854000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/hu/i4/x8q0o0yuwi4hu_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/hu/i4/x8q0o0yuwi4hu_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/hu/i4/x8q0o0yuwi4hu_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Subtronics",
+          "id": 2658260,
+          "albums_count": 41,
+          "slug": "subtronics",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 2658260,
+            "name": "Subtronics",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0723277949536",
+        "released_at": 1734044400,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 128,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "Amnesia",
+        "qobuz_id": 405727290,
+        "version": "HOL! Remix",
+        "url": "/mx-es/album/amnesia-subtronics/x8q0o0yuwi4hu",
+        "slug": "amnesia-subtronics",
+        "duration": 182,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "x8q0o0yuwi4hu",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-12-13",
+        "release_date_download": "2024-12-13",
+        "release_date_stream": "2024-12-13",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1774854000,
+        "hires": false,
+        "hires_streamable": false
+      },
+      {
+        "maximum_bit_depth": 16,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/fk/6c/p9mhjk5ac6cfk_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/fk/6c/p9mhjk5ac6cfk_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/fk/6c/p9mhjk5ac6cfk_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "VEXUS",
+          "id": 6740999,
+          "albums_count": 14,
+          "slug": "vexus",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 6740999,
+            "name": "VEXUS",
+            "roles": [
+              "main-artist"
+            ]
+          }
+        ],
+        "upc": "0723277935751",
+        "released_at": 1733439600,
+        "label": {
+          "name": "Cyclops Recordings",
+          "id": 9322512,
+          "albums_count": 48,
+          "supplier_id": 266,
+          "slug": "cyclops-recordings-1"
+        },
+        "title": "DELUSIONS",
+        "qobuz_id": 405743053,
+        "version": null,
+        "url": "/mx-es/album/delusions-vexus/p9mhjk5ac6cfk",
+        "slug": "delusions-vexus",
+        "duration": 132,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 1,
+        "genre": {
+          "path": [
+            64,
+            129
+          ],
+          "color": "#0070ef",
+          "name": "Dance",
+          "id": 129,
+          "slug": "dance"
+        },
+        "maximum_channel_count": 2,
+        "id": "p9mhjk5ac6cfk",
+        "maximum_sampling_rate": 44.1,
+        "articles": [],
+        "release_date_original": "2024-12-06",
+        "release_date_download": "2024-12-06",
+        "release_date_stream": "2024-12-06",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1774854000,
+        "hires": false,
+        "hires_streamable": false
+      }
+    ]
+  }
+}

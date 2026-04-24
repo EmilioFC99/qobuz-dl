@@ -22,3 +22,7 @@ dist/
 # Windows executables
 *.exe
 *.spec
+
+# Claude
+.claude
+CLAUDE.md

@@ -1,0 +1,218 @@
+{
+  "tracks": {
+    "offset": 0,
+    "limit": 2,
+    "total": 243,
+    "items": [
+      {
+        "maximum_bit_depth": 16,
+        "copyright": "© 2018 Illusory Records ℗ 2018 Illusory Records",
+        "performers": "G Jones, MainArtist - Gregory Jones, Composer, Writer",
+        "audio_info": {
+          "replaygain_track_peak": 0.978394,
+          "replaygain_track_gain": -8.14
+        },
+        "performer": {
+          "name": "G Jones",
+          "id": 848263
+        },
+        "album": {
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/tc/5b/w7eky0qmu5btc_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/tc/5b/w7eky0qmu5btc_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/tc/5b/w7eky0qmu5btc_600.jpg"
+          },
+          "maximum_bit_depth": 16,
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "G Jones",
+            "id": 848263,
+            "albums_count": 62,
+            "slug": "g-jones-2",
+            "picture": null
+          },
+          "upc": "0192641202209",
+          "released_at": 1540504800,
+          "label": {
+            "name": "Illusory Records",
+            "id": 165900,
+            "albums_count": 12,
+            "supplier_id": 36,
+            "slug": "illusory-records"
+          },
+          "title": "The Ineffable Truth",
+          "qobuz_id": 54655559,
+          "version": null,
+          "duration": 2472,
+          "parental_warning": false,
+          "tracks_count": 11,
+          "genre": {
+            "path": [
+              64
+            ],
+            "name": "Electrónica",
+            "id": 64,
+            "slug": "electro"
+          },
+          "maximum_channel_count": 2,
+          "id": "w7eky0qmu5btc",
+          "maximum_sampling_rate": 44.1,
+          "previewable": true,
+          "sampleable": true,
+          "displayable": true,
+          "streamable": true,
+          "streamable_at": 1744614000,
+          "downloadable": false,
+          "purchasable_at": null,
+          "purchasable": false,
+          "release_date_original": "2018-10-26",
+          "release_date_download": "2018-10-26",
+          "release_date_stream": "2018-10-26",
+          "release_date_purchase": "2018-10-26",
+          "hires": false,
+          "hires_streamable": false,
+          "maximum_technical_specifications": "16 bits / 44.1 kHz - Stereo "
+        },
+        "work": null,
+        "composer": {
+          "name": "Gregory Jones",
+          "id": 108062
+        },
+        "isrc": "USA2P1883266",
+        "title": "222 / Unknowable",
+        "version": null,
+        "duration": 158,
+        "parental_warning": false,
+        "track_number": 1,
+        "maximum_channel_count": 2,
+        "id": 54655560,
+        "media_number": 1,
+        "maximum_sampling_rate": 44.1,
+        "release_date_original": "2018-10-26",
+        "release_date_download": "2018-10-26",
+        "release_date_stream": "2018-10-26",
+        "release_date_purchase": "2018-10-26",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1744614000,
+        "hires": false,
+        "hires_streamable": false,
+        "maximum_technical_specifications": "16 bits / 44.1 kHz - Stereo ",
+        "favorited_at": 1776920120
+      },
+      {
+        "maximum_bit_depth": 16,
+        "copyright": "(P) 2024 Sony Music Entertainment UK Limited",
+        "performers": "Bring Me The Horizon, MainArtist, AssociatedPerformer - Oliver Sykes, Programmer, Composer, Lyricist, Producer - Cynthoni, Programmer, Composer, Producer - Zakk Cervini, Mixing Engineer - Julian Gargiulo, Engineer, Mixing Engineer - Ted Jensen, Mastering Engineer",
+        "audio_info": {
+          "replaygain_track_peak": 0.987732,
+          "replaygain_track_gain": -12.32
+        },
+        "performer": {
+          "name": "Bring Me The Horizon",
+          "id": 333314
+        },
+        "album": {
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/sa/fw/pc9nqjaj1fwsa_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/sa/fw/pc9nqjaj1fwsa_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/sa/fw/pc9nqjaj1fwsa_600.jpg"
+          },
+          "maximum_bit_depth": 16,
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Bring Me The Horizon",
+            "id": 333314,
+            "albums_count": 206,
+            "slug": "bring-me-the-horizon",
+            "picture": null
+          },
+          "upc": "0196872087246",
+          "released_at": 1716501600,
+          "label": {
+            "name": "RCA Records Label",
+            "id": 4607,
+            "albums_count": 17113,
+            "supplier_id": 23,
+            "slug": "rca-records-label"
+          },
+          "title": "POST HUMAN: NeX GEn",
+          "qobuz_id": 267693835,
+          "version": null,
+          "duration": 3319,
+          "parental_warning": true,
+          "tracks_count": 16,
+          "genre": {
+            "path": [
+              112,
+              119
+            ],
+            "name": "Rock",
+            "id": 119,
+            "slug": "rock"
+          },
+          "maximum_channel_count": 2,
+          "id": "pc9nqjaj1fwsa",
+          "maximum_sampling_rate": 44.1,
+          "previewable": true,
+          "sampleable": true,
+          "displayable": true,
+          "streamable": true,
+          "streamable_at": 1776582000,
+          "downloadable": false,
+          "purchasable_at": null,
+          "purchasable": false,
+          "release_date_original": "2024-05-24",
+          "release_date_download": "2024-05-24",
+          "release_date_stream": "2024-05-24",
+          "release_date_purchase": "2024-05-24",
+          "hires": false,
+          "hires_streamable": false,
+          "maximum_technical_specifications": "16 bits / 44.1 kHz - Stereo "
+        },
+        "work": null,
+        "composer": {
+          "name": "Oliver Sykes",
+          "id": 333319
+        },
+        "isrc": "GBARL2400565",
+        "title": "[ost] p.u.s.s.-e",
+        "version": null,
+        "duration": 169,
+        "parental_warning": true,
+        "track_number": 14,
+        "maximum_channel_count": 2,
+        "id": 267693849,
+        "media_number": 1,
+        "maximum_sampling_rate": 44.1,
+        "release_date_original": "2024-05-24",
+        "release_date_download": "2024-05-24",
+        "release_date_stream": "2024-05-24",
+        "release_date_purchase": "2024-05-24",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1776582000,
+        "hires": false,
+        "hires_streamable": false,
+        "maximum_technical_specifications": "16 bits / 44.1 kHz - Stereo ",
+        "favorited_at": 1776920120
+      }
+    ]
+  },
+  "user": {
+    "id": 2077331,
+    "login": "emilioflores"
+  }
+}

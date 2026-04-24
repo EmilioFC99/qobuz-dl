@@ -1,0 +1,2641 @@
+{
+  "query": "beethoven",
+  "albums": {
+    "limit": 2,
+    "offset": 0,
+    "analytics": {
+      "search_external_id": "c1deb022147157eab3ca07c5ab045cd2"
+    },
+    "total": 1000,
+    "items": [
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/82/37/0002894793782_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/82/37/0002894793782_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/82/37/0002894793782_600.jpg",
+          "back": null
+        },
+        "media_count": 5,
+        "artist": {
+          "image": null,
+          "name": "Herbert von Karajan",
+          "id": 24128,
+          "albums_count": 1198,
+          "slug": "herbert-von-karajan",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 56836,
+            "name": "Berliner Philharmoniker",
+            "roles": [
+              "main-artist",
+              "orchestra"
+            ]
+          },
+          {
+            "id": 24128,
+            "name": "Herbert von Karajan",
+            "roles": [
+              "main-artist",
+              "conductor"
+            ]
+          }
+        ],
+        "upc": "0002894793782",
+        "released_at": 1388530800,
+        "label": {
+          "name": "Deutsche Grammophon (DG)",
+          "id": 80905,
+          "albums_count": 9647,
+          "supplier_id": 1,
+          "slug": "deutsche-grammophon"
+        },
+        "title": "Beethoven : 9 Symphonies (1963)",
+        "qobuz_id": 17644532,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/beethoven-9-symphonies-1963-berliner-philharmoniker-herbert-von-karajan/0002894793782",
+        "slug": "beethoven-9-symphonies-1963-berliner-philharmoniker-herbert-von-karajan",
+        "duration": 19975,
+        "parental_warning": true,
+        "popularity": 0,
+        "tracks_count": 38,
+        "genre": {
+          "path": [
+            10
+          ],
+          "color": "#0070ef",
+          "name": "Clásica",
+          "id": 10,
+          "slug": "classique"
+        },
+        "maximum_channel_count": 2,
+        "id": "0002894793782",
+        "maximum_sampling_rate": 96,
+        "articles": [],
+        "release_date_original": "2014-01-01",
+        "release_date_download": "2014-01-01",
+        "release_date_stream": "2014-01-01",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1770706800,
+        "hires": true,
+        "hires_streamable": true
+      },
+      {
+        "maximum_bit_depth": 24,
+        "image": {
+          "small": "https://static.qobuz.com/images/covers/48/05/0002894790548_230.jpg",
+          "thumbnail": "https://static.qobuz.com/images/covers/48/05/0002894790548_50.jpg",
+          "large": "https://static.qobuz.com/images/covers/48/05/0002894790548_600.jpg",
+          "back": null
+        },
+        "media_count": 1,
+        "artist": {
+          "image": null,
+          "name": "Carlos Kleiber",
+          "id": 22805,
+          "albums_count": 33,
+          "slug": "carlos-kleiber",
+          "picture": null
+        },
+        "artists": [
+          {
+            "id": 1463649,
+            "name": "Wiener Philharmonic Orchestra",
+            "roles": [
+              "main-artist",
+              "orchestra"
+            ]
+          },
+          {
+            "id": 22805,
+            "name": "Carlos Kleiber",
+            "roles": [
+              "main-artist",
+              "conductor"
+            ]
+          }
+        ],
+        "upc": "0002894790548",
+        "released_at": 796860000,
+        "label": {
+          "name": "Deutsche Grammophon (DG)",
+          "id": 80905,
+          "albums_count": 9607,
+          "supplier_id": 1,
+          "slug": "deutsche-grammophon"
+        },
+        "title": "Beethoven : Symphonies n°5 & n°7",
+        "qobuz_id": 6826225,
+        "version": null,
+        "url": "https://www.qobuz.com/fr-fr/album/beethoven-symphonies-n5-n7-wiener-philharmoniker-carlos-kleiber/0002894790548",
+        "slug": "beethoven-symphonies-n5-n7-wiener-philharmoniker-carlos-kleiber",
+        "duration": 4340,
+        "parental_warning": false,
+        "popularity": 0,
+        "tracks_count": 8,
+        "genre": {
+          "path": [
+            10
+          ],
+          "color": "#0070ef",
+          "name": "Clásica",
+          "id": 10,
+          "slug": "classique"
+        },
+        "maximum_channel_count": 2,
+        "id": "0002894790548",
+        "maximum_sampling_rate": 96,
+        "articles": [],
+        "release_date_original": "1995-04-03",
+        "release_date_download": "1995-04-03",
+        "release_date_stream": "1995-04-03",
+        "purchasable": false,
+        "streamable": true,
+        "previewable": true,
+        "sampleable": true,
+        "downloadable": false,
+        "displayable": true,
+        "purchasable_at": null,
+        "streamable_at": 1770706800,
+        "hires": true,
+        "hires_streamable": true
+      }
+    ]
+  },
+  "tracks": {
+    "analytics": {
+      "search_external_id": "7459afedaf2fd3dcd4972e9b2de85a73"
+    },
+    "total": 1000,
+    "items": []
+  },
+  "artists": {
+    "analytics": {
+      "search_external_id": "ae9fcac7f85877d61c3b66fac7cae653"
+    },
+    "total": 350,
+    "items": []
+  },
+  "playlists": {
+    "analytics": {
+      "search_external_id": "bc2f8ade144130ac488bdfceb5bfa0e4"
+    },
+    "total": 522,
+    "items": []
+  },
+  "stories": {
+    "analytics": {
+      "search_external_id": "22ce83e00732944839712107ab4e63ee"
+    },
+    "total": 14,
+    "items": []
+  },
+  "most_popular": {
+    "limit": 30,
+    "offset": 0,
+    "analytics": {
+      "search_external_id": "6d11065bd6fd7e693a4ac479e708cec4"
+    },
+    "total": 1000,
+    "items": [
+      {
+        "type": "artists",
+        "content": {
+          "type": "artists",
+          "picture": "https://static.qobuz.com/images/artists/covers/small/557d7db70922dd77f6f57fc1f1ca1f30.jpg",
+          "image": {
+            "small": "https://static.qobuz.com/images/artists/covers/small/557d7db70922dd77f6f57fc1f1ca1f30.jpg",
+            "medium": "https://static.qobuz.com/images/artists/covers/medium/557d7db70922dd77f6f57fc1f1ca1f30.jpg",
+            "large": "https://static.qobuz.com/images/artists/covers/large/557d7db70922dd77f6f57fc1f1ca1f30.jpg",
+            "extralarge": "https://static.qobuz.com/images/artists/covers/large/557d7db70922dd77f6f57fc1f1ca1f30.jpg",
+            "mega": "https://static.qobuz.com/images/artists/covers/large/557d7db70922dd77f6f57fc1f1ca1f30.jpg"
+          },
+          "name": "Ludwig van Beethoven",
+          "slug": "ludwig-van-beethoven",
+          "albums_count": 26863,
+          "id": 38
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/82/37/0002894793782_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/82/37/0002894793782_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/82/37/0002894793782_600.jpg",
+            "back": null
+          },
+          "media_count": 5,
+          "artist": {
+            "image": null,
+            "name": "Herbert von Karajan",
+            "id": 24128,
+            "albums_count": 1198,
+            "slug": "herbert-von-karajan",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 56836,
+              "name": "Berliner Philharmoniker",
+              "roles": [
+                "main-artist",
+                "orchestra"
+              ]
+            },
+            {
+              "id": 24128,
+              "name": "Herbert von Karajan",
+              "roles": [
+                "main-artist",
+                "conductor"
+              ]
+            }
+          ],
+          "upc": "0002894793782",
+          "released_at": 1388530800,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9647,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven : 9 Symphonies (1963)",
+          "qobuz_id": 17644532,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-9-symphonies-1963-berliner-philharmoniker-herbert-von-karajan/0002894793782",
+          "slug": "beethoven-9-symphonies-1963-berliner-philharmoniker-herbert-von-karajan",
+          "duration": 19975,
+          "parental_warning": true,
+          "popularity": 0,
+          "tracks_count": 38,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "0002894793782",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2014-01-01",
+          "release_date_download": "2014-01-01",
+          "release_date_stream": "2014-01-01",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1770706800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/8b/pc/e6rn84ne5pc8b_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/8b/pc/e6rn84ne5pc8b_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/8b/pc/e6rn84ne5pc8b_600.jpg",
+            "back": null
+          },
+          "media_count": 9,
+          "artist": {
+            "image": null,
+            "name": "Igor Levit",
+            "id": 1110793,
+            "albums_count": 76,
+            "slug": "igor-levit",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 1110793,
+              "name": "Igor Levit",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0886447741030",
+          "released_at": 1568325600,
+          "label": {
+            "name": "Sony Classical",
+            "id": 4608,
+            "albums_count": 11159,
+            "supplier_id": 23,
+            "slug": "sony-classical"
+          },
+          "title": "Beethoven : Complete Piano Sonatas",
+          "qobuz_id": 63441371,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-complete-piano-sonatas-igor-levit/e6rn84ne5pc8b",
+          "slug": "beethoven-complete-piano-sonatas-igor-levit",
+          "duration": 36305,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 102,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "e6rn84ne5pc8b",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2019-09-13",
+          "release_date_download": "2019-09-13",
+          "release_date_stream": "2019-09-13",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1768460400,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/48/05/0002894790548_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/48/05/0002894790548_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/48/05/0002894790548_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Carlos Kleiber",
+            "id": 22805,
+            "albums_count": 33,
+            "slug": "carlos-kleiber",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 1463649,
+              "name": "Wiener Philharmonic Orchestra",
+              "roles": [
+                "main-artist",
+                "orchestra"
+              ]
+            },
+            {
+              "id": 22805,
+              "name": "Carlos Kleiber",
+              "roles": [
+                "main-artist",
+                "conductor"
+              ]
+            }
+          ],
+          "upc": "0002894790548",
+          "released_at": 796860000,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9607,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven : Symphonies n°5 & n°7",
+          "qobuz_id": 6826225,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-symphonies-n5-n7-wiener-philharmoniker-carlos-kleiber/0002894790548",
+          "slug": "beethoven-symphonies-n5-n7-wiener-philharmoniker-carlos-kleiber",
+          "duration": 4340,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 8,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "0002894790548",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "1995-04-03",
+          "release_date_download": "1995-04-03",
+          "release_date_stream": "1995-04-03",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1770706800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/7a/8u/pnrwtpva38u7a_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/7a/8u/pnrwtpva38u7a_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/7a/8u/pnrwtpva38u7a_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Jon Batiste",
+            "id": 2547085,
+            "albums_count": 72,
+            "slug": "jon-batiste",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 2547085,
+              "name": "Jon Batiste",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0602475290049",
+          "released_at": 1731625200,
+          "label": {
+            "name": "Beethoven Blues",
+            "id": 7126314,
+            "albums_count": 3,
+            "supplier_id": 1,
+            "slug": "beethoven-blues"
+          },
+          "title": "Beethoven Blues",
+          "qobuz_id": 290289948,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-blues-jon-batiste/pnrwtpva38u7a",
+          "slug": "beethoven-blues-jon-batiste",
+          "duration": 3051,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 11,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "pnrwtpva38u7a",
+          "maximum_sampling_rate": 48,
+          "articles": [],
+          "release_date_original": "2024-11-15",
+          "release_date_download": "2024-11-15",
+          "release_date_stream": "2024-11-15",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1749538800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/8a/ei/e8i0s2w35ei8a_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/8a/ei/e8i0s2w35ei8a_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/8a/ei/e8i0s2w35ei8a_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Anne-Sophie Mutter",
+            "id": 35307,
+            "albums_count": 165,
+            "slug": "anne-sophie-mutter",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 35307,
+              "name": "Anne-Sophie Mutter",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 289938,
+              "name": "Daniel Barenboim",
+              "roles": [
+                "conductor",
+                "main-artist"
+              ]
+            },
+            {
+              "id": 31220,
+              "name": "Yo-Yo Ma",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 347758,
+              "name": "West-Eastern Divan Orchestra",
+              "roles": [
+                "orchestra",
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0028948382446",
+          "released_at": 1585864800,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9643,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven: Triple Concerto & Symphony No. 7",
+          "qobuz_id": 85983030,
+          "version": "Live",
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-triple-concerto-symphony-no-7-daniel-barenboim-yo-yo-ma-anne-sophie-mutter-west-eastern-divan-orchestra/e8i0s2w35ei8a",
+          "slug": "beethoven-triple-concerto-symphony-no-7-daniel-barenboim-yo-yo-ma-anne-sophie-mutter-west-eastern-divan-orchestra",
+          "duration": 4428,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 7,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "e8i0s2w35ei8a",
+          "maximum_sampling_rate": 48,
+          "articles": [],
+          "release_date_original": "2020-04-03",
+          "release_date_download": "2020-04-03",
+          "release_date_stream": "2020-04-03",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1776236400,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/07/26/0002894782607_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/07/26/0002894782607_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/07/26/0002894782607_600.jpg",
+            "back": null
+          },
+          "media_count": 12,
+          "artist": {
+            "image": null,
+            "name": "Alfred Brendel",
+            "id": 37865,
+            "albums_count": 489,
+            "slug": "alfred-brendel-1",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 37865,
+              "name": "Alfred Brendel",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0002894782607",
+          "released_at": 1262300400,
+          "label": {
+            "name": "Decca Music Group Ltd.",
+            "id": 80295,
+            "albums_count": 9140,
+            "supplier_id": 1,
+            "slug": "decca-music-group-ltd"
+          },
+          "title": "Beethoven: Complete Piano Sonatas & Concertos",
+          "qobuz_id": 3214048,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-complete-piano-sonatas-concertos-alfred-brendel/0002894782607",
+          "slug": "beethoven-complete-piano-sonatas-concertos-alfred-brendel",
+          "duration": 51157,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 121,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "0002894782607",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2010-01-01",
+          "release_date_download": "2010-01-01",
+          "release_date_stream": "2010-01-01",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1776927600,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/aa/j2/cfas6uw9wj2aa_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/aa/j2/cfas6uw9wj2aa_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/aa/j2/cfas6uw9wj2aa_600.jpg",
+            "back": null
+          },
+          "media_count": 5,
+          "artist": {
+            "image": null,
+            "name": "Berliner Philharmoniker",
+            "id": 56836,
+            "albums_count": 1567,
+            "slug": "berliner-philharmoniker",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 56836,
+              "name": "Berliner Philharmoniker",
+              "roles": [
+                "main-artist",
+                "orchestra"
+              ]
+            },
+            {
+              "id": 225092,
+              "name": "Sir Simon Rattle",
+              "roles": [
+                "main-artist",
+                "conductor"
+              ]
+            }
+          ],
+          "upc": "4260306180943",
+          "released_at": 1463090400,
+          "label": {
+            "name": "Berlin Philharmonic Orchestra",
+            "id": 308079,
+            "albums_count": 47,
+            "supplier_id": 22,
+            "slug": "berlin-philharmonic-orchestra"
+          },
+          "title": "Beethoven: Symphonies Nos. 1 - 9",
+          "qobuz_id": 61026884,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-symphonies-nos-1-9-berliner-philharmoniker-and-sir-simon-rattle/cfas6uw9wj2aa",
+          "slug": "beethoven-symphonies-nos-1-9-berliner-philharmoniker-and-sir-simon-rattle",
+          "duration": 20598,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 38,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "cfas6uw9wj2aa",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2016-05-13",
+          "release_date_download": "2016-05-13",
+          "release_date_stream": "2016-05-13",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1769497200,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ga/m3/cawut5xg5m3ga_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ga/m3/cawut5xg5m3ga_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ga/m3/cawut5xg5m3ga_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Krystian Zimerman",
+            "id": 44724,
+            "albums_count": 43,
+            "slug": "krystian-zimerman",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 44724,
+              "name": "Krystian Zimerman",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 35953,
+              "name": "London Symphony Orchestra",
+              "roles": [
+                "orchestra",
+                "main-artist"
+              ]
+            },
+            {
+              "id": 225092,
+              "name": "Sir Simon Rattle",
+              "roles": [
+                "conductor",
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0028948399772",
+          "released_at": 1625781600,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9607,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven: Complete Piano Concertos",
+          "qobuz_id": 117631030,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-complete-piano-concertos-sir-simon-rattle-london-symphony-orchestra-krystian-zimerman/cawut5xg5m3ga",
+          "slug": "beethoven-complete-piano-concertos-sir-simon-rattle-london-symphony-orchestra-krystian-zimerman",
+          "duration": 10353,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 15,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "cawut5xg5m3ga",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2021-07-09",
+          "release_date_download": "2021-07-09",
+          "release_date_stream": "2021-07-09",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1770706800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/7b/b0/nenq72ow2b07b_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/7b/b0/nenq72ow2b07b_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/7b/b0/nenq72ow2b07b_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "María Dueñas",
+            "id": 8216996,
+            "albums_count": 51,
+            "slug": "maria-duenas",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 8216996,
+              "name": "María Dueñas",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 37777,
+              "name": "Wiener Symphoniker",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 287075,
+              "name": "Manfred Honeck",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0028948635177",
+          "released_at": 1683237600,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9647,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven and Beyond",
+          "qobuz_id": 201587202,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-and-beyond-wiener-symphoniker-manfred-honeck-maria-duenas/nenq72ow2b07b",
+          "slug": "beethoven-and-beyond-wiener-symphoniker-manfred-honeck-maria-duenas",
+          "duration": 5976,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 13,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "nenq72ow2b07b",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2023-05-05",
+          "release_date_download": "2023-05-05",
+          "release_date_stream": "2023-05-05",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1776754800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/zb/sx/cp7hoqudwsxzb_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/zb/sx/cp7hoqudwsxzb_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/zb/sx/cp7hoqudwsxzb_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Wiener Philharmonic Orchestra",
+            "id": 1463649,
+            "albums_count": 1489,
+            "slug": "wiener-philharmonic-orchestra",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 1463649,
+              "name": "Wiener Philharmonic Orchestra",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 225092,
+              "name": "Sir Simon Rattle",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0190296607653",
+          "released_at": 1631224800,
+          "label": {
+            "name": "Warner Classics",
+            "id": 8400,
+            "albums_count": 11627,
+            "supplier_id": 5,
+            "slug": "warner-classics"
+          },
+          "title": "Beethoven: Symphony No. 5, Op. 67",
+          "qobuz_id": 130784513,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-symphony-no-5-op-67-wiener-philharmoniker-simon-rattle/cp7hoqudwsxzb",
+          "slug": "beethoven-symphony-no-5-op-67-wiener-philharmoniker-simon-rattle",
+          "duration": 1916,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 4,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "cp7hoqudwsxzb",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2021-09-10",
+          "release_date_download": "2021-09-10",
+          "release_date_stream": "2021-09-10",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1750057200,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/dc/5k/ki6wy04vc5kdc_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/dc/5k/ki6wy04vc5kdc_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/dc/5k/ki6wy04vc5kdc_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Alice Sara Ott",
+            "id": 256285,
+            "albums_count": 48,
+            "slug": "alice-sara-ott",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 256285,
+              "name": "Alice Sara Ott",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 244489,
+              "name": "Netherlands Radio Philharmonic Orchestra",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 3252476,
+              "name": "Karina Canellakis",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0028948649006",
+          "released_at": 1690495200,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9479,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven",
+          "qobuz_id": 214307558,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-alice-sara-ott-karina-canellakis-netherlands-radio-philharmonic-orchestra/ki6wy04vc5kdc",
+          "slug": "beethoven-alice-sara-ott-karina-canellakis-netherlands-radio-philharmonic-orchestra",
+          "duration": 3454,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 10,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "ki6wy04vc5kdc",
+          "maximum_sampling_rate": 192,
+          "articles": [],
+          "release_date_original": "2023-07-28",
+          "release_date_download": "2023-07-28",
+          "release_date_stream": "2023-07-28",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1751007600,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ga/k1/w7pswfndpk1ga_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ga/k1/w7pswfndpk1ga_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ga/k1/w7pswfndpk1ga_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Quatuor Ébène",
+            "id": 53709,
+            "albums_count": 44,
+            "slug": "quatuor-ebene",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 53709,
+              "name": "Quatuor Ébène",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0190295329952",
+          "released_at": 1581634800,
+          "label": {
+            "name": "Warner Classics",
+            "id": 8400,
+            "albums_count": 11949,
+            "supplier_id": 5,
+            "slug": "warner-classics"
+          },
+          "title": "Beethoven Around the World: The Complete String Quartets",
+          "qobuz_id": 87514583,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-around-the-world-the-complete-string-quartets-quatuor-ebene/w7pswfndpk1ga",
+          "slug": "beethoven-around-the-world-the-complete-string-quartets-quatuor-ebene",
+          "duration": 31801,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 70,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "w7pswfndpk1ga",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2020-02-14",
+          "release_date_download": "2020-02-14",
+          "release_date_stream": "2020-02-14",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1776322800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/fa/zn/fbbuj8ythznfa_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/fa/zn/fbbuj8ythznfa_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/fa/zn/fbbuj8ythznfa_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Wiener Philharmonic Orchestra",
+            "id": 1463649,
+            "albums_count": 1516,
+            "slug": "wiener-philharmonic-orchestra",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 1463649,
+              "name": "Wiener Philharmonic Orchestra",
+              "roles": [
+                "main-artist",
+                "orchestra"
+              ]
+            },
+            {
+              "id": 22805,
+              "name": "Carlos Kleiber",
+              "roles": [
+                "main-artist",
+                "conductor"
+              ]
+            }
+          ],
+          "upc": "0028948638796",
+          "released_at": 796860000,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9607,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven: Symphonies Nos. 5 & 7",
+          "qobuz_id": 177264165,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-symphonies-nos-5-7-carlos-kleiber-wiener-philharmoniker/fbbuj8ythznfa",
+          "slug": "beethoven-symphonies-nos-5-7-carlos-kleiber-wiener-philharmoniker",
+          "duration": 4324,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 8,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "fbbuj8ythznfa",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "1995-04-03",
+          "release_date_download": "1995-04-03",
+          "release_date_stream": "1995-04-03",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1761116400,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/72/22/0002894122272_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/72/22/0002894122272_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/72/22/0002894122272_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Alfred Brendel",
+            "id": 37865,
+            "albums_count": 452,
+            "slug": "alfred-brendel-1",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 37865,
+              "name": "Alfred Brendel",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0002894122272",
+          "released_at": 473382000,
+          "label": {
+            "name": "Decca Music Group Ltd.",
+            "id": 80295,
+            "albums_count": 8908,
+            "supplier_id": 1,
+            "slug": "decca-music-group-ltd"
+          },
+          "title": "Beethoven: Für Elise; Eroica Variations, Op.35; 6 Bagatelles Op.126; 6 Ecossaises",
+          "qobuz_id": 3208682,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-fur-elise-eroica-variations-op35-6-bagatelles-op126-6-ecossaises-alfred-brendel/0002894122272",
+          "slug": "beethoven-fur-elise-eroica-variations-op35-6-bagatelles-op126-6-ecossaises-alfred-brendel",
+          "duration": 2980,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 28,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "0002894122272",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "1985-01-01",
+          "release_date_download": "1985-01-01",
+          "release_date_stream": "1985-01-01",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1749625200,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/66/03/0002894810366_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/66/03/0002894810366_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/66/03/0002894810366_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Yundi Li",
+            "id": 40523,
+            "albums_count": 40,
+            "slug": "yundi-li",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 40523,
+              "name": "Yundi Li",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0002894810366",
+          "released_at": 1346709600,
+          "label": {
+            "name": "Mercury Classics",
+            "id": 165906,
+            "albums_count": 722,
+            "supplier_id": 1,
+            "slug": "mercury-kx"
+          },
+          "title": "Beethoven - Pathétique, Moonlight, Appassionata",
+          "qobuz_id": 8649525,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-pathetique-moonlight-appassionata-yundi/0002894810366",
+          "slug": "beethoven-pathetique-moonlight-appassionata-yundi",
+          "duration": 3427,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 9,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "0002894810366",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2012-09-04",
+          "release_date_download": "2012-09-04",
+          "release_date_stream": "2012-09-04",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1765436400,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ta/2l/e7md5ml2h2lta_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ta/2l/e7md5ml2h2lta_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ta/2l/e7md5ml2h2lta_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Sviatoslav Richter",
+            "id": 23648,
+            "albums_count": 946,
+            "slug": "sviatoslav-richter-6",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 23648,
+              "name": "Sviatoslav Richter",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0028948671663",
+          "released_at": 1748556000,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9647,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "The Lost Tapes - Beethoven: Sonatas Nos. 18, 27, 28 & 31",
+          "qobuz_id": 320610885,
+          "version": "Live",
+          "url": "https://www.qobuz.com/fr-fr/album/the-lost-tapes-beethoven-sonatas-nos-18-27-28-31-sviatoslav-richter/e7md5ml2h2lta",
+          "slug": "the-lost-tapes-beethoven-sonatas-nos-18-27-28-31-sviatoslav-richter",
+          "duration": 4340,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 14,
+          "genre": {
+            "path": [
+              10,
+              27,
+              30
+            ],
+            "color": "#0070ef",
+            "name": "Piano solo",
+            "id": 30,
+            "slug": "piano-solo"
+          },
+          "maximum_channel_count": 2,
+          "id": "e7md5ml2h2lta",
+          "maximum_sampling_rate": 192,
+          "articles": [],
+          "release_date_original": "2025-05-30",
+          "release_date_download": "2025-05-30",
+          "release_date_stream": "2025-05-30",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1768374000,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/05/63/0002894796305_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/05/63/0002894796305_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/05/63/0002894796305_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Wilhelm Kempff",
+            "id": 11825,
+            "albums_count": 374,
+            "slug": "wilhelm-kempff",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 11825,
+              "name": "Wilhelm Kempff",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0002894796305",
+          "released_at": 1378072800,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9594,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven: The 32 Piano Sonatas",
+          "qobuz_id": 32683937,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-the-32-piano-sonatas-wilhelm-kempff/0002894796305",
+          "slug": "beethoven-the-32-piano-sonatas-wilhelm-kempff",
+          "duration": 35750,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 102,
+          "genre": {
+            "path": [
+              10,
+              27,
+              30
+            ],
+            "color": "#0070ef",
+            "name": "Piano solo",
+            "id": 30,
+            "slug": "piano-solo"
+          },
+          "maximum_channel_count": 2,
+          "id": "0002894796305",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2013-09-02",
+          "release_date_download": "2013-09-02",
+          "release_date_stream": "2013-09-02",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1770706800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/xa/c6/wxddkkxrfc6xa_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/xa/c6/wxddkkxrfc6xa_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/xa/c6/wxddkkxrfc6xa_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Nicola Benedetti",
+            "id": 394758,
+            "albums_count": 55,
+            "slug": "nicola-benedetti",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 394758,
+              "name": "Nicola Benedetti",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 776493,
+              "name": "Aurora Orchestra",
+              "roles": [
+                "main-artist",
+                "orchestra"
+              ]
+            },
+            {
+              "id": 794519,
+              "name": "Nicholas Collon",
+              "roles": [
+                "main-artist",
+                "conductor"
+              ]
+            }
+          ],
+          "upc": "0028948711031",
+          "released_at": 1744322400,
+          "label": {
+            "name": "Decca",
+            "id": 1125,
+            "albums_count": 1327,
+            "supplier_id": 1,
+            "slug": "decca"
+          },
+          "title": "Beethoven: Violin Concerto",
+          "qobuz_id": 319114037,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-violin-concerto-nicola-benedetti-aurora-orchestra-nicholas-collon/wxddkkxrfc6xa",
+          "slug": "beethoven-violin-concerto-nicola-benedetti-aurora-orchestra-nicholas-collon",
+          "duration": 2463,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 3,
+          "genre": {
+            "path": [
+              10,
+              22,
+              25
+            ],
+            "color": "#0070ef",
+            "name": "Conciertos para violín",
+            "id": 25,
+            "slug": "concertos-pour-violon"
+          },
+          "maximum_channel_count": 2,
+          "id": "wxddkkxrfc6xa",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2025-04-11",
+          "release_date_download": "2025-04-11",
+          "release_date_stream": "2025-04-11",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1749711600,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/17/15/0002894831517_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/17/15/0002894831517_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/17/15/0002894831517_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Takács Quartet",
+            "id": 50353,
+            "albums_count": 85,
+            "slug": "takacs-quartet",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 50353,
+              "name": "Takács Quartet",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0002894831517",
+          "released_at": 1483225200,
+          "label": {
+            "name": "Decca Music Group Ltd.",
+            "id": 80295,
+            "albums_count": 9012,
+            "supplier_id": 1,
+            "slug": "decca-music-group-ltd"
+          },
+          "title": "Beethoven: Complete String Quartets",
+          "qobuz_id": 39456744,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-complete-string-quartets-takacs-quartet/0002894831517",
+          "slug": "beethoven-complete-string-quartets-takacs-quartet",
+          "duration": 30666,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 71,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "0002894831517",
+          "maximum_sampling_rate": 48,
+          "articles": [],
+          "release_date_original": "2017-01-01",
+          "release_date_download": "2017-01-01",
+          "release_date_stream": "2017-01-01",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1770793200,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/ga/by/ef9jpi4nhbyga_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/ga/by/ef9jpi4nhbyga_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/ga/by/ef9jpi4nhbyga_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Yo-Yo Ma",
+            "id": 31220,
+            "albums_count": 331,
+            "slug": "yo-yo-ma",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 31220,
+              "name": "Yo-Yo Ma",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 50929,
+              "name": "Leonidas Kavakos",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 153025,
+              "name": "Emanuel Ax",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0196589496522",
+          "released_at": 1668121200,
+          "label": {
+            "name": "Sony Classical",
+            "id": 4608,
+            "albums_count": 11138,
+            "supplier_id": 23,
+            "slug": "sony-classical"
+          },
+          "title": "Beethoven for Three: Symphony No. 6 \"Pastorale\" and Op. 1, No. 3",
+          "qobuz_id": 175483819,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-for-three-symphony-no-6-pastorale-and-op-1-no-3-yo-yo-ma-leonidas-kavakos-emanuel-ax/ef9jpi4nhbyga",
+          "slug": "beethoven-for-three-symphony-no-6-pastorale-and-op-1-no-3-yo-yo-ma-leonidas-kavakos-emanuel-ax",
+          "duration": 4318,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 9,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "ef9jpi4nhbyga",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2022-11-11",
+          "release_date_download": "2022-11-11",
+          "release_date_stream": "2022-11-11",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1764054000,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/6a/ty/iv07x87ksty6a_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/6a/ty/iv07x87ksty6a_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/6a/ty/iv07x87ksty6a_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Nicola Benedetti",
+            "id": 394758,
+            "albums_count": 61,
+            "slug": "nicola-benedetti",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 394758,
+              "name": "Nicola Benedetti",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 2964654,
+              "name": "Sheku Kanneh-Mason",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 685433,
+              "name": "Benjamin Grosvenor",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 316285,
+              "name": "Philharmonia Orchestra",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 1098636,
+              "name": "Santtu-Matias Rouvali",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0028948703586",
+          "released_at": 1717106400,
+          "label": {
+            "name": "Decca Music Group Ltd.",
+            "id": 80295,
+            "albums_count": 9138,
+            "supplier_id": 1,
+            "slug": "decca-music-group-ltd"
+          },
+          "title": "Beethoven: Triple Concerto, Op. 56",
+          "qobuz_id": 257867582,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-triple-concerto-op-56-philharmonia-orchestra-nicola-benedetti-benjamin-grosvenor-santtu-matias-rouvali-sheku-kanneh-mason/iv07x87ksty6a",
+          "slug": "beethoven-triple-concerto-op-56-philharmonia-orchestra-nicola-benedetti-benjamin-grosvenor-santtu-matias-rouvali-sheku-kanneh-mason",
+          "duration": 3492,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 12,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "iv07x87ksty6a",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2024-05-31",
+          "release_date_download": "2024-05-31",
+          "release_date_stream": "2024-05-31",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1776754800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/yc/uz/hdzendixiuzyc_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/yc/uz/hdzendixiuzyc_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/yc/uz/hdzendixiuzyc_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Yannick Nézet-Séguin",
+            "id": 178969,
+            "albums_count": 34,
+            "slug": "yannick-nezet-seguin",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 37253,
+              "name": "The Chamber Orchestra of Europe",
+              "roles": [
+                "main-artist",
+                "orchestra"
+              ]
+            },
+            {
+              "id": 178969,
+              "name": "Yannick Nézet-Séguin",
+              "roles": [
+                "main-artist",
+                "conductor"
+              ]
+            }
+          ],
+          "upc": "0028948630578",
+          "released_at": 1657836000,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9479,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven: The Symphonies",
+          "qobuz_id": 159921957,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-the-symphonies-yannick-nezet-seguin-chamber-orchestra-of-europe/hdzendixiuzyc",
+          "slug": "beethoven-the-symphonies-yannick-nezet-seguin-chamber-orchestra-of-europe",
+          "duration": 20787,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 44,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "hdzendixiuzyc",
+          "maximum_sampling_rate": 192,
+          "articles": [],
+          "release_date_original": "2022-07-15",
+          "release_date_download": "2022-07-15",
+          "release_date_stream": "2022-07-15",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1749625200,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/pc/t3/bl0292og4t3pc_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/pc/t3/bl0292og4t3pc_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/pc/t3/bl0292og4t3pc_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Daniel Barenboim",
+            "id": 289938,
+            "albums_count": 505,
+            "slug": "daniel-barenboim-3",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 289938,
+              "name": "Daniel Barenboim",
+              "roles": [
+                "main-artist",
+                "orchestra"
+              ]
+            }
+          ],
+          "upc": "0028948395262",
+          "released_at": 1604012400,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9557,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven: Piano Sonatas Nos. 27-32",
+          "qobuz_id": 100706240,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-piano-sonatas-nos-27-32-daniel-barenboim/bl0292og4t3pc",
+          "slug": "beethoven-piano-sonatas-nos-27-32-daniel-barenboim",
+          "duration": 9688,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 31,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "bl0292og4t3pc",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2020-10-30",
+          "release_date_download": "2020-10-30",
+          "release_date_stream": "2020-10-30",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1766386800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/u0/cj/ec2ycw9zucju0_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/u0/cj/ec2ycw9zucju0_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/u0/cj/ec2ycw9zucju0_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Alena Baeva",
+            "id": 2028203,
+            "albums_count": 5,
+            "slug": "alena-baeva",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 2028203,
+              "name": "Alena Baeva",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 1044320,
+              "name": "Vadym Kholodenko",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "3701624512081",
+          "released_at": 1772146800,
+          "label": {
+            "name": "Alpha Classics",
+            "id": 1950819,
+            "albums_count": 1116,
+            "supplier_id": 129,
+            "slug": "alpha-classics-1"
+          },
+          "title": "Beethoven: Violin Sonatas Nos. 5 \"Spring\", 9 'Kreutzer\" & 3",
+          "qobuz_id": 385232992,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-violin-sonatas-nos-5-spring-9-kreutzer-3-alena-baeva-and-vadym-kholodenko/ec2ycw9zucju0",
+          "slug": "beethoven-violin-sonatas-nos-5-spring-9-kreutzer-3-alena-baeva-and-vadym-kholodenko",
+          "duration": 4826,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 10,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "ec2ycw9zucju0",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2026-02-27",
+          "release_date_download": "2026-02-27",
+          "release_date_stream": "2026-02-27",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1773903600,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/sa/cx/psv3tdl0qcxsa_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/sa/cx/psv3tdl0qcxsa_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/sa/cx/psv3tdl0qcxsa_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Berliner Philharmoniker",
+            "id": 56836,
+            "albums_count": 1567,
+            "slug": "berliner-philharmoniker",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 8205618,
+              "name": "Berliner Philharmoniker, Kirill Petrenko, Kwangchul Youn, Benjamin Bruns, Elisabeth Kulman, Marlis Petersen and Rundfunkchor Berlin",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 56836,
+              "name": "Berliner Philharmoniker",
+              "roles": [
+                "orchestra"
+              ]
+            },
+            {
+              "id": 581557,
+              "name": "Kirill Petrenko",
+              "roles": [
+                "conductor"
+              ]
+            }
+          ],
+          "upc": "4260306189816",
+          "released_at": 1608246000,
+          "label": {
+            "name": "Berlin Philharmonic Orchestra",
+            "id": 308079,
+            "albums_count": 47,
+            "supplier_id": 22,
+            "slug": "berlin-philharmonic-orchestra"
+          },
+          "title": "Beethoven: Symphony No. 9",
+          "qobuz_id": 106056995,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-symphony-no-9-berliner-philharmoniker-kirill-petrenko-kwangchul-youn-benjamin-bruns-elisabeth-kulman-marlis-petersen-and-rundfunkchor-berlin/psv3tdl0qcxsa",
+          "slug": "beethoven-symphony-no-9-berliner-philharmoniker-kirill-petrenko-kwangchul-youn-benjamin-bruns-elisabeth-kulman-marlis-petersen-and-rundfunkchor-berlin",
+          "duration": 3710,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 5,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "psv3tdl0qcxsa",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2020-12-18",
+          "release_date_download": "2020-12-18",
+          "release_date_stream": "2020-12-18",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1769497200,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/4a/v1/icipczlgdv14a_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/4a/v1/icipczlgdv14a_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/4a/v1/icipczlgdv14a_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Mari Kodama",
+            "id": 65348,
+            "albums_count": 41,
+            "slug": "mari-kodama-3",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 65348,
+              "name": "Mari Kodama",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "8720604703047",
+          "released_at": 1280613600,
+          "label": {
+            "name": "Pentatone",
+            "id": 4627006,
+            "albums_count": 763,
+            "supplier_id": 30,
+            "slug": "pentatone-2"
+          },
+          "title": "Beethoven: Piano Sonatas 25, 24, 9, 10, 19 & 20",
+          "qobuz_id": 219894132,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-piano-sonatas-25-24-9-10-19-20-mari-kodama/icipczlgdv14a",
+          "slug": "beethoven-piano-sonatas-25-24-9-10-19-20-mari-kodama",
+          "duration": 4053,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 15,
+          "genre": {
+            "path": [
+              10,
+              27,
+              30
+            ],
+            "color": "#0070ef",
+            "name": "Piano solo",
+            "id": 30,
+            "slug": "piano-solo"
+          },
+          "maximum_channel_count": 2,
+          "id": "icipczlgdv14a",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2010-08-01",
+          "release_date_download": "2010-08-01",
+          "release_date_stream": "2010-08-01",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1774767600,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/la/1a/o77kr76fy1ala_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/la/1a/o77kr76fy1ala_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/la/1a/o77kr76fy1ala_600.jpg",
+            "back": null
+          },
+          "media_count": 3,
+          "artist": {
+            "image": null,
+            "name": "Calidore String Quartet",
+            "id": 3896947,
+            "albums_count": 21,
+            "slug": "calidore-string-quartet",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 3896947,
+              "name": "Calidore String Quartet",
+              "roles": [
+                "main-artist",
+                "ensemble"
+              ]
+            }
+          ],
+          "upc": "0635212087220",
+          "released_at": 1726178400,
+          "label": {
+            "name": "Signum Records",
+            "id": 1680,
+            "albums_count": 1731,
+            "supplier_id": 17,
+            "slug": "signum-records"
+          },
+          "title": "Beethoven: The Middle Quartets",
+          "qobuz_id": 271626197,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-the-middle-quartets-calidore-string-quartet/o77kr76fy1ala",
+          "slug": "beethoven-the-middle-quartets-calidore-string-quartet",
+          "duration": 9505,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 20,
+          "genre": {
+            "path": [
+              10,
+              27
+            ],
+            "color": "#0070ef",
+            "name": "Música de cámara",
+            "id": 27,
+            "slug": "musique-de-chambre"
+          },
+          "maximum_channel_count": 2,
+          "id": "o77kr76fy1ala",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2024-09-13",
+          "release_date_download": "2024-09-13",
+          "release_date_stream": "2024-09-13",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1727334000,
+          "hires": true,
+          "hires_streamable": true
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 16,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/95/65/0002894776595_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/95/65/0002894776595_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/95/65/0002894776595_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Hélène Grimaud",
+            "id": 38474,
+            "albums_count": 119,
+            "slug": "helene-grimaud",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 38474,
+              "name": "Hélène Grimaud",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 44685,
+              "name": "Staatskapelle Dresden",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 72661,
+              "name": "Vladimir Jurowski",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "0002894776595",
+          "released_at": 1167606000,
+          "label": {
+            "name": "Deutsche Grammophon (DG)",
+            "id": 80905,
+            "albums_count": 9479,
+            "supplier_id": 1,
+            "slug": "deutsche-grammophon"
+          },
+          "title": "Beethoven: Piano Concerto No. 5; Piano Sonata No.28 in A, Op.101",
+          "qobuz_id": 3213447,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-piano-concerto-no-5-piano-sonata-no28-in-a-op101-helene-grimaud-staatskapelle-dresden-vladimir-jurowski/0002894776595",
+          "slug": "beethoven-piano-concerto-no-5-piano-sonata-no28-in-a-op101-helene-grimaud-staatskapelle-dresden-vladimir-jurowski",
+          "duration": 3548,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 7,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "0002894776595",
+          "maximum_sampling_rate": 44.1,
+          "articles": [],
+          "release_date_original": "2007-01-01",
+          "release_date_download": "2007-01-01",
+          "release_date_stream": "2007-01-01",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1758178800,
+          "hires": false,
+          "hires_streamable": false
+        }
+      },
+      {
+        "type": "albums",
+        "content": {
+          "type": "albums",
+          "maximum_bit_depth": 24,
+          "image": {
+            "small": "https://static.qobuz.com/images/covers/qa/md/rsgbn8a5omdqa_230.jpg",
+            "thumbnail": "https://static.qobuz.com/images/covers/qa/md/rsgbn8a5omdqa_50.jpg",
+            "large": "https://static.qobuz.com/images/covers/qa/md/rsgbn8a5omdqa_600.jpg",
+            "back": null
+          },
+          "media_count": 1,
+          "artist": {
+            "image": null,
+            "name": "Elisabeth Leonskaja",
+            "id": 314788,
+            "albums_count": 72,
+            "slug": "elisabeth-leonskaja",
+            "picture": null
+          },
+          "artists": [
+            {
+              "id": 314788,
+              "name": "Elisabeth Leonskaja",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 36357,
+              "name": "Michael Schønwandt",
+              "roles": [
+                "main-artist"
+              ]
+            },
+            {
+              "id": 26735829,
+              "name": "Orchestre Français des Jeunes",
+              "roles": [
+                "main-artist"
+              ]
+            }
+          ],
+          "upc": "5021732723543",
+          "released_at": 1747951200,
+          "label": {
+            "name": "Warner Classics",
+            "id": 8400,
+            "albums_count": 11627,
+            "supplier_id": 5,
+            "slug": "warner-classics"
+          },
+          "title": "Beethoven: Piano Concerto No. 5, Op. 73 \"Emperor\" & Quintet for Piano and Winds, Op. 16",
+          "qobuz_id": 332655467,
+          "version": null,
+          "url": "https://www.qobuz.com/fr-fr/album/beethoven-piano-concerto-no-5-op-73-emperor-quintet-for-piano-and-winds-op-16-elisabeth-leonskaja-michael-schonwandt-orchestre-francais-des-jeunes/rsgbn8a5omdqa",
+          "slug": "beethoven-piano-concerto-no-5-op-73-emperor-quintet-for-piano-and-winds-op-16-elisabeth-leonskaja-michael-schonwandt-orchestre-francais-des-jeunes",
+          "duration": 4182,
+          "parental_warning": false,
+          "popularity": 0,
+          "tracks_count": 6,
+          "genre": {
+            "path": [
+              10
+            ],
+            "color": "#0070ef",
+            "name": "Clásica",
+            "id": 10,
+            "slug": "classique"
+          },
+          "maximum_channel_count": 2,
+          "id": "rsgbn8a5omdqa",
+          "maximum_sampling_rate": 96,
+          "articles": [],
+          "release_date_original": "2025-05-23",
+          "release_date_download": "2025-05-23",
+          "release_date_stream": "2025-05-23",
+          "purchasable": false,
+          "streamable": true,
+          "previewable": true,
+          "sampleable": true,
+          "downloadable": false,
+          "displayable": true,
+          "purchasable_at": null,
+          "streamable_at": 1749970800,
+          "hires": true,
+          "hires_streamable": true
+        }
+      }
+    ]
+  }
+}

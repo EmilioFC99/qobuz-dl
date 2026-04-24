@@ -33,6 +33,9 @@ setup(
     # 4. LINK TO YOUR FORK
     url="https://github.com/Sei969/qobuz-dl", 
     install_requires=requirements,
+    extras_require={
+        "tests": ["pytest>=7.0", "pytest-mock>=3.10"],
+    },
     entry_points={
         "console_scripts": [
             # Keeping the original command names for backward compatibility
