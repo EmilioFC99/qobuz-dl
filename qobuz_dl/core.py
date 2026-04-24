@@ -66,7 +66,7 @@ class QobuzDL:
         genius_token=None,
         force_english=True,
         no_credits=False,
-        playlist_by_album=False,
+        by_album=False,
         settings: QobuzDLSettings = None,
     ):
         self.directory = create_and_return_dir(directory)
@@ -88,7 +88,7 @@ class QobuzDL:
         self.genius_token = genius_token
         self.force_english = force_english
         self.no_credits = no_credits
-        self.playlist_by_album = playlist_by_album
+        self.by_album = by_album
         self.settings = settings or QobuzDLSettings()
 
     def initialize_client(self, email, pwd, app_id, secrets):
@@ -175,7 +175,7 @@ class QobuzDL:
                 f"({url_type})!"
             )
 
-            if is_playlist and self.playlist_by_album:
+            if self.by_album:
                 new_path = self.directory
             else:
                 new_path = create_and_return_dir(
@@ -199,7 +199,7 @@ class QobuzDL:
                 logger.debug(f"Items in first chunk: {len(content[0].get(type_dict['iterable_key'], {}).get('items', []))}")
             logger.info(f"{YELLOW}{len(items)} downloads in queue")
 
-            if is_playlist and self.playlist_by_album:
+            if is_playlist and self.by_album:
                 for item in items:
                     self.download_from_id(
                         item["id"],
@@ -562,7 +562,7 @@ class QobuzDL:
             return
 
         # Step 3: Send valid IDs to the downloader engine
-        if self.playlist_by_album:
+        if self.by_album:
             for t_id in track_ids:
                 try:
                     self.download_from_id(

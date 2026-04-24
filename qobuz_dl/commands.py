@@ -206,9 +206,9 @@ def add_common_arg(custom_parser, default_folder, default_quality):
         help="disable the generation of the Digital Booklet.txt (Credits & Review) file",
     )
     custom_parser.add_argument(
-        "--playlist-by-album",
+        "--by-album",
         action="store_true",
-        help="save playlist tracks grouped by album folder instead of a flat playlist folder",
+        help="organize downloads by album folder: playlists save tracks into album folders, artists/labels skip the parent wrapper folder",
     )
 
     # Adding tag-related parameters
