@@ -212,7 +212,19 @@ def main():
         fetch_lyrics = config.getboolean(section, "fetch_lyrics", fallback=False)
         genius_token = config.get(section, "genius_token", fallback=None)
         
-        default_folder = config.get(section, "directory", fallback="Qobuz Downloads")
+        # --- FIX: Backward compatibility for default_folder ---
+        directory_val = config.get(section, "directory", fallback=None)
+        if directory_val is not None:
+            default_folder = directory_val
+        else:
+            legacy_val = config.get(section, "default_folder", fallback=None)
+            if legacy_val is not None:
+                # If the legacy key is used, accept it but print a yellow warning
+                print(f"\033[93m[!] Notice: 'default_folder' in config.ini is deprecated. Please rename it to 'directory' for future updates.\033[0m")
+                default_folder = legacy_val
+            else:
+                default_folder = "Qobuz Downloads"
+        # ------------------------------------------------------
         default_limit = config.get(section, "default_limit")
         default_quality = config.get(section, "default_quality")
         
@@ -336,6 +348,7 @@ def main():
     # ----------------------------------------------------------
 
     directory_to_use = arguments.directory if hasattr(arguments, 'directory') and arguments.directory else default_folder
+    directory_to_use = os.path.expanduser(directory_to_use)
 
     # --- WINDOWS LONG PATH BYPASS ---
     if os.name == "nt":
