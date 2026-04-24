@@ -309,6 +309,32 @@ def main():
         sys.exit(0)
     # ----------------------------------------------
 
+    # --- REORGANIZE FEATURE (Standalone Mode, no API needed) ---
+    if arguments.command in ("reorganize", "reorg"):
+        from qobuz_dl.reorganize import reorganize_folder
+
+        target_dir = arguments.FOLDER or default_folder
+        if os.name == "nt":
+            target_dir = os.path.abspath(target_dir)
+            if not target_dir.startswith("\\\\?\\"):
+                target_dir = "\\\\?\\" + target_dir
+
+        reorg_folder_format = getattr(arguments, 'folder_format', None) or folder_format
+
+        try:
+            reorganize_folder(
+                directory=target_dir,
+                by_album=arguments.by_album,
+                folder_format=reorg_folder_format,
+                auto_confirm=arguments.yes,
+                dry_run=arguments.dry_run,
+            )
+        except KeyboardInterrupt:
+            print("\n\n\033[91m[!] Operation manually interrupted by the user (CTRL+C).\033[0m")
+            print("\033[93mAlready moved files are safe. Exiting...\033[0m")
+        sys.exit(0)
+    # ----------------------------------------------------------
+
     directory_to_use = arguments.directory if hasattr(arguments, 'directory') and arguments.directory else default_folder
 
     # --- WINDOWS LONG PATH BYPASS ---

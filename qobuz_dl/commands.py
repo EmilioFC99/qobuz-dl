@@ -93,6 +93,44 @@ def sync_playlist_args(subparsers):
     )
     return sync_pl
 
+def reorganize_args(subparsers):
+    reorg = subparsers.add_parser(
+        "reorganize",
+        aliases=["reorg"],
+        description="Reorganize existing audio files into structured folders "
+                    "based on their embedded metadata tags.",
+        help="reorganize local files by album, artist, or label",
+    )
+    reorg.add_argument(
+        "FOLDER",
+        nargs="?",
+        default=None,
+        help="the local directory to reorganize (default: download directory from config)",
+    )
+    strategy = reorg.add_mutually_exclusive_group(required=True)
+    strategy.add_argument(
+        "--by-album",
+        action="store_true",
+        help="group tracks into album folders using folder_format from config",
+    )
+    reorg.add_argument(
+        "--yes", "-y",
+        action="store_true",
+        help="skip confirmation prompt before moving files",
+    )
+    reorg.add_argument(
+        "-ff", "--folder-format",
+        metavar="PATTERN",
+        help="override folder_format pattern from config",
+    )
+    reorg.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="show what would be moved without actually moving anything",
+    )
+    return reorg
+
+
 def add_common_arg(custom_parser, default_folder, default_quality):
     custom_parser.add_argument(
         "-d",
@@ -400,7 +438,8 @@ def qobuz_dl_args(
     # Inizializza il nuovo comando
     lyrics_cmd = lyrics_args(subparsers)
     sync_pl_cmd = sync_playlist_args(subparsers)
-    
+    reorg_cmd = reorganize_args(subparsers)
+
     [
         add_common_arg(i, default_folder, default_quality)
         for i in (interactive, download, lucky, sync_pl_cmd)
