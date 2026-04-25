@@ -23,6 +23,8 @@ dist/
 *.exe
 *.spec
 
-# Claude
+# AI
 .claude
 CLAUDE.md
+.gemini/
+gha-creds-*.json
